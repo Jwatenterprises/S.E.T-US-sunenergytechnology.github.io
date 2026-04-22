@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find My Solar Generator — 5-Minute Quiz | S.E.T. Sun Energy Technology</title>
+  <meta name="description" content="Answer 5 quick questions and get a personalized solar generator recommendation. Free, unbiased, and takes less than 5 minutes." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8W4W8LPNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8W4W8LPNC');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF; --blue-dark: #0052CC; --charcoal: #1E1E2E;
+      --white: #FFFFFF; --gray-bg: #F5F7FA; --accent: #00C896;
+      --gold: #F5A623; --text: #2D3748; --text-muted: #718096;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    /* ===== HEADER ===== */
+    header { position: sticky; top: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    nav a:hover { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold { background: var(--gold); color: var(--charcoal); font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; white-space: nowrap; }
+    .btn-gold:hover { background: #e8961f; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid #e2e8f0; padding: 16px 24px 20px; }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) { nav { display: none; } .hamburger { display: flex; } .mobile-nav.open { display: flex; } }
+
+    /* ===== DISCLOSURE BANNER ===== */
+    .disclosure-banner { background: #FFF8E1; border-bottom: 1px solid #ffe082; padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548; }
+
+    /* ===== QUIZ WRAPPER ===== */
+    .quiz-page {
+      min-height: calc(100vh - 72px);
+      background: linear-gradient(160deg, var(--gray-bg) 0%, #eef2ff 100%);
+      padding: 48px 24px 80px;
+    }
+    .quiz-container {
+      max-width: 720px; margin: 0 auto;
+      background: var(--white); border-radius: 24px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* ===== PROGRESS BAR ===== */
+    .progress-bar-wrap {
+      background: var(--gray-bg); padding: 24px 36px 20px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+    .progress-label {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 10px;
+    }
+    .progress-label .step-text { font-size: 0.88rem; font-weight: 600; color: var(--text-muted); }
+    .progress-label .step-name { font-size: 0.88rem; font-weight: 700; color: var(--blue); }
+    .progress-track {
+      height: 8px; background: #e2e8f0; border-radius: 100px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, var(--blue), var(--accent));
+      border-radius: 100px; transition: width 0.4s ease;
+    }
+    .step-dots { display: flex; gap: 8px; margin-top: 12px; }
+    .step-dot {
+      flex: 1; height: 4px; border-radius: 100px; background: #e2e8f0; transition: background 0.3s;
+    }
+    .step-dot.done { background: var(--accent); }
+    .step-dot.active { background: var(--blue); }
+
+    /* ===== QUIZ STEP ===== */
+    .quiz-step { display: none; padding: 40px 36px; }
+    .quiz-step.active { display: block; animation: slideIn 0.35s ease; }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+    .step-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+    .step-number { font-size: 0.8rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .step-question { font-size: 1.5rem; font-weight: 800; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
+    .step-hint { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 32px; }
+
+    /* ===== OPTION CARDS ===== */
+    .options-grid { display: grid; gap: 14px; }
+    .options-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .options-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .options-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+
+    .option-card {
+      border: 2px solid #e2e8f0; border-radius: 14px; padding: 20px 18px;
+      cursor: pointer; transition: all 0.2s; text-align: center;
+      background: var(--white);
+    }
+    .option-card:hover { border-color: var(--blue); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,102,255,0.1); }
+    .option-card.selected { border-color: var(--blue); background: rgba(0,102,255,0.05); box-shadow: 0 6px 20px rgba(0,102,255,0.15); }
+    .option-card .opt-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .option-card .opt-label { font-weight: 700; font-size: 1rem; color: var(--charcoal); display: block; margin-bottom: 4px; }
+    .option-card .opt-sub { font-size: 0.8rem; color: var(--text-muted); }
+    .option-card.selected .opt-label { color: var(--blue); }
+
+    /* ===== NAVIGATION ===== */
+    .quiz-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid #f0f4f8; }
+    .btn-back {
+      padding: 12px 24px; border-radius: 10px; border: 1.5px solid #d1d9e6;
+      background: var(--white); color: var(--text-muted); font-weight: 600;
+      font-size: 0.9rem; cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+    .btn-back:hover { border-color: var(--text); color: var(--text); }
+    .btn-back:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-next {
+      padding: 12px 32px; border-radius: 10px; border: none;
+      background: var(--blue); color: var(--white); font-weight: 700;
+      font-size: 0.95rem; cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-next:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .btn-next:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+    .btn-submit {
+      padding: 14px 36px; border-radius: 10px; border: none;
+      background: var(--gold); color: var(--charcoal); font-weight: 800;
+      font-size: 1rem; cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-submit:hover { background: #e8961f; transform: translateY(-1px); }
+
+    /* ===== RESULTS PAGE ===== */
+    #results { display: none; }
+    .results-hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1a2a4a 100%);
+      padding: 40px 36px 36px; color: var(--white);
+    }
+    .results-tag { display: inline-block; background: rgba(0,200,150,0.2); border: 1px solid rgba(0,200,150,0.4); color: var(--accent); padding: 5px 14px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-bottom: 14px; }
+    .results-headline { font-size: 1.5rem; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+    .results-sub { font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+
+    .results-body { padding: 36px; }
+    .result-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 12px; }
+
+    /* Top Pick Card */
+    .top-result-card {
+      background: linear-gradient(135deg, rgba(0,102,255,0.05) 0%, rgba(0,200,150,0.04) 100%);
+      border: 2px solid var(--blue); border-radius: 18px; padding: 28px; margin-bottom: 28px;
+      position: relative; overflow: hidden;
+    }
+    .top-result-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue), var(--accent)); }
+    .result-pick-badge { display: inline-block; background: var(--gold); color: var(--charcoal); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 800; margin-bottom: 14px; }
+    .result-brand-name { font-size: 1.4rem; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; }
+    .result-model { font-size: 1rem; font-weight: 600; color: var(--blue); margin-bottom: 14px; }
+    .result-specs { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
+    .result-spec { font-size: 0.85rem; color: var(--text-muted); }
+    .result-spec strong { color: var(--text); font-weight: 700; display: block; }
+    .result-why { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; padding: 16px; background: rgba(0,0,0,0.03); border-radius: 10px; border-left: 3px solid var(--blue); }
+    .btn-result-buy { display: inline-block; background: var(--gold); color: var(--charcoal); padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1rem; transition: background 0.2s; }
+    .btn-result-buy:hover { background: #e8961f; }
+
+    /* Alternative Cards */
+    .alt-title { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin: 28px 0 14px; }
+    .alt-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 36px; }
+    .alt-card { border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; }
+    .alt-card .alt-badge { display: inline-block; background: var(--gray-bg); color: var(--text-muted); padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; }
+    .alt-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .alt-card .alt-cap { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px; }
+    .alt-card .alt-price { font-size: 0.88rem; font-weight: 600; color: var(--blue); margin-bottom: 12px; }
+    .alt-card .alt-buy { display: block; text-align: center; background: var(--blue); color: var(--white); padding: 9px 0; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s; }
+    .alt-card .alt-buy:hover { background: var(--blue-dark); }
+    @media (max-width: 560px) { .alt-cards { grid-template-columns: 1fr; } }
+
+    /* Email capture in results */
+    .result-email-box {
+      background: var(--blue); border-radius: 16px; padding: 28px;
+      text-align: center; color: var(--white); margin-bottom: 24px;
+    }
+    .result-email-box h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .result-email-box p { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .result-email-form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .result-email-form input { flex: 1; min-width: 160px; padding: 12px 16px; border-radius: 8px; border: none; font-size: 0.9rem; font-family: 'Inter', sans-serif; }
+    .result-email-form button { background: var(--gold); color: var(--charcoal); padding: 12px 20px; border-radius: 8px; border: none; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap; transition: background 0.2s; }
+    .result-email-form button:hover { background: #e8961f; }
+
+    .retake-btn { display: block; text-align: center; padding: 12px; border: 1.5px solid #d1d9e6; border-radius: 10px; color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; cursor: pointer; background: var(--white); width: 100%; font-family: 'Inter', sans-serif; transition: all 0.2s; }
+    .retake-btn:hover { border-color: var(--text); color: var(--text); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 60px 24px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo-text .brand { color: var(--white); }
+    .footer-brand .logo-text .sub { color: rgba(255,255,255,0.5); }
+    .footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.7; }
+    .footer-col h5 { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-disclosure { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 24px; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copyright { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    @media (max-width: 800px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .quiz-step { padding: 28px 20px; }
+      .options-grid.cols-2, .options-grid.cols-3, .options-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .results-hero { padding: 28px 20px; }
+      .results-body { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-group">
+      <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="index.html#use-cases">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="compare.html">Compare</a>
+    <a href="index.html#use-cases">Use Cases</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spec-guide.html">Spec Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<!-- QUIZ PAGE -->
+<div class="quiz-page">
+  <div class="quiz-container" id="quizContainer">
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar-wrap">
+      <div class="progress-label">
+        <span class="step-text" id="progressText">Step 1 of 5</span>
+        <span class="step-name" id="progressName">Primary Use</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:20%"></div>
+      </div>
+      <div class="step-dots">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+        <div class="step-dot" id="dot4"></div>
+        <div class="step-dot" id="dot5"></div>
+      </div>
+    </div>
+
+    <!-- STEP 1: Primary Use -->
+    <div class="quiz-step active" id="step1">
+      <span class="step-number">Step 1 of 5</span>
+      <h2 class="step-question">What&rsquo;s your primary use for a solar generator?</h2>
+      <p class="step-hint">This is the most important factor. Pick the one that best matches your main scenario.</p>
+      <div class="options-grid cols-4" id="step1-options">
+        <div class="option-card" onclick="selectOption(1, 'camping', this)">
+          <span class="opt-icon">&#127957;&#65039;</span>
+          <span class="opt-label">Camping</span>
+          <span class="opt-sub">Weekend trips &amp; outdoor adventures</span>
+        </div>
+        <div class="option-card" onclick="selectOption(1, 'emergency', this)">
+          <span class="opt-icon">&#128680;</span>
+          <span class="opt-label">Emergency Prep</span>
+          <span class="opt-sub">Power when the grid goes down</span>
+        </div>
+        <div class="option-card" onclick="selectOption(1, 'offgrid', this)">
+          <span class="opt-icon">&#127968;</span>
+          <span class="opt-label">Off-Grid Living</span>
+          <span class="opt-sub">Full-time power independence</span>
+        </div>
+        <div class="option-card" onclick="selectOption(1, 'vanlife', this)">
+          <span class="opt-icon">&#128656;</span>
+          <span class="opt-label">Van Life</span>
+          <span class="opt-sub">Mobile home on the road</span>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" disabled>&#8592; Back</button>
+        <button class="btn-next" id="next1" onclick="goToStep(2)" disabled>Next &rarr;</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Devices / Load Size -->
+    <div class="quiz-step" id="step2">
+      <span class="step-number">Step 2 of 5</span>
+      <h2 class="step-question">How many devices do you need to power?</h2>
+      <p class="step-hint">Think about what you&rsquo;d run during a typical outage or trip &mdash; not the absolute maximum.</p>
+      <div class="options-grid cols-2" id="step2-options">
+        <div class="option-card" onclick="selectOption(2, 'essentials', this)">
+          <span class="opt-icon">&#128241;</span>
+          <span class="opt-label">Just the Essentials</span>
+          <span class="opt-sub">Phones, lights, maybe a fan (1&ndash;3 devices)</span>
+        </div>
+        <div class="option-card" onclick="selectOption(2, 'small', this)">
+          <span class="opt-icon">&#128187;</span>
+          <span class="opt-label">Small Setup</span>
+          <span class="opt-sub">Laptop, fridge, lights, devices (4&ndash;6)</span>
+        </div>
+        <div class="option-card" onclick="selectOption(2, 'household', this)">
+          <span class="opt-icon">&#127968;</span>
+          <span class="opt-label">Full Household</span>
+          <span class="opt-sub">Fridge, TV, CPAP, multiple devices (7&ndash;10)</span>
+        </div>
+        <div class="option-card" onclick="selectOption(2, 'everything', this)">
+          <span class="opt-icon">&#9889;</span>
+          <span class="opt-label">Everything</span>
+          <span class="opt-sub">Run the whole house including heavy appliances (10+)</span>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" onclick="goToStep(1)">&#8592; Back</button>
+        <button class="btn-next" id="next2" onclick="goToStep(3)" disabled>Next &rarr;</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Budget -->
+    <div class="quiz-step" id="step3">
+      <span class="step-number">Step 3 of 5</span>
+      <h2 class="step-question">What&rsquo;s your budget for a solar generator?</h2>
+      <p class="step-hint">Including any solar panels you&rsquo;ll buy to charge it. Be honest &mdash; better to know your real budget upfront.</p>
+      <div class="options-grid cols-2" id="step3-options">
+        <div class="option-card" onclick="selectOption(3, 'under500', this)">
+          <span class="opt-icon">&#128153;</span>
+          <span class="opt-label">Under $500</span>
+          <span class="opt-sub">Tight budget, need to get started</span>
+        </div>
+        <div class="option-card" onclick="selectOption(3, '500-1500', this)">
+          <span class="opt-icon">&#128154;</span>
+          <span class="opt-label">$500&ndash;$1,500</span>
+          <span class="opt-sub">Mid-range, most popular budget</span>
+        </div>
+        <div class="option-card" onclick="selectOption(3, '1500-3000', this)">
+          <span class="opt-icon">&#128155;</span>
+          <span class="opt-label">$1,500&ndash;$3,000</span>
+          <span class="opt-sub">Premium range, serious capability</span>
+        </div>
+        <div class="option-card" onclick="selectOption(3, '3000plus', this)">
+          <span class="opt-icon">&#11088;</span>
+          <span class="opt-label">$3,000+</span>
+          <span class="opt-sub">Maximum capability, no compromises</span>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" onclick="goToStep(2)">&#8592; Back</button>
+        <button class="btn-next" id="next3" onclick="goToStep(4)" disabled>Next &rarr;</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Portability -->
+    <div class="quiz-step" id="step4">
+      <span class="step-number">Step 4 of 5</span>
+      <h2 class="step-question">How important is portability to you?</h2>
+      <p class="step-hint">Heavier units typically offer more power. Lighter units sacrifice capacity for mobility.</p>
+      <div class="options-grid cols-3" id="step4-options">
+        <div class="option-card" onclick="selectOption(4, 'very', this)">
+          <span class="opt-icon">&#127939;</span>
+          <span class="opt-label">Very Important</span>
+          <span class="opt-sub">Must be lightweight &amp; easy to carry (&lt;30 lbs)</span>
+        </div>
+        <div class="option-card" onclick="selectOption(4, 'somewhat', this)">
+          <span class="opt-icon">&#128717;</span>
+          <span class="opt-label">Somewhat Important</span>
+          <span class="opt-sub">Can handle moderate weight with wheels</span>
+        </div>
+        <div class="option-card" onclick="selectOption(4, 'not', this)">
+          <span class="opt-icon">&#127968;</span>
+          <span class="opt-label">Not Important</span>
+          <span class="opt-sub">Staying in one place, want maximum power</span>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" onclick="goToStep(3)">&#8592; Back</button>
+        <button class="btn-next" id="next4" onclick="goToStep(5)" disabled>Next &rarr;</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: Solar Panels -->
+    <div class="quiz-step" id="step5">
+      <span class="step-number">Step 5 of 5</span>
+      <h2 class="step-question">Do you already have solar panels?</h2>
+      <p class="step-hint">This affects which generator is the best fit &mdash; some have better solar input compatibility than others.</p>
+      <div class="options-grid cols-3" id="step5-options">
+        <div class="option-card" onclick="selectOption(5, 'have', this)">
+          <span class="opt-icon">&#9728;&#65039;</span>
+          <span class="opt-label">Yes, I Have Panels</span>
+          <span class="opt-sub">Already own or installing solar panels</span>
+        </div>
+        <div class="option-card" onclick="selectOption(5, 'need', this)">
+          <span class="opt-icon">&#128722;</span>
+          <span class="opt-label">No, I&rsquo;ll Need Them</span>
+          <span class="opt-sub">Starting fresh, need a complete solution</span>
+        </div>
+        <div class="option-card" onclick="selectOption(5, 'unsure', this)">
+          <span class="opt-icon">&#10067;</span>
+          <span class="opt-label">Not Sure Yet</span>
+          <span class="opt-sub">Open to options, still researching</span>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" onclick="goToStep(4)">&#8592; Back</button>
+        <button class="btn-submit" id="submitBtn" onclick="showResults()" disabled>See My Recommendations &rarr;</button>
+      </div>
+    </div>
+
+  </div><!-- end quiz-container -->
+
+  <!-- RESULTS -->
+  <div class="quiz-container" id="results">
+    <div class="results-hero">
+      <div class="results-tag">Your Personalized Recommendation</div>
+      <div class="results-headline" id="resultsHeadline">Based on your needs, here&rsquo;s what we recommend:</div>
+      <div class="results-sub" id="resultsSub">Matched to your use case, budget, and portability requirements.</div>
+    </div>
+
+    <div class="results-body">
+      <div class="result-label">&#9733; Top Recommendation</div>
+
+      <!-- Top Pick Card -->
+      <div class="top-result-card">
+        <span class="result-pick-badge" id="topPickBadge">#1 Pick for You</span>
+        <div class="result-brand-name" id="topBrand">EcoFlow</div>
+        <div class="result-model" id="topModel">Delta 2 Max</div>
+        <div class="result-specs">
+          <div class="result-spec"><strong id="topCapacity">2,048Wh</strong>Capacity</div>
+          <div class="result-spec"><strong id="topOutput">2,400W</strong>AC Output</div>
+          <div class="result-spec"><strong id="topPrice">~$1,499&ndash;$1,799</strong>Price Range</div>
+          <div class="result-spec"><strong id="topBattery">LFP</strong>Battery Type</div>
+        </div>
+        <div class="result-why" id="topWhy">This generator matches your needs perfectly.</div>
+        <a href="#" id="topBuyLink" target="_blank" rel="noopener noreferrer" class="btn-result-buy">Check Current Price &rarr;</a>
+      </div>
+
+      <!-- Alternative Picks -->
+      <div class="alt-title">Also Consider These Alternatives</div>
+      <div class="alt-cards">
+        <div class="alt-card">
+          <span class="alt-badge">Alternative #1</span>
+          <h4 id="alt1Name">Jackery Explorer 2000 Plus</h4>
+          <div class="alt-cap" id="alt1Cap">2,042Wh | 2,200W AC</div>
+          <div class="alt-price" id="alt1Price">~$1,499&ndash;$1,899</div>
+          <a href="#" id="alt1Link" target="_blank" rel="noopener noreferrer" class="alt-buy">Check Price &rarr;</a>
+        </div>
+        <div class="alt-card">
+          <span class="alt-badge">Alternative #2</span>
+          <h4 id="alt2Name">Anker SOLIX C1000</h4>
+          <div class="alt-cap" id="alt2Cap">1,056Wh | 1,800W AC</div>
+          <div class="alt-price" id="alt2Price">~$799&ndash;$999</div>
+          <a href="#" id="alt2Link" target="_blank" rel="noopener noreferrer" class="alt-buy">Check Price &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Email Capture -->
+      <div class="result-email-box">
+        <h3>Save Your Results + Get the Free Buyer&rsquo;s Guide</h3>
+        <p>47-page PDF with full brand reviews, runtime tests, and exclusive discount codes. Free.</p>
+        <form class="result-email-form" onsubmit="handleResultEmail(event)">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Send Me the Guide</button>
+        </form>
+      </div>
+
+      <!-- Compare Link -->
+      <p style="text-align:center;margin-bottom:20px;">
+        <a href="compare.html" style="color:var(--blue);font-weight:600;text-decoration:none;">View Full Comparison Table &rarr;</a>
+      </p>
+
+      <!-- Retake -->
+      <button class="retake-btn" onclick="retakeQuiz()">&#8635; Retake the Quiz</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-group">
+          <img src="set-logo.jpg" alt="S.E.T. Logo" />
+          <div class="logo-text">
+            <span class="brand">S.E.T.</span>
+            <span class="sub">Sun Energy Technology</span>
+          </div>
+        </a>
+        <p class="footer-tagline">&ldquo;Find Your Perfect Generator in 5 Minutes&rdquo;<br>The Independent Solar Generator Comparison Platform.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Compare</h5>
+        <a href="compare.html">All Comparisons</a>
+        <a href="compare.html#jackery-vs-ecoflow">Jackery vs EcoFlow</a>
+        <a href="compare.html#budget">Budget Picks Under $1K</a>
+        <a href="compare.html#premium">Premium $2K+ Picks</a>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="quiz.html">Generator Quiz</a>
+        <a href="calculator.html">Solar Calculator</a>
+        <a href="spec-guide.html">Spec Guide</a>
+        <a href="reviews.html">Brand Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h5>Brands</h5>
+        <a href="https://www.jackery.com" target="_blank" rel="noopener noreferrer">Jackery</a>
+        <a href="https://www.ecoflow.com" target="_blank" rel="noopener noreferrer">EcoFlow</a>
+        <a href="https://4patriots.com" target="_blank" rel="noopener noreferrer">4Patriots</a>
+        <a href="https://www.anker.com" target="_blank" rel="noopener noreferrer">Anker SOLIX</a>
+      </div>
+    </div>
+    <div class="footer-disclosure">
+      <strong style="color:rgba(255,255,255,0.75);">Affiliate Disclosure:</strong>
+      <em>S.E.T. &mdash; Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 S.E.T. &mdash; Sun Energy Technology | Part of Jwat Enterprise Inc</p>
+      <p class="footer-copyright">Contact: <a href="mailto:biz@jwatenterprisesinc.com" style="color:rgba(255,255,255,0.45);text-decoration:none;">biz@jwatenterprisesinc.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== STATE =====
+  var answers = { use: null, load: null, budget: null, portability: null, panels: null };
+  var currentStep = 1;
+
+  var stepNames = ['Primary Use', 'Device Count', 'Budget', 'Portability', 'Solar Panels'];
+  var totalSteps = 5;
+
+  // ===== MOBILE NAV =====
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // ===== OPTION SELECTION =====
+  function selectOption(step, value, el) {
+    var containerId = 'step' + step + '-options';
+    var container = document.getElementById(containerId);
+    container.querySelectorAll('.option-card').forEach(function(card) {
+      card.classList.remove('selected');
+    });
+    el.classList.add('selected');
+
+    if (step === 1) { answers.use = value; enableNext('next1'); }
+    else if (step === 2) { answers.load = value; enableNext('next2'); }
+    else if (step === 3) { answers.budget = value; enableNext('next3'); }
+    else if (step === 4) { answers.portability = value; enableNext('next4'); }
+    else if (step === 5) { answers.panels = value; document.getElementById('submitBtn').disabled = false; }
+
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'quiz_answer', { event_category: 'Quiz', event_label: 'step' + step + '_' + value });
+    }
+  }
+
+  function enableNext(btnId) {
+    document.getElementById(btnId).disabled = false;
+  }
+
+  // ===== STEP NAVIGATION =====
+  function goToStep(stepNum) {
+    document.getElementById('step' + currentStep).classList.remove('active');
+    document.getElementById('step' + stepNum).classList.add('active');
+
+    // Update dots
+    for (var i = 1; i <= totalSteps; i++) {
+      var dot = document.getElementById('dot' + i);
+      dot.classList.remove('active', 'done');
+      if (i < stepNum) dot.classList.add('done');
+      else if (i === stepNum) dot.classList.add('active');
+    }
+
+    // Update progress bar
+    var pct = (stepNum / totalSteps) * 100;
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = 'Step ' + stepNum + ' of ' + totalSteps;
+    document.getElementById('progressName').textContent = stepNames[stepNum - 1];
+
+    currentStep = stepNum;
+    document.getElementById('quizContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ===== RECOMMENDATION ENGINE =====
+  var products = {
+    jackery1000pro: {
+      brand: 'Jackery',
+      model: 'Explorer 1000 Pro',
+      capacity: '1,002Wh',
+      output: '1,000W',
+      price: '~$699–$899',
+      battery: 'LFP',
+      link: 'https://www.jackery.com',
+      why: {
+        camping: 'At 25.4 lbs with 1,002Wh, the Jackery 1000 Pro is the gold standard for campers. Fast 1.8-hour solar recharge, pass-through charging, and a proven track record make this the best portable power station for your use case.',
+        vanlife: 'Lightweight, compact, and compatible with both car chargers and solar panels. The 1.8-hour solar recharge means you wake up with a full battery every morning. Built for exactly this lifestyle.',
+        default: 'A reliable, portable, and well-priced generator that handles essentials without breaking the bank.'
+      }
+    },
+    ecoflowRiver3: {
+      brand: 'EcoFlow',
+      model: 'River 3 Plus',
+      capacity: '286Wh',
+      output: '600W',
+      price: '~$299–$399',
+      battery: 'LFP',
+      link: 'https://www.ecoflow.com',
+      why: {
+        camping: 'At just 7.7 lbs, the River 3 Plus is the lightest capable generator on the market. Perfect for minimalist campers who only need to charge phones, run lights, and power a small fan.',
+        vanlife: 'Ultra-compact for van builds where every inch counts. Charges to 80% in just 50 minutes via AC.',
+        default: 'The best entry-level option for light use cases with excellent build quality and brand support.'
+      }
+    },
+    ankerC1000: {
+      brand: 'Anker SOLIX',
+      model: 'C1000',
+      capacity: '1,056Wh',
+      output: '1,800W',
+      price: '~$799–$999',
+      battery: 'LFP',
+      link: 'https://www.anker.com',
+      why: {
+        camping: 'The SOLIX C1000 punches above its price class with 1,800W AC output and 1,056Wh capacity. Excellent value for campers who want to run a mini-fridge alongside other devices.',
+        emergency: 'Compact enough to store easily, powerful enough to run critical appliances during a short outage. Best under-$1K emergency option.',
+        default: 'Strong all-around performance with competitive pricing and excellent Anker build quality.'
+      }
+    },
+    ecoflowDelta2Max: {
+      brand: 'EcoFlow',
+      model: 'Delta 2 Max',
+      capacity: '2,048Wh',
+      output: '2,400W',
+      price: '~$1,499–$1,799',
+      battery: 'LFP',
+      link: 'https://www.ecoflow.com',
+      why: {
+        emergency: 'The Delta 2 Max is our top emergency prep recommendation. It recharges fully in 1 hour via AC, expands to 6kWh with add-on batteries, and handles nearly every household appliance with its 2,400W output. It is the benchmark for this price range.',
+        offgrid: 'Expandable, smart-home-compatible, and backed by EcoFlow’s industry-leading software ecosystem. Grows with your needs.',
+        default: 'Industry-leading recharge speed and expandability make this a top choice for serious use cases.'
+      }
+    },
+    jackery2000Plus: {
+      brand: 'Jackery',
+      model: 'Explorer 2000 Plus',
+      capacity: '2,042Wh',
+      output: '2,200W',
+      price: '~$1,499–$1,899',
+      battery: 'LFP',
+      link: 'https://www.jackery.com',
+      why: {
+        camping: 'For campers who want serious power without going full off-grid, the 2000 Plus delivers 2,042Wh in a relatively portable package. Run a mini-fridge, electric grill, and all your devices comfortably.',
+        emergency: 'Reliable, well-reviewed, and backed by Jackery’s proven track record. 3,000W surge handles power-hungry appliances during outages.',
+        default: 'Jackery’s flagship balance of capacity, portability, and proven reliability.'
+      }
+    },
+    patriots: {
+      brand: '4Patriots',
+      model: 'AlphaCase Elite',
+      capacity: '2,000Wh',
+      output: '2,000W',
+      price: '~$1,299–$1,699',
+      battery: 'LFP',
+      link: 'https://4patriots.com',
+      why: {
+        emergency: 'Built specifically for emergency preparedness, the AlphaCase Elite is the go-to for self-reliance communities. US-based support, rugged construction, and a company that focuses entirely on this use case.',
+        default: 'Best for those who prioritize brand values, US support, and emergency-focused features.'
+      }
+    },
+    ecoflowDeltaPro: {
+      brand: 'EcoFlow',
+      model: 'Delta Pro',
+      capacity: '3,600Wh',
+      output: '3,600W',
+      price: '~$2,899–$3,499',
+      battery: 'LFP',
+      link: 'https://www.ecoflow.com',
+      why: {
+        offgrid: 'The Delta Pro is the benchmark for serious off-grid setups. 3,600Wh expandable to 25kWh, 1,600W solar input, and deep smart home integration make it the most versatile whole-home backup system available.',
+        emergency: 'Can power an entire home during extended outages. Expandable, app-controlled, and built to last with LFP chemistry rated for 3,500+ cycles.',
+        default: 'The most capable and versatile generator in EcoFlow’s lineup, suited for serious power needs.'
+      }
+    },
+    ankerF3800: {
+      brand: 'Anker SOLIX',
+      model: 'F3800',
+      capacity: '3,840Wh',
+      output: '6,000W',
+      price: '~$3,499–$3,999',
+      battery: 'LFP',
+      link: 'https://www.anker.com',
+      why: {
+        offgrid: 'With 6,000W AC output — the highest in class — and expandability to 26.9kWh, the SOLIX F3800 runs virtually any appliance. Whole-home integration with a transfer switch makes it the ultimate off-grid power solution.',
+        emergency: 'The most powerful emergency backup generator available. 6,000W surge capacity handles anything from AC units to power tools, and 2,400W solar input means fast solar recharge.',
+        default: 'Maximum power output, maximum expandability, built for those who refuse to compromise.'
+      }
+    }
+  };
+
+  // Scoring matrix
+  function getRecommendation() {
+    var use = answers.use;
+    var load = answers.load;
+    var budget = answers.budget;
+    var port = answers.portability;
+    var top, alt1, alt2;
+
+    // === Van Life ===
+    if (use === 'vanlife') {
+      if (budget === 'under500' || load === 'essentials') {
+        top = 'ecoflowRiver3'; alt1 = 'ankerC1000'; alt2 = 'jackery1000pro';
+      } else {
+        top = 'jackery1000pro'; alt1 = 'ecoflowRiver3'; alt2 = 'ankerC1000';
+      }
+    }
+    // === Camping ===
+    else if (use === 'camping') {
+      if (budget === 'under500' || port === 'very') {
+        top = 'ecoflowRiver3'; alt1 = 'jackery1000pro'; alt2 = 'ankerC1000';
+      } else if (budget === 'under500' || budget === '500-1500') {
+        top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowRiver3';
+      } else if (budget === '1500-3000') {
+        top = 'jackery2000Plus'; alt1 = 'ecoflowDelta2Max'; alt2 = 'jackery1000pro';
+      } else {
+        top = 'ecoflowDeltaPro'; alt1 = 'jackery2000Plus'; alt2 = 'ankerF3800';
+      }
+    }
+    // === Emergency ===
+    else if (use === 'emergency') {
+      if (budget === 'under500') {
+        top = 'ankerC1000'; alt1 = 'jackery1000pro'; alt2 = 'ecoflowRiver3';
+      } else if (budget === '500-1500') {
+        if (load === 'essentials' || load === 'small') {
+          top = 'ankerC1000'; alt1 = 'jackery1000pro'; alt2 = 'ecoflowRiver3';
+        } else {
+          top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowRiver3';
+        }
+      } else if (budget === '1500-3000') {
+        if (load === 'household' || load === 'everything') {
+          top = 'ecoflowDelta2Max'; alt1 = 'jackery2000Plus'; alt2 = 'patriots';
+        } else {
+          top = 'jackery2000Plus'; alt1 = 'ecoflowDelta2Max'; alt2 = 'patriots';
+        }
+      } else {
+        if (load === 'everything' || port === 'not') {
+          top = 'ankerF3800'; alt1 = 'ecoflowDeltaPro'; alt2 = 'ecoflowDelta2Max';
+        } else {
+          top = 'ecoflowDeltaPro'; alt1 = 'ankerF3800'; alt2 = 'ecoflowDelta2Max';
+        }
+      }
+    }
+    // === Off-Grid ===
+    else if (use === 'offgrid') {
+      if (budget === 'under500' || budget === '500-1500') {
+        top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowDelta2Max';
+      } else if (budget === '1500-3000') {
+        top = 'ecoflowDelta2Max'; alt1 = 'jackery2000Plus'; alt2 = 'ankerC1000';
+      } else {
+        if (port === 'not' || load === 'everything') {
+          top = 'ankerF3800'; alt1 = 'ecoflowDeltaPro'; alt2 = 'ecoflowDelta2Max';
+        } else {
+          top = 'ecoflowDeltaPro'; alt1 = 'ankerF3800'; alt2 = 'ecoflowDelta2Max';
+        }
+      }
+    }
+    // Fallback
+    else {
+      top = 'ecoflowDelta2Max'; alt1 = 'jackery2000Plus'; alt2 = 'ankerC1000';
+    }
+
+    return { top: top, alt1: alt1, alt2: alt2 };
+  }
+
+  // ===== SHOW RESULTS =====
+  function showResults() {
+    var rec = getRecommendation();
+    var topP = products[rec.top];
+    var alt1P = products[rec.alt1];
+    var alt2P = products[rec.alt2];
+
+    // Headline
+    var useLabels = { camping: 'Camping', emergency: 'Emergency Prep', offgrid: 'Off-Grid Living', vanlife: 'Van Life' };
+    document.getElementById('resultsHeadline').textContent = 'Based on your ' + (useLabels[answers.use] || '') + ' needs, here’s what we recommend:';
+    document.getElementById('resultsSub').textContent = 'Matched to your ' + (useLabels[answers.use] || '') + ' use case, ' + answers.budget + ' budget, and portability preferences.';
+
+    // Top pick
+    document.getElementById('topBrand').textContent = topP.brand;
+    document.getElementById('topModel').textContent = topP.model;
+    document.getElementById('topCapacity').textContent = topP.capacity;
+    document.getElementById('topOutput').textContent = topP.output;
+    document.getElementById('topPrice').textContent = topP.price;
+    document.getElementById('topBattery').textContent = topP.battery;
+    document.getElementById('topBuyLink').href = topP.link;
+    var whyKey = answers.use && topP.why[answers.use] ? answers.use : 'default';
+    document.getElementById('topWhy').textContent = topP.why[whyKey] || topP.why['default'];
+    document.getElementById('topPickBadge').textContent = '#1 Pick for ' + (useLabels[answers.use] || 'You');
+
+    // Alternatives
+    document.getElementById('alt1Name').textContent = alt1P.brand + ' ' + alt1P.model;
+    document.getElementById('alt1Cap').textContent = alt1P.capacity + ' | ' + alt1P.output + ' AC';
+    document.getElementById('alt1Price').textContent = alt1P.price;
+    document.getElementById('alt1Link').href = alt1P.link;
+
+    document.getElementById('alt2Name').textContent = alt2P.brand + ' ' + alt2P.model;
+    document.getElementById('alt2Cap').textContent = alt2P.capacity + ' | ' + alt2P.output + ' AC';
+    document.getElementById('alt2Price').textContent = alt2P.price;
+    document.getElementById('alt2Link').href = alt2P.link;
+
+    // Show results, hide quiz
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'quiz_complete', {
+        event_category: 'Quiz',
+        event_label: rec.top,
+        use_case: answers.use,
+        budget: answers.budget
+      });
+    }
+  }
+
+  // ===== RETAKE QUIZ =====
+  function retakeQuiz() {
+    answers = { use: null, load: null, budget: null, portability: null, panels: null };
+    currentStep = 1;
+    document.querySelectorAll('.option-card').forEach(function(c) { c.classList.remove('selected'); });
+    document.querySelectorAll('.btn-next, .btn-submit').forEach(function(b) { b.disabled = true; });
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('quizContainer').style.display = 'block';
+    goToStep(1);
+    document.getElementById('quizContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ===== EMAIL IN RESULTS =====
+  function handleResultEmail(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button');
+    btn.textContent = 'Guide Sent!';
+    btn.style.background = '#00C896';
+    btn.disabled = true;
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Quiz Results' });
+    }
+  }
+
+  // ===== SCROLL SHADOW =====
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+</body>
+</html>

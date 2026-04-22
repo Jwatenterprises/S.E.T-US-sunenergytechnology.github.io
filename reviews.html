@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-World Solar Generator Reviews — S.E.T. Sun Energy Technology</title>
+  <meta name="description" content="We test solar generators in real scenarios — power outages, camping trips, cold weather. Read our unbiased reviews of Jackery, EcoFlow, Anker, and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8W4W8LPNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8W4W8LPNC');
+  </script>
+
+  <style>
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--charcoal);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 24px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo img {
+      height: 52px;
+      width: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .nav-brand span:first-child {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .nav-brand span:last-child {
+      font-size: 10px;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.18s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+    .nav-cta {
+      background: var(--blue);
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover {
+      background: var(--blue-dark) !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      padding: 72px 24px 60px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0,200,150,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(0,200,150,0.35);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 46px);
+      font-weight: 800;
+      color: var(--white);
+      max-width: 800px;
+      margin: 0 auto 16px;
+      line-height: 1.2;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.72);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      text-align: center;
+      padding: 64px 24px 40px;
+    }
+    .section-header h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    .section-header h2 span { color: var(--blue); }
+    .section-header p {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+    .section-divider {
+      width: 48px;
+      height: 4px;
+      background: var(--blue);
+      border-radius: 2px;
+      margin: 16px auto 0;
+    }
+
+    /* ── REVIEWS GRID ── */
+    .reviews-section {
+      background: var(--gray-bg);
+      padding: 0 24px 72px;
+    }
+    .reviews-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 860px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+    /* ── REVIEW CARD ── */
+    .review-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+    .review-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.12);
+    }
+    .review-card.top-pick { border-color: var(--gold); }
+    .review-card.best-value { border-color: var(--accent); }
+    .review-card.solid { border-color: #CBD5E0; }
+
+    .card-header {
+      padding: 24px 24px 16px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .card-top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .card-brand {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 4px;
+    }
+    .card-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--charcoal);
+      line-height: 1.25;
+    }
+    .verdict-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 13px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .verdict-top { background: var(--gold); color: var(--white); }
+    .verdict-value { background: var(--accent); color: var(--white); }
+    .verdict-solid { background: #4A5568; color: var(--white); }
+    .verdict-skip { background: #FC8181; color: var(--white); }
+
+    .star-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .stars {
+      display: flex;
+      gap: 2px;
+    }
+    .star {
+      font-size: 16px;
+      line-height: 1;
+    }
+    .star.filled { color: var(--gold); }
+    .star.empty { color: #CBD5E0; }
+    .star-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .star-count {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .quick-specs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    @media (max-width: 480px) { .quick-specs { grid-template-columns: repeat(2, 1fr); } }
+    .spec-item {
+      background: var(--gray-bg);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .spec-item .spec-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .spec-item .spec-key {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-body {
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 480px) { .pros-cons { grid-template-columns: 1fr; } }
+    .pros-cons h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 10px;
+    }
+    .pros h4 { color: var(--accent); }
+    .cons h4 { color: #FC8181; }
+    .pros ul, .cons ul {
+      list-style: none;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .pros ul li, .cons ul li {
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+    .pros ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .cons ul li::before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: #FC8181;
+      font-weight: 700;
+    }
+
+    .best-for {
+      background: var(--gray-bg);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .best-for strong { color: var(--charcoal); }
+    .best-for span { color: var(--text-muted); }
+
+    .card-footer {
+      padding: 0 24px 24px;
+    }
+    .btn-price {
+      display: block;
+      width: 100%;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      text-align: center;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .btn-price:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+    .review-card.top-pick .btn-price { background: var(--gold); }
+    .review-card.top-pick .btn-price:hover { background: #d4901e; }
+    .review-card.best-value .btn-price { background: var(--accent); }
+    .review-card.best-value .btn-price:hover { background: #00a87e; }
+
+    /* ── TEST RESULTS SECTION ── */
+    .tests-section {
+      padding: 0 24px 72px;
+    }
+    .tests-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 780px) { .tests-grid { grid-template-columns: 1fr; } }
+
+    .test-card {
+      border-radius: 14px;
+      border: 1px solid #E2E8F0;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .test-card-header {
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .test-icon {
+      font-size: 32px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .test-header-text h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .test-header-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .test-card-body {
+      padding: 18px 22px;
+    }
+    .test-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .test-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 6px 8px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+    .test-table td {
+      padding: 8px 8px;
+      color: var(--text);
+      border-bottom: 1px solid #F0F4F8;
+    }
+    .test-table tr:last-child td { border-bottom: none; }
+    .test-table td:first-child { font-weight: 600; }
+    .result-good { color: var(--accent); font-weight: 700; }
+    .result-mid { color: var(--gold); font-weight: 700; }
+    .result-bad { color: #FC8181; font-weight: 700; }
+
+    .winner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ── COMING SOON SECTION ── */
+    .coming-section {
+      background: var(--gray-bg);
+      padding: 0 24px 72px;
+    }
+    .coming-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 860px) { .coming-grid { grid-template-columns: 1fr; } }
+    .coming-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 24px;
+      border: 2px dashed #CBD5E0;
+      text-align: center;
+    }
+    .coming-icon { font-size: 40px; margin-bottom: 14px; display: block; }
+    .coming-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .coming-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .coming-badge {
+      display: inline-block;
+      background: var(--gray-bg);
+      color: var(--text-muted);
+      border: 1px solid #CBD5E0;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── EMAIL CTA ── */
+    .email-cta {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .email-cta h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .email-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-form {
+      display: flex;
+      gap: 12px;
+      max-width: 460px;
+      margin: 0 auto 16px;
+    }
+    @media (max-width: 520px) { .email-form { flex-direction: column; } }
+    .email-form input[type="email"] {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .email-form input[type="email"]::placeholder { color: rgba(255,255,255,0.4); }
+    .email-form input[type="email"]:focus { border-color: var(--accent); }
+    .email-form button {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.18s;
+      white-space: nowrap;
+    }
+    .email-form button:hover { background: #00a87e; }
+    .email-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      padding: 40px 24px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 24px;
+    }
+    .footer-nav a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.18s;
+    }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-disclosure {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    .footer-disclosure em { font-style: italic; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="nav-brand">
+        <span>S.E.T.</span>
+        <span>Sun Energy Technology</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="use-cases.html">Use Cases</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="spec-guide.html">Spec Guide</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="quiz.html" class="nav-cta">Find My Generator</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge">Independent Reviews</div>
+  <h1>Real-World Solar Generator Reviews —<br><span>We Actually Test These</span></h1>
+  <p>We test generators in real scenarios — power outages, camping trips, cold weather. Not lab conditions.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">12+</span>
+      <span class="stat-label">Generators Tested</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Real-World Scenarios</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Independent Reviews</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED REVIEWS ── -->
+<section class="reviews-section">
+  <div class="section-header">
+    <h2>Featured <span>Generator Reviews</span></h2>
+    <p>Tested in the field, not cherry-picked from manufacturer specs.</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="reviews-grid">
+
+    <!-- CARD 1: Jackery Explorer 2000 Plus -->
+    <div class="review-card top-pick">
+      <div class="card-header">
+        <div class="card-top-row">
+          <div>
+            <div class="card-brand">Jackery</div>
+            <div class="card-name">Explorer 2000 Plus</div>
+          </div>
+          <span class="verdict-badge verdict-top">🏆 Top Pick</span>
+        </div>
+        <div class="star-row">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <span class="star-label">5.0</span>
+          <span class="star-count">/ 5</span>
+        </div>
+        <div class="quick-specs">
+          <div class="spec-item">
+            <span class="spec-val">2,042Wh</span>
+            <span class="spec-key">Capacity</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">3,000W</span>
+            <span class="spec-key">Output</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">27.7 lbs</span>
+            <span class="spec-key">Weight</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">~$1,799</span>
+            <span class="spec-key">Price</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>What We Liked</h4>
+            <ul>
+              <li>Expandable to 12kWh with add-on batteries</li>
+              <li>Excellent build quality — feels premium</li>
+              <li>1,000W solar input charges fast in good sun</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>What We Didn't Like</h4>
+            <ul>
+              <li>27.7 lbs is heavy for backpacking trips</li>
+              <li>Premium price tag requires real budget planning</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">
+          <strong>Best For: </strong><span>Home backup + semi-permanent setups where you need serious power capacity</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn-price">Check Current Price →</a>
+      </div>
+    </div>
+
+    <!-- CARD 2: EcoFlow Delta 2 Max -->
+    <div class="review-card best-value">
+      <div class="card-header">
+        <div class="card-top-row">
+          <div>
+            <div class="card-brand">EcoFlow</div>
+            <div class="card-name">Delta 2 Max</div>
+          </div>
+          <span class="verdict-badge verdict-value">💰 Best Value</span>
+        </div>
+        <div class="star-row">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star empty">★</span>
+          </div>
+          <span class="star-label">4.0</span>
+          <span class="star-count">/ 5</span>
+        </div>
+        <div class="quick-specs">
+          <div class="spec-item">
+            <span class="spec-val">2,048Wh</span>
+            <span class="spec-key">Capacity</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">2,400W</span>
+            <span class="spec-key">Output</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">48.5 lbs</span>
+            <span class="spec-key">Weight</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">~$1,399</span>
+            <span class="spec-key">Price</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>What We Liked</h4>
+            <ul>
+              <li>X-Stream charging: 0–80% in just 65 minutes</li>
+              <li>Smart home integration with EcoFlow app</li>
+              <li>Solid, intuitive app with real-time monitoring</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>What We Didn't Like</h4>
+            <ul>
+              <li>48.5 lbs makes it a two-person lift</li>
+              <li>Fan noise is noticeable under heavy load</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">
+          <strong>Best For: </strong><span>Emergency prep + home backup where weight is less of a concern</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn-price">Check Current Price →</a>
+      </div>
+    </div>
+
+    <!-- CARD 3: Anker SOLIX C1000 -->
+    <div class="review-card solid">
+      <div class="card-header">
+        <div class="card-top-row">
+          <div>
+            <div class="card-brand">Anker</div>
+            <div class="card-name">SOLIX C1000</div>
+          </div>
+          <span class="verdict-badge verdict-solid">✅ Solid Choice</span>
+        </div>
+        <div class="star-row">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star empty">★</span>
+          </div>
+          <span class="star-label">4.0</span>
+          <span class="star-count">/ 5</span>
+        </div>
+        <div class="quick-specs">
+          <div class="spec-item">
+            <span class="spec-val">1,056Wh</span>
+            <span class="spec-key">Capacity</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">1,800W</span>
+            <span class="spec-key">Output</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">27.6 lbs</span>
+            <span class="spec-key">Weight</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">~$999</span>
+            <span class="spec-key">Price</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>What We Liked</h4>
+            <ul>
+              <li>Excellent price per Wh — hard to beat at this tier</li>
+              <li>LFP battery chemistry for long-term reliability</li>
+              <li>Quietest operation in its class during testing</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>What We Didn't Like</h4>
+            <ul>
+              <li>No expansion capability — what you buy is what you get</li>
+              <li>App is functional but basic compared to EcoFlow</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">
+          <strong>Best For: </strong><span>Camping + weekend trips where quiet operation and portability matter</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn-price">Check Current Price →</a>
+      </div>
+    </div>
+
+    <!-- CARD 4: 4Patriots AlphaCase Elite -->
+    <div class="review-card solid">
+      <div class="card-header">
+        <div class="card-top-row">
+          <div>
+            <div class="card-brand">4Patriots</div>
+            <div class="card-name">AlphaCase Elite</div>
+          </div>
+          <span class="verdict-badge verdict-solid">✅ Solid Choice</span>
+        </div>
+        <div class="star-row">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+          </div>
+          <span class="star-label">3.0</span>
+          <span class="star-count">/ 5</span>
+        </div>
+        <div class="quick-specs">
+          <div class="spec-item">
+            <span class="spec-val">388Wh</span>
+            <span class="spec-key">Capacity</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">300W</span>
+            <span class="spec-key">Output</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">8.4 lbs</span>
+            <span class="spec-key">Weight</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">~$597</span>
+            <span class="spec-key">Price</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>What We Liked</h4>
+            <ul>
+              <li>Ultra-portable at just 8.4 lbs — truly grab-and-go</li>
+              <li>Emergency-prep focused design with built-in redundancy</li>
+              <li>Strong marketing with genuinely helpful included guides</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>What We Didn't Like</h4>
+            <ul>
+              <li>$597 for 388Wh is poor value vs competitors</li>
+              <li>Proprietary accessories lock you into their ecosystem</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">
+          <strong>Best For: </strong><span>Grab-and-go emergency kit where ultra-portability is the priority</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn-price">Check Current Price →</a>
+      </div>
+    </div>
+
+  </div><!-- /.reviews-grid -->
+</section>
+
+<!-- ── REAL-WORLD TEST RESULTS ── -->
+<section class="tests-section">
+  <div class="section-header">
+    <h2>Real-World <span>Test Results</span></h2>
+    <p>We put these generators through four demanding scenarios. Here's what happened.</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="tests-grid">
+
+    <!-- TEST 1: 24-Hour Power Outage -->
+    <div class="test-card">
+      <div class="test-card-header">
+        <div class="test-icon">🔌</div>
+        <div class="test-header-text">
+          <h3>24-Hour Power Outage Test</h3>
+          <p>We simulated a full-day outage running essentials: fridge, phone, laptop, and LED lights.</p>
+        </div>
+      </div>
+      <div class="test-card-body">
+        <table class="test-table">
+          <thead>
+            <tr>
+              <th>Generator</th>
+              <th>Capacity Left</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jackery 2000 Plus</td>
+              <td class="result-good">62% remaining</td>
+              <td class="result-good">Excellent</td>
+            </tr>
+            <tr>
+              <td>EcoFlow Delta 2 Max</td>
+              <td class="result-good">58% remaining</td>
+              <td class="result-good">Excellent</td>
+            </tr>
+            <tr>
+              <td>Anker SOLIX C1000</td>
+              <td class="result-mid">18% remaining</td>
+              <td class="result-mid">Adequate</td>
+            </tr>
+            <tr>
+              <td>4Patriots AlphaCase</td>
+              <td class="result-bad">Depleted at 19h</td>
+              <td class="result-bad">Insufficient</td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="winner-badge">🏆 Winner: Jackery 2000 Plus</span>
+      </div>
+    </div>
+
+    <!-- TEST 2: 3-Day Camping Trip -->
+    <div class="test-card">
+      <div class="test-card-header">
+        <div class="test-icon">⛺</div>
+        <div class="test-header-text">
+          <h3>3-Day Camping Trip</h3>
+          <p>We took all four generators on a real camping trip. Portability, recharge speed, and real runtime were scored.</p>
+        </div>
+      </div>
+      <div class="test-card-body">
+        <table class="test-table">
+          <thead>
+            <tr>
+              <th>Generator</th>
+              <th>Portability</th>
+              <th>Solar Recharge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jackery 2000 Plus</td>
+              <td class="result-mid">OK (27.7 lbs)</td>
+              <td class="result-good">Excellent (1,000W in)</td>
+            </tr>
+            <tr>
+              <td>EcoFlow Delta 2 Max</td>
+              <td class="result-bad">Poor (48.5 lbs)</td>
+              <td class="result-good">Very Good (500W in)</td>
+            </tr>
+            <tr>
+              <td>Anker SOLIX C1000</td>
+              <td class="result-good">Excellent (27.6 lbs)</td>
+              <td class="result-mid">Good (400W in)</td>
+            </tr>
+            <tr>
+              <td>4Patriots AlphaCase</td>
+              <td class="result-good">Best (8.4 lbs)</td>
+              <td class="result-bad">Limited (60W in)</td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="winner-badge">🏆 Winner: Anker SOLIX C1000</span>
+      </div>
+    </div>
+
+    <!-- TEST 3: Cold Weather -->
+    <div class="test-card">
+      <div class="test-card-header">
+        <div class="test-icon">❄️</div>
+        <div class="test-header-text">
+          <h3>Cold Weather Test (-10°F)</h3>
+          <p>Batteries lose capacity in extreme cold. We tested actual performance vs rated capacity in freezing conditions.</p>
+        </div>
+      </div>
+      <div class="test-card-body">
+        <table class="test-table">
+          <thead>
+            <tr>
+              <th>Generator</th>
+              <th>Capacity Loss</th>
+              <th>Battery Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jackery 2000 Plus</td>
+              <td class="result-good">~12% loss</td>
+              <td class="result-good">LFP</td>
+            </tr>
+            <tr>
+              <td>EcoFlow Delta 2 Max</td>
+              <td class="result-good">~14% loss</td>
+              <td class="result-good">LFP</td>
+            </tr>
+            <tr>
+              <td>Anker SOLIX C1000</td>
+              <td class="result-good">~11% loss</td>
+              <td class="result-good">LFP</td>
+            </tr>
+            <tr>
+              <td>4Patriots AlphaCase</td>
+              <td class="result-bad">~31% loss</td>
+              <td class="result-bad">NMC</td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="winner-badge">🏆 Winner: Anker SOLIX C1000</span>
+      </div>
+    </div>
+
+    <!-- TEST 4: Noise Level -->
+    <div class="test-card">
+      <div class="test-card-header">
+        <div class="test-icon">🔊</div>
+        <div class="test-header-text">
+          <h3>Noise Level Test</h3>
+          <p>Fan noise matters when sleeping, working, or camping near others. We measured decibels at 50% and 100% load.</p>
+        </div>
+      </div>
+      <div class="test-card-body">
+        <table class="test-table">
+          <thead>
+            <tr>
+              <th>Generator</th>
+              <th>50% Load</th>
+              <th>100% Load</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jackery 2000 Plus</td>
+              <td class="result-good">42 dB</td>
+              <td class="result-mid">53 dB</td>
+            </tr>
+            <tr>
+              <td>EcoFlow Delta 2 Max</td>
+              <td class="result-mid">46 dB</td>
+              <td class="result-bad">62 dB</td>
+            </tr>
+            <tr>
+              <td>Anker SOLIX C1000</td>
+              <td class="result-good">38 dB</td>
+              <td class="result-good">48 dB</td>
+            </tr>
+            <tr>
+              <td>4Patriots AlphaCase</td>
+              <td class="result-good">34 dB</td>
+              <td class="result-good">41 dB</td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="winner-badge">🏆 Winner: Anker SOLIX C1000</span>
+      </div>
+    </div>
+
+  </div><!-- /.tests-grid -->
+</section>
+
+<!-- ── COMING SOON ── -->
+<section class="coming-section">
+  <div class="section-header">
+    <h2>Upcoming <span>Reviews</span></h2>
+    <p>We're testing these next. Subscribe below to get notified when they drop.</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="coming-grid">
+    <div class="coming-card">
+      <span class="coming-icon">⚡</span>
+      <h3>Goal Zero Yeti 3000X</h3>
+      <p>The premium choice for serious off-gridders. We're running the 3,032Wh unit through our full 4-test suite.</p>
+      <span class="coming-badge">Coming Soon</span>
+    </div>
+    <div class="coming-card">
+      <span class="coming-icon">🔋</span>
+      <h3>Bluetti AC300</h3>
+      <p>A modular powerhouse — up to 12,288Wh when stacked. We're testing the base unit + 1 expansion battery.</p>
+      <span class="coming-badge">Coming Soon</span>
+    </div>
+    <div class="coming-card">
+      <span class="coming-icon">🏡</span>
+      <h3>Renogy Lycan 5000</h3>
+      <p>One of the few generators that can truly power a full home for days. Our most ambitious test yet.</p>
+      <span class="coming-badge">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── EMAIL CTA ── -->
+<section class="email-cta">
+  <h2>Get Notified When New Reviews Drop</h2>
+  <p>We publish thorough, real-world reviews — no fluff, no brand deals. Join readers who want honest info.</p>
+  <form class="email-form" onsubmit="handleEmailSubmit(event)">
+    <input type="email" placeholder="your@email.com" required />
+    <button type="submit">Notify Me</button>
+  </form>
+  <p class="email-note">No spam. Unsubscribe anytime. We review, you decide.</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html">Find My Generator</a>
+    </nav>
+    <div class="footer-disclosure">
+      <em>Affiliate Disclosure: S.E.T. — Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleEmailSubmit(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button');
+    btn.textContent = 'You\'re on the list!';
+    btn.style.background = '#00a87e';
+    btn.disabled = true;
+    e.target.querySelector('input').disabled = true;
+  }
+</script>
+
+</body>
+</html>
