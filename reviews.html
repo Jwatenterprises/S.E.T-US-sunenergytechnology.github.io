@@ -38,85 +38,25 @@
       line-height: 1.6;
     }
 
-    /* ── NAV ── */
-    nav {
-      background: var(--charcoal);
-      padding: 0 24px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      gap: 24px;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-    .nav-logo img {
-      height: 52px;
-      width: 52px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .nav-brand {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-    .nav-brand span:first-child {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: 0.04em;
-    }
-    .nav-brand span:last-child {
-      font-size: 10px;
-      color: var(--accent);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.82);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: all 0.18s;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--white);
-      background: rgba(255,255,255,0.1);
-    }
-    .nav-cta {
-      background: var(--blue);
-      color: var(--white) !important;
-      padding: 8px 18px !important;
-      border-radius: 8px !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover {
-      background: var(--blue-dark) !important;
-    }
+    /* ── HEADER ── */
+    .disclosure-banner { background: #FFF8E1; border-bottom: 1px solid #ffe082; padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548; }
+    header { position: sticky; top: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    header nav { display: flex; align-items: center; gap: 8px; }
+    header nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    header nav a:hover, header nav a.active { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold { background: var(--gold); color: var(--charcoal); font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; white-space: nowrap; }
+    .btn-gold:hover { background: #e8961f; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid #e2e8f0; padding: 16px 24px 20px; }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) { header nav { display: none; } .hamburger { display: flex; } .mobile-nav.open { display: flex; } }
 
     /* ── HERO ── */
     .hero {
@@ -638,26 +578,42 @@
 </head>
 <body>
 
-<!-- ── NAV ── -->
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-group">
       <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
-      <div class="nav-brand">
-        <span>S.E.T.</span>
-        <span>Sun Energy Technology</span>
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
       </div>
     </a>
-    <ul class="nav-links">
-      <li><a href="compare.html">Compare</a></li>
-      <li><a href="use-cases.html">Use Cases</a></li>
-      <li><a href="reviews.html" class="active">Reviews</a></li>
-      <li><a href="spec-guide.html">Spec Guide</a></li>
-      <li><a href="calculator.html">Calculator</a></li>
-      <li><a href="quiz.html" class="nav-cta">Find My Generator</a></li>
-    </ul>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="compare.html">Compare</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spec-guide.html">Spec Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -1199,12 +1155,15 @@
 <footer>
   <div class="footer-inner">
     <nav class="footer-nav">
+      <a href="index.html">Home</a>
       <a href="compare.html">Compare</a>
       <a href="use-cases.html">Use Cases</a>
       <a href="reviews.html">Reviews</a>
       <a href="spec-guide.html">Spec Guide</a>
       <a href="calculator.html">Calculator</a>
       <a href="quiz.html">Find My Generator</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="footer-disclosure">
       <em>Affiliate Disclosure: S.E.T. — Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
@@ -1213,6 +1172,9 @@
 </footer>
 
 <script>
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
   function handleEmailSubmit(e) {
     e.preventDefault();
     var btn = e.target.querySelector('button');
@@ -1221,6 +1183,10 @@
     btn.disabled = true;
     e.target.querySelector('input').disabled = true;
   }
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    if (header) header.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+  });
 </script>
 
 </body>

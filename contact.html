@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact S.E.T. Sun Energy Technology</title>
+  <meta name="description" content="Contact the S.E.T. team. Questions about solar generators, review requests, corrections, or partnership inquiries — we read everything." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8W4W8LPNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8W4W8LPNC');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF; --blue-dark: #0052CC; --charcoal: #1E1E2E;
+      --white: #FFFFFF; --gray-bg: #F5F7FA; --accent: #00C896;
+      --gold: #F5A623; --text: #2D3748; --text-muted: #718096;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    .disclosure-banner { background: #FFF8E1; border-bottom: 1px solid #ffe082; padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548; }
+    header { position: sticky; top: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    nav a:hover { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold { background: var(--gold); color: var(--charcoal); font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; white-space: nowrap; }
+    .btn-gold:hover { background: #e8961f; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid #e2e8f0; padding: 16px 24px 20px; }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) { nav { display: none; } .hamburger { display: flex; } .mobile-nav.open { display: flex; } }
+
+    .hero { background: linear-gradient(135deg, var(--charcoal) 0%, #1a2a4a 100%); padding: 72px 24px 56px; text-align: center; color: var(--white); }
+    .hero-badge { display: inline-block; background: rgba(0,200,150,0.18); border: 1px solid rgba(0,200,150,0.4); color: var(--accent); padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto; }
+
+    .contact-layout { max-width: 900px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 680px) { .contact-layout { grid-template-columns: 1fr; } }
+
+    .section-tag { display: inline-block; background: rgba(0,102,255,0.1); color: var(--blue); padding: 4px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+
+    .contact-info p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px; }
+    .info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .info-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(0,102,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .info-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 2px; }
+    .info-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+    .info-value a { color: var(--blue); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+
+    .response-time { background: var(--gray-bg); border-radius: 12px; padding: 20px; margin-top: 28px; }
+    .response-time p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .response-time strong { color: var(--text); }
+
+    .form-card { background: var(--white); border: 1px solid #e2e8f0; border-radius: 20px; padding: 36px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    .form-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 24px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px; border: 1.5px solid #e2e8f0; border-radius: 10px;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s; outline: none; background: var(--white);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .btn-submit {
+      width: 100%; background: var(--blue); color: var(--white); font-weight: 700;
+      padding: 14px; border: none; border-radius: 10px; font-size: 1rem;
+      cursor: pointer; transition: background 0.2s, transform 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .success-msg { display: none; text-align: center; padding: 20px; background: rgba(0,200,150,0.1); border-radius: 10px; color: #00875a; font-weight: 600; }
+
+    footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 40px 24px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 24px; }
+    .footer-nav a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-disclosure { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-group">
+      <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="compare.html">Compare</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spec-guide.html">Spec Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Get in Touch</div>
+  <h1>Contact S.E.T.</h1>
+  <p>Questions, corrections, review requests, or partnerships — we read every message.</p>
+</div>
+
+<div class="contact-layout">
+
+  <div class="contact-info">
+    <div class="section-tag">Contact Info</div>
+    <h2>We'd Love to Hear From You</h2>
+    <p>Whether you have a question about a generator, spotted an error in one of our reviews, or want to suggest a product we should test — reach out.</p>
+
+    <div class="info-item">
+      <div class="info-icon">&#9993;</div>
+      <div>
+        <div class="info-label">Email</div>
+        <div class="info-value"><a href="mailto:biz@jwatenterprisesinc.com">biz@jwatenterprisesinc.com</a></div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">&#127758;</div>
+      <div>
+        <div class="info-label">Website</div>
+        <div class="info-value">sunenergytechnology.com</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">&#128205;</div>
+      <div>
+        <div class="info-label">Based In</div>
+        <div class="info-value">Riverview, Florida — United States</div>
+      </div>
+    </div>
+
+    <div class="response-time">
+      <p><strong>Response time:</strong> We typically reply within 1–2 business days. For urgent questions about a purchase decision, check our <a href="quiz.html" style="color:var(--blue);">generator quiz</a> or <a href="compare.html" style="color:var(--blue);">comparison table</a> first — your answer may already be there.</p>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h3>Send Us a Message</h3>
+    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="First and last name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">What's this about?</label>
+        <select id="subject" name="subject">
+          <option value="">Select a topic...</option>
+          <option value="generator-question">Question about a generator</option>
+          <option value="review-request">Review request</option>
+          <option value="correction">Error or correction</option>
+          <option value="partnership">Partnership / affiliate inquiry</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message &rarr;</button>
+      <p class="form-note">We never share your email. No spam, ever.</p>
+    </form>
+    <div class="success-msg" id="successMsg">
+      &#10003; Message sent! We'll get back to you within 1–2 business days.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html">Find My Generator</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-disclosure">
+      <em>Affiliate Disclosure: S.E.T. — Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased. &copy; 2026 S.E.T. Sun Energy Technology. All rights reserved.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact_form_submit', { event_category: 'Contact' });
+    }
+  }
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+</body>
+</html>
