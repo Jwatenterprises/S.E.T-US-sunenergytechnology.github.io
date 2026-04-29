@@ -1175,13 +1175,41 @@
   function toggleMobileNav() {
     document.getElementById('mobileNav').classList.toggle('open');
   }
+  var ML_API_TOKEN = 'PASTE_MAILERLITE_API_TOKEN_HERE';
+  var ML_GROUP_ID  = 'PASTE_MAILERLITE_GROUP_ID_HERE';
+
   function handleEmailSubmit(e) {
     e.preventDefault();
-    var btn = e.target.querySelector('button');
-    btn.textContent = 'You\'re on the list!';
-    btn.style.background = '#00a87e';
+    var form  = e.target;
+    var btn   = form.querySelector('button');
+    var email = form.querySelector('input[type="email"]').value;
+
+    btn.textContent = 'Adding you...';
     btn.disabled = true;
-    e.target.querySelector('input').disabled = true;
+
+    fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + ML_API_TOKEN
+      },
+      body: JSON.stringify({ email: email, groups: [ML_GROUP_ID] })
+    })
+    .then(function(res) {
+      if (res.ok || res.status === 409) {
+        btn.textContent = 'You\'re on the list!';
+        btn.style.background = '#00a87e';
+        form.querySelector('input').disabled = true;
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+    });
   }
   window.addEventListener('scroll', function() {
     var header = document.querySelector('header');

@@ -787,17 +787,50 @@
     }
   }
 
-  // Email form handler
+  // MailerLite email capture — replace these two values with real credentials
+  var ML_API_TOKEN = 'PASTE_MAILERLITE_API_TOKEN_HERE';
+  var ML_GROUP_ID  = 'PASTE_MAILERLITE_GROUP_ID_HERE';
+
   function handleEmailSubmit(e) {
     e.preventDefault();
-    var btn = e.target.querySelector('button');
-    btn.textContent = 'Guide Sent! Check Your Inbox.';
-    btn.style.background = '#00C896';
-    btn.style.color = '#fff';
+    var form = e.target;
+    var btn  = form.querySelector('button');
+    var email = form.querySelector('input[type="email"]').value;
+    var name  = (form.querySelector('input[name="name"]') || {}).value || '';
+
+    btn.textContent = 'Sending...';
     btn.disabled = true;
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Buyers Guide' });
-    }
+
+    fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + ML_API_TOKEN
+      },
+      body: JSON.stringify({
+        email: email,
+        fields: { name: name },
+        groups: [ML_GROUP_ID]
+      })
+    })
+    .then(function(res) {
+      if (res.ok || res.status === 409) {
+        btn.textContent = 'Guide Sent! Check Your Inbox.';
+        btn.style.background = '#00C896';
+        btn.style.color = '#fff';
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Buyers Guide' });
+        }
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+    });
   }
 
   // Scroll shadow on header
