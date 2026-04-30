@@ -39,6 +39,11 @@
     header .brand { color: var(--white); }
     header .brand h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.5px; }
     header .brand p  { font-size: 0.78rem; color: #93C5FD; margin-top: 2px; }
+    @media (max-width: 540px) {
+      header { padding: 14px 16px; gap: 10px; }
+      header img { height: 38px; }
+      header .brand h1 { font-size: 1.1rem; }
+    }
 
     /* ── HERO BANNER ── */
     .hero {
@@ -652,12 +657,12 @@
 
 <!-- FOOTER -->
 <footer>
-  <div style="margin-bottom:16px;">
-    <a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;margin-right:16px;">&#8592; Back to S.E.T.</a>
-    <a href="compare.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;margin-right:16px;">Compare</a>
-    <a href="quiz.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;margin-right:16px;">Find My Generator</a>
-    <a href="reviews.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;margin-right:16px;">Reviews</a>
-    <a href="about.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;margin-right:16px;">About</a>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;margin-bottom:16px;">
+    <a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">&#8592; Back to S.E.T.</a>
+    <a href="compare.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">Compare</a>
+    <a href="quiz.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">Find My Generator</a>
+    <a href="reviews.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">Reviews</a>
+    <a href="about.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">About</a>
     <a href="contact.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.85rem;">Contact</a>
   </div>
   <strong>S.E.T — Sun Energy Technology</strong> &nbsp;|&nbsp;

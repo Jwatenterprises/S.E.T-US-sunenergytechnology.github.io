@@ -76,7 +76,9 @@
     .filter-btn.active { background: var(--blue); border-color: var(--blue); color: var(--white); }
 
     /* ===== COMPARISON TABLE ===== */
-    .table-wrapper { overflow-x: auto; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .table-wrapper { overflow-x: auto; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; }
+    .swipe-hint { display: none; text-align: center; font-size: 0.78rem; color: var(--text-muted); padding: 8px 0 4px; }
+    @media (max-width: 768px) { .swipe-hint { display: block; } }
     table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 960px; }
     thead th {
       background: var(--charcoal); color: var(--white); padding: 16px 14px;
@@ -237,6 +239,7 @@
       <button class="filter-btn" onclick="filterTable('emergency', this)">Best for Emergency</button>
     </div>
 
+    <p class="swipe-hint">&#8592; Swipe to compare &#8594;</p>
     <div class="table-wrapper">
       <table id="compTable">
         <thead>
