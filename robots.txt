@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sunenergytechnology.net/sitemap.xml
+Sitemap: https://sunenergytechnology.com/sitemap.xml
