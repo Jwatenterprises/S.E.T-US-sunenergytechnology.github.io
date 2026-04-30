@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jwatenterprises.github.io/S.E.T-US-sunenergytechnology.github.io/sitemap.xml
+Sitemap: https://sunenergytechnology.net/sitemap.xml
