@@ -249,6 +249,152 @@
     @media (max-width: 1000px) { .picks-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 560px) { .picks-grid { grid-template-columns: 1fr; } }
 
+    /* ===== ROOFTOP SOLAR BRIDGE ===== */
+    .rooftop-section {
+      background: #111c24;
+      color: var(--white);
+    }
+    .rooftop-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 44px;
+    }
+    .rooftop-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--charcoal);
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 5px 11px;
+      border-radius: 6px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .rooftop-header h2 {
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .rooftop-header p {
+      color: rgba(255,255,255,0.68);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .rooftop-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 44px;
+    }
+    .rooftop-card {
+      background: #17242e;
+      border: 1px solid #233544;
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+    }
+    .rooftop-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .rooftop-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 9px;
+      color: var(--white);
+    }
+    .rooftop-card p {
+      color: rgba(255,255,255,0.64);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .rooftop-box {
+      background: linear-gradient(145deg, #1b2d3a, #14222c);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 38px;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+    .rooftop-box h3 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+    .rooftop-box p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.98rem;
+      margin: 0 auto 24px;
+      max-width: 540px;
+    }
+    .rooftop-form {
+      display: flex;
+      gap: 12px;
+      max-width: 460px;
+      margin: 0 auto 14px;
+    }
+    .rooftop-input {
+      flex: 1;
+      min-width: 0;
+      padding: 15px 18px;
+      border-radius: 8px;
+      border: 1px solid #2d3748;
+      background: #0d151c;
+      color: var(--white);
+      font: 600 1rem 'Inter', sans-serif;
+      text-align: center;
+    }
+    .rooftop-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.16);
+    }
+    .rooftop-submit {
+      background: var(--gold);
+      color: var(--charcoal);
+      border: none;
+      padding: 15px 22px;
+      border-radius: 8px;
+      font: 800 0.95rem 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .rooftop-submit:hover {
+      background: #e8961f;
+      transform: translateY(-1px);
+    }
+    .rooftop-secure {
+      display: block;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.8rem;
+    }
+    .rooftop-partners {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .rooftop-partners a {
+      color: rgba(255,255,255,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.24);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .rooftop-partners a:hover { color: var(--white); border-color: var(--gold); }
+    @media (max-width: 800px) {
+      .rooftop-features { grid-template-columns: 1fr; }
+      .rooftop-box { padding: 30px 22px; }
+    }
+    @media (max-width: 560px) {
+      .rooftop-form { flex-direction: column; }
+      .rooftop-submit { width: 100%; }
+    }
+
     /* ===== TRUST SECTION ===== */
     .trust-section { background: var(--gray-bg); }
     .trust-pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin: 48px 0 40px; }
@@ -714,6 +860,52 @@
   </div>
 </section>
 
+<!-- ROOFTOP SOLAR BRIDGE -->
+<section class="rooftop-section" id="rooftop-solar">
+  <div class="section-inner">
+    <div class="rooftop-header">
+      <span class="rooftop-badge">New Feature</span>
+      <h2>Looking for Permanent Home Bill Reduction?</h2>
+      <p>Our portable generator rankings above are built for emergency backup, camping, and off-grid flexibility. If your goal is whole-home central AC, long-term utility savings, or a fixed roof array, residential solar is the right channel.</p>
+    </div>
+
+    <div class="rooftop-features">
+      <div class="rooftop-card">
+        <span class="rooftop-icon">&#128203;</span>
+        <h3>Compare Bids</h3>
+        <p>Review multiple personalized roof-solar quotes from marketplace and installer partners before you choose a contractor.</p>
+      </div>
+      <div class="rooftop-card">
+        <span class="rooftop-icon">&#128176;</span>
+        <h3>Check Incentives</h3>
+        <p>See which local, state, utility, and financing programs may apply before you decide whether rooftop solar makes sense.</p>
+      </div>
+      <div class="rooftop-card">
+        <span class="rooftop-icon">&#128274;</span>
+        <h3>Stay Independent</h3>
+        <p>S.E.T. remains focused on clear comparisons. Use the quotes as data, then evaluate price, contract terms, and equipment side by side.</p>
+      </div>
+    </div>
+
+    <div class="rooftop-box">
+      <h3>Calculate Your Fixed Roof Solar Savings</h3>
+      <p>Enter your ZIP code to start with EnergySage, then compare roof-solar options from marketplace and installer channels such as EnergySage, Modernize, and Sunrun.</p>
+
+      <form class="rooftop-form" onsubmit="handleRooftopSolarSubmit(event)">
+        <input type="text" inputmode="numeric" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]{5}" required class="rooftop-input" aria-label="ZIP code for rooftop solar quotes" />
+        <button type="submit" class="rooftop-submit">Compare Roof Solar Quotes</button>
+      </form>
+
+      <span class="rooftop-secure">Free research path. Compare the contract details before signing any proposal.</span>
+      <div class="rooftop-partners" aria-label="Rooftop solar quote partners">
+        <a href="https://www.energysage.com/your-marketplace/" target="_blank" rel="sponsored noopener noreferrer">EnergySage</a>
+        <a href="https://modernize.com/solar" target="_blank" rel="sponsored noopener noreferrer">Modernize</a>
+        <a href="https://quote.sunrun.com/shop/solar/" target="_blank" rel="sponsored noopener noreferrer">Sunrun</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY TRUST S.E.T. -->
 <section class="trust-section">
   <div class="section-inner">
@@ -830,6 +1022,7 @@
         <h5>Tools</h5>
         <a href="quiz.html">Generator Quiz</a>
         <a href="calculator.html">Solar Calculator</a>
+        <a href="#rooftop-solar">Roof Solar Quotes</a>
         <a href="spec-guide.html">Spec Guide</a>
         <a href="reviews.html">Brand Reviews</a>
         <a href="about.html">About S.E.T.</a>
@@ -923,6 +1116,25 @@
       btn.textContent = 'Try Again';
       btn.disabled = false;
     });
+  }
+
+  function handleRooftopSolarSubmit(e) {
+    e.preventDefault();
+    var input = e.target.querySelector('.rooftop-input');
+    var zip = input.value.trim();
+    if (!/^[0-9]{5}$/.test(zip)) {
+      input.focus();
+      return false;
+    }
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'rooftop_solar_quote_click', {
+        event_category: 'Affiliate',
+        event_label: 'EnergySage',
+        zip_code: zip
+      });
+    }
+    window.open('https://www.energysage.com/your-marketplace/?zip=' + encodeURIComponent(zip), '_blank', 'noopener,noreferrer');
+    return false;
   }
 
   // Scroll shadow on header
