@@ -726,6 +726,20 @@
         emergency: 'The most powerful emergency backup generator available. 6,000W surge capacity handles anything from AC units to power tools, and 2,400W solar input means fast solar recharge.',
         default: 'Maximum power output, maximum expandability, built for those who refuse to compromise.'
       }
+    },
+    mangoPowerE: {
+      brand: 'Mango Power',
+      model: 'E (72% OFF Sale)',
+      capacity: '3,500Wh',
+      output: '3,000W',
+      price: '$1,199 (was $4,250)',
+      battery: 'LFP',
+      link: 'https://www.amazon.com/s?k=mango+power+e+portable+power+station&tag=sunenergytec2-20',
+      why: {
+        emergency: 'At $1,199 (72% off), the Mango Power E delivers 3,500Wh with CATL LFP cells rated for 6,000 cycles — expandable to 14kWh for whole-home backup. Best value in its class right now.',
+        offgrid: 'Expandable to 14kWh, 3,000W continuous output, and 1.5-hour fast charge make the Mango Power E a serious off-grid contender — especially at the current $1,199 sale price.',
+        default: 'The best value home backup generator available. 3,500Wh capacity, LFP battery, expandable to 14kWh — all for $1,199 during the current 72% off sale.'
+      }
     }
   };
 
@@ -762,36 +776,38 @@
       if (budget === 'under500') {
         top = 'ankerC1000'; alt1 = 'jackery1000pro'; alt2 = 'ecoflowRiver3';
       } else if (budget === '500-1500') {
-        if (load === 'essentials' || load === 'small') {
-          top = 'ankerC1000'; alt1 = 'jackery1000pro'; alt2 = 'ecoflowRiver3';
+        if (load === 'household' || load === 'everything') {
+          top = 'mangoPowerE'; alt1 = 'jackery1000pro'; alt2 = 'ankerC1000';
         } else {
-          top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowRiver3';
+          top = 'ankerC1000'; alt1 = 'mangoPowerE'; alt2 = 'jackery1000pro';
         }
       } else if (budget === '1500-3000') {
         if (load === 'household' || load === 'everything') {
-          top = 'ecoflowDelta2Max'; alt1 = 'jackery2000Plus'; alt2 = 'patriots';
+          top = 'mangoPowerE'; alt1 = 'ecoflowDelta2Max'; alt2 = 'jackery2000Plus';
         } else {
-          top = 'jackery2000Plus'; alt1 = 'ecoflowDelta2Max'; alt2 = 'patriots';
+          top = 'mangoPowerE'; alt1 = 'jackery2000Plus'; alt2 = 'ecoflowDelta2Max';
         }
       } else {
         if (load === 'everything' || port === 'not') {
-          top = 'ankerF3800'; alt1 = 'ecoflowDeltaPro'; alt2 = 'ecoflowDelta2Max';
+          top = 'ankerF3800'; alt1 = 'ecoflowDeltaPro'; alt2 = 'mangoPowerE';
         } else {
-          top = 'ecoflowDeltaPro'; alt1 = 'ankerF3800'; alt2 = 'ecoflowDelta2Max';
+          top = 'ecoflowDeltaPro'; alt1 = 'mangoPowerE'; alt2 = 'ankerF3800';
         }
       }
     }
     // === Off-Grid ===
     else if (use === 'offgrid') {
-      if (budget === 'under500' || budget === '500-1500') {
-        top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowDelta2Max';
+      if (budget === 'under500') {
+        top = 'jackery1000pro'; alt1 = 'ankerC1000'; alt2 = 'ecoflowRiver3';
+      } else if (budget === '500-1500') {
+        top = 'mangoPowerE'; alt1 = 'jackery1000pro'; alt2 = 'ankerC1000';
       } else if (budget === '1500-3000') {
-        top = 'ecoflowDelta2Max'; alt1 = 'jackery2000Plus'; alt2 = 'ankerC1000';
+        top = 'mangoPowerE'; alt1 = 'ecoflowDelta2Max'; alt2 = 'jackery2000Plus';
       } else {
         if (port === 'not' || load === 'everything') {
-          top = 'ankerF3800'; alt1 = 'ecoflowDeltaPro'; alt2 = 'ecoflowDelta2Max';
+          top = 'ankerF3800'; alt1 = 'mangoPowerE'; alt2 = 'ecoflowDeltaPro';
         } else {
-          top = 'ecoflowDeltaPro'; alt1 = 'ankerF3800'; alt2 = 'ecoflowDelta2Max';
+          top = 'ecoflowDeltaPro'; alt1 = 'mangoPowerE'; alt2 = 'ankerF3800';
         }
       }
     }
