@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLUETTI AC300 + B300 Review — S.E.T. Sun Energy Technology</title>
+  <meta name="description" content="In-depth review of the BLUETTI AC300 + B300 modular solar generator. 3,000W inverter, LiFePO4 battery, expandable to 12,288Wh. Our #1 pick for home emergency backup in 2026." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8W4W8LPNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8W4W8LPNC');
+  </script>
+
+  <meta name='impact-site-verification' value='01383a9a-92be-4ba4-a08d-91407c19575e'>
+
+  <style>
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .disclosure-banner { background: #FFF8E1; border-bottom: 1px solid #ffe082; padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548; }
+    header { position: sticky; top: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    header nav { display: flex; align-items: center; gap: 8px; }
+    header nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    header nav a:hover, header nav a.active { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold { background: var(--gold); color: var(--charcoal); font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; white-space: nowrap; }
+    .btn-gold:hover { background: #e8961f; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid #e2e8f0; padding: 16px 24px 20px; }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) { header nav { display: none; } .hamburger { display: flex; } .mobile-nav.open { display: flex; } }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .article-hero .breadcrumb {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+    }
+    .article-hero .breadcrumb a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+    .article-hero .breadcrumb a:hover { color: var(--accent); }
+    .article-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+    }
+    .article-hero h1 {
+      font-size: clamp(24px, 4.5vw, 42px);
+      font-weight: 800;
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 16px;
+      line-height: 1.2;
+    }
+    .article-hero h1 span { color: var(--accent); }
+    .article-hero .subtitle {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+    .article-meta strong { color: rgba(255,255,255,0.8); }
+
+    /* ── ARTICLE BODY ── */
+    .article-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .score-card {
+      background: var(--gray-bg);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .score-number {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .score-details {
+      flex: 1;
+      min-width: 200px;
+    }
+    .score-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+    .score-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .score-summary {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 600px) { .specs-grid { grid-template-columns: repeat(2, 1fr); } }
+    .spec-box {
+      background: var(--gray-bg);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .spec-box .val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--charcoal);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .spec-box .key {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .article-wrapper h2 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      color: var(--charcoal);
+      margin: 40px 0 16px;
+      padding-top: 12px;
+      border-top: 2px solid var(--gray-bg);
+    }
+    .article-wrapper h2:first-of-type { border-top: none; margin-top: 0; }
+
+    .article-wrapper h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 28px 0 10px;
+    }
+
+    .article-wrapper p {
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .article-wrapper ul, .article-wrapper ol {
+      margin: 0 0 18px 24px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .article-wrapper li { margin-bottom: 6px; }
+    .article-wrapper strong { color: var(--charcoal); }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-size: 14px;
+    }
+    .vs-table th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 10px 14px;
+      border-bottom: 2px solid #E2E8F0;
+      background: var(--gray-bg);
+    }
+    .vs-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #F0F4F8;
+      color: var(--text);
+    }
+    .vs-table tr:last-child td { border-bottom: none; }
+
+    .pros-cons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0 28px;
+    }
+    @media (max-width: 520px) { .pros-cons-grid { grid-template-columns: 1fr; } }
+    .pro-col, .con-col {
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .pro-col { background: #E8F5E9; }
+    .con-col { background: #FFEBEE; }
+    .pro-col h4 { color: #2E7D32; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .con-col h4 { color: #C62828; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .pro-col ul, .con-col ul { list-style: none; margin: 0; padding: 0; font-size: 14px; line-height: 1.7; }
+    .pro-col li { padding: 4px 0 4px 20px; position: relative; }
+    .pro-col li::before { content: '\2713'; position: absolute; left: 0; color: #2E7D32; font-weight: 700; }
+    .con-col li { padding: 4px 0 4px 20px; position: relative; }
+    .con-col li::before { content: '\2717'; position: absolute; left: 0; color: #C62828; font-weight: 700; }
+
+    /* ── CTA ── */
+    .cta-box {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-box h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 24px;
+    }
+    .btn-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--charcoal);
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .btn-cta:hover {
+      background: #e8961f;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      display: inline-block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 14px;
+    }
+    .btn-secondary:hover { color: var(--white); }
+
+    .ftc-note {
+      background: var(--gray-bg);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      padding: 40px 24px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 24px; }
+    .footer-nav a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.18s; }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-disclosure { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+    .footer-disclosure em { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-group">
+      <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="compare.html">Compare</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="spec-guide.html">Spec Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<!-- ── ARTICLE HERO ── -->
+<section class="article-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <a href="reviews.html">Reviews</a> &rsaquo; BLUETTI AC300
+  </div>
+  <span class="article-badge">&#127942; #1 Top Pick &mdash; Home Backup</span>
+  <h1>BLUETTI AC300 + B300 Review:<br><span>Modularity Meets Peace of Mind</span></h1>
+  <p class="subtitle">The "smart money" choice for homeowners who want expandable, future-proof emergency power.</p>
+  <div class="article-meta">
+    <span>By <strong>Solana</strong> &mdash; S.E.T. Solar</span>
+    <span>Updated <strong>July 2026</strong></span>
+    <span>Score: <strong style="color:#F5A623;">9.4 / 10</strong></span>
+  </div>
+</section>
+
+<!-- ── ARTICLE BODY ── -->
+<div class="article-wrapper">
+
+  <!-- Score Card -->
+  <div class="score-card">
+    <div class="score-number">9.4</div>
+    <div class="score-details">
+      <div class="score-label">S.E.T. Score</div>
+      <div class="score-title">Solana's Top Pick for Home Emergency Backup</div>
+      <div class="score-summary">While newer, flashier models have hit the market, the AC300 + B300 combo remains our #1 recommendation for the average homeowner. It doesn't force you to buy power you don't need today, but gives you the modularity to expand when you do.</div>
+    </div>
+  </div>
+
+  <!-- Quick Specs -->
+  <div class="specs-grid">
+    <div class="spec-box">
+      <span class="val">3,000W</span>
+      <span class="key">Pure Sine Wave</span>
+    </div>
+    <div class="spec-box">
+      <span class="val">6,000W</span>
+      <span class="key">Surge Capacity</span>
+    </div>
+    <div class="spec-box">
+      <span class="val">3,072Wh</span>
+      <span class="key">Per B300 Module</span>
+    </div>
+    <div class="spec-box">
+      <span class="val">3,500+</span>
+      <span class="key">LiFePO4 Cycles</span>
+    </div>
+  </div>
+
+  <h2>The Verdict: Why the AC300 Is Still the &ldquo;Smart Money&rdquo; Choice for 2026</h2>
+
+  <p>When we evaluate solar generators at Sun Energy Technology, we look at three pillars: <strong>Reliability, Scalability, and Value.</strong> While newer, flashier models have hit the market, the BLUETTI AC300 + B300 combo remains our #1 recommendation for the average homeowner.</p>
+
+  <p>Why? Because it doesn't force you to buy power you don't need today, but it gives you the &ldquo;LEGO-style&rdquo; modularity to expand when you do.</p>
+
+  <h3>Technical Powerhouse at a Glance</h3>
+  <ul>
+    <li><strong>3,000W Pure Sine Wave Inverter:</strong> Runs everything from your full-sized fridge to your high-end gaming PC without &ldquo;dirty power&rdquo; risks.</li>
+    <li><strong>6,000W Surge Capacity:</strong> Effortlessly handles the startup kick of heavy motor-driven appliances like sump pumps or power tools.</li>
+    <li><strong>LiFePO4 Chemistry:</strong> Rated for 3,500+ cycles. If you use it every single day, you&rsquo;re looking at over <strong>10 years of life</strong> before the battery hits 80% capacity.</li>
+    <li><strong>2,400W Solar Input:</strong> Using dual-MPPT controllers, you can fully recharge the system in under 2 hours of peak sunlight with a proper solar array.</li>
+  </ul>
+
+  <h2>What Makes the AC300 Different?</h2>
+
+  <h3>1. Modularity = Longevity</h3>
+  <p>Most &ldquo;all-in-one&rdquo; solar generators are a single heavy box. If the battery dies, the whole unit is a paperweight. The AC300 is a <strong>pure inverter module</strong>. It requires at least one B300 battery to run. This means if battery technology improves in 5 years, or if you simply need more juice, you just add another B300 module &mdash; up to 4 total for 12,288Wh.</p>
+
+  <div class="highlight-box">
+    <strong>Think of it this way:</strong> The AC300 is the brain. The B300 batteries are the muscle. You can upgrade the muscle without ever replacing the brain.
+  </div>
+
+  <h3>2. 240V Capability (The Fusion Advantage)</h3>
+  <p>By connecting two AC300 units via the <strong>Fusion Box Pro</strong>, you can run 240V appliances. This is the &ldquo;holy grail&rdquo; for off-grid living, allowing you to power well pumps and heavy-duty dryers that smaller 120V units simply can&rsquo;t touch.</p>
+
+  <h3>3. UPS Home Integration</h3>
+  <p>The AC300 features a 24/7 UPS (Uninterruptible Power Supply) mode. If the grid goes down in the middle of the night, the AC300 takes over in less than 20ms. Your CPAP machine, your fridge, and your home security stay on &mdash; period.</p>
+
+  <h2>AC300 vs. AC500: Which One for You?</h2>
+
+  <table class="vs-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>AC300</th>
+        <th>AC500</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Best For</strong></td>
+        <td>Home essentials backup</td>
+        <td>Central AC / extreme cold</td>
+      </tr>
+      <tr>
+        <td><strong>Output</strong></td>
+        <td>3,000W (6,000W surge)</td>
+        <td>5,000W (10,000W surge)</td>
+      </tr>
+      <tr>
+        <td><strong>Battery</strong></td>
+        <td>B300 (LiFePO4)</td>
+        <td>B300S (LiFePO4 + heater)</td>
+      </tr>
+      <tr>
+        <td><strong>Max Capacity</strong></td>
+        <td>12,288Wh (4x B300)</td>
+        <td>18,432Wh (6x B300S)</td>
+      </tr>
+      <tr>
+        <td><strong>Cold Weather</strong></td>
+        <td>Standard</td>
+        <td>Internal heaters down to -4&deg;F</td>
+      </tr>
+      <tr>
+        <td><strong>Price</strong></td>
+        <td>$$</td>
+        <td>$$$$</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Choose the AC300</strong> if you want the best ROI for backing up essentials &mdash; fridge, lights, electronics, coffee maker. <strong>Choose the AC500</strong> if you absolutely must run a central air conditioner or live in an environment where temperatures drop below -4&deg;F.</p>
+
+  <h2>Solana&rsquo;s S.E.T. Score: 9.4 / 10</h2>
+
+  <div class="pros-cons-grid">
+    <div class="pro-col">
+      <h4>Pros</h4>
+      <ul>
+        <li>Best-in-class modular design</li>
+        <li>Ultra-safe LiFePO4 battery chemistry</li>
+        <li>Quiet operation (under 55dB)</li>
+        <li>Exceptional 2,400W solar charging rate</li>
+        <li>UPS mode with 20ms switchover</li>
+        <li>240V Fusion Box Pro option</li>
+      </ul>
+    </div>
+    <div class="con-col">
+      <h4>Cons</h4>
+      <ul>
+        <li>Requires external batteries (not standalone)</li>
+        <li>Weight: AC300 + 1x B300 = ~127 lbs</li>
+        <li>No built-in battery heater for extreme cold</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── CTA ── -->
+  <div class="cta-box">
+    <h3>Ready to Secure Your Home&rsquo;s Power?</h3>
+    <p>Don&rsquo;t wait for the next blackout. The AC300 + B300 is our top-vetted system for reliability, modularity, and long-term value.</p>
+    <a href="https://www.awin1.com/cread.php?awinmid=59271&awinaffid=2881111" target="_blank" rel="sponsored noopener noreferrer" class="btn-cta" onclick="gtag('event','bluetti_ac300_click',{event_category:'affiliate',event_label:'review_cta'});">Check Current BLUETTI AC300 + B300 Pricing &rarr;</a>
+    <br />
+    <a href="compare.html" class="btn-secondary">Or compare all systems side-by-side &rarr;</a>
+  </div>
+
+  <div class="ftc-note">
+    <strong>FTC Disclosure:</strong> As an independent comparison platform, S.E.T. Solar receives commissions from qualifying purchases made through our links. This does not affect our editorial ratings or the final price you pay. Read our full <a href="disclosure.html" style="color:var(--blue);">disclosure</a>.
+  </div>
+
+</div><!-- /.article-wrapper -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html">Find My Generator</a>
+      <a href="about.html">About</a>
+      <a href="disclosure.html">Disclosure</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-disclosure">
+      <em>Affiliate Disclosure: S.E.T. &mdash; Sun Energy Technology participates in affiliate programs including BLUETTI (Awin), EcoFlow (Awin), ALLPOWERS (Awin), Nature&rsquo;s Generator (Awin), and Amazon Associates. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    if (header) header.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+
+</body>
+</html>
