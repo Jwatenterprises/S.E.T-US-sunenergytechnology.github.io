@@ -7,7 +7,7 @@
   var GA4_ID = 'G-W8W4W8LPNC';
   var IMPACT_PROGRAM_ID = 'P-A6782322-8a4f-4218-9a98-fb3e2a61a6961';
   var META_PIXEL_ID = '2023918628214957';
-  var TIKTOK_PIXEL_ID = '';
+  var TIKTOK_PIXEL_ID = '7650989745631281169';
 
   // ── GA4 ──
   var gaScript = document.createElement('script');
