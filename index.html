@@ -122,6 +122,40 @@
     .trust-badges { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
     .trust-badge { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.8); font-weight: 500; }
 
+    /* ===== TRACTION METRICS STRIP ===== */
+    .set-metrics-strip {
+      background: var(--charcoal);
+      padding: 36px 24px;
+    }
+    .set-metrics-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .set-metric { text-align: center; min-width: 130px; }
+    .set-metric-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .set-metric-lbl {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .set-metrics-inner { justify-content: center; }
+      .set-metric { min-width: 110px; flex: 0 0 45%; }
+      .set-metric-num { font-size: 1.8rem; }
+    }
+
     /* ===== PROBLEM BAR ===== */
     .problem-bar {
       background: var(--blue); color: var(--white);
@@ -538,6 +572,28 @@
     <a rel="sponsored noopener noreferrer" target="_blank" href="https://www.awin1.com/cread.php?s=4701100&v=59271&q=568164&r=2881111" style="display:inline-block;line-height:0;">
       <img src="https://www.awin1.com/cshow.php?s=4701100&v=59271&q=568164&r=2881111" alt="BLUETTI Solar Generators &mdash; Sponsored Partner" border="0" style="max-width:100%;height:auto;display:block;" />
     </a>
+  </div>
+</section>
+
+<!-- TRACTION METRICS -->
+<section class="set-metrics-strip">
+  <div class="set-metrics-inner">
+    <div class="set-metric">
+      <div class="set-metric-num">7+</div>
+      <div class="set-metric-lbl">Brands Compared</div>
+    </div>
+    <div class="set-metric">
+      <div class="set-metric-num">43+</div>
+      <div class="set-metric-lbl">Solar Subscribers</div>
+    </div>
+    <div class="set-metric">
+      <div class="set-metric-num">12+</div>
+      <div class="set-metric-lbl">Free Guides & Tools</div>
+    </div>
+    <div class="set-metric">
+      <div class="set-metric-num">100%</div>
+      <div class="set-metric-lbl">Independent Reviews</div>
+    </div>
   </div>
 </section>
 
