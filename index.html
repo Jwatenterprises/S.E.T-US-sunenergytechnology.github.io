@@ -529,6 +529,7 @@
       <a href="compare.html">Compare</a>
       <a href="index.html#use-cases">Use Cases</a>
       <a href="reviews.html">Reviews</a>
+      <a href="blog/index.html">Blog</a>
       <a href="spec-guide.html">Spec Guide</a>
       <a href="calculator.html">Calculator</a>
       <a href="quiz.html" class="btn-gold">Find My Generator</a>
@@ -541,6 +542,7 @@
     <a href="compare.html">Compare</a>
     <a href="index.html#use-cases">Use Cases</a>
     <a href="reviews.html">Reviews</a>
+    <a href="blog/index.html">Blog</a>
     <a href="spec-guide.html">Spec Guide</a>
     <a href="calculator.html">Calculator</a>
     <a href="quiz.html" class="btn-gold">Find My Generator</a>
@@ -653,7 +655,7 @@
           <div class="cap">286Wh | 600W AC Output</div>
           <div class="price">~$299&ndash;$399</div>
           <p>Ultra-compact and lightweight at just 7.7 lbs. Charges 0&ndash;80% in 50 minutes via AC. Great budget-conscious option for minimalist campers or day hikers.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Friver-3-plus-portable-power-station" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
         </div>
       </div>
     </div>
@@ -671,7 +673,7 @@
           <div class="cap">2,048Wh | 2,400W AC Output</div>
           <div class="price">~$1,499&ndash;$1,799</div>
           <p>Industry-leading 1-hour AC recharge. Expandable to 6kWh with add-on batteries. Smart home integration and remote monitoring via app. Our top emergency prep recommendation.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Patriot-Grade Emergency Pick</span>
@@ -697,7 +699,7 @@
           <div class="cap">3,600Wh | 3,600W AC Output</div>
           <div class="price">~$2,899&ndash;$3,499</div>
           <p>Expandable to 25kWh with extra batteries and smart generator. Up to 1,600W solar input. Can power an entire home during outages. The benchmark for serious off-grid setups.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Off-Grid Power Alternative</span>
@@ -731,7 +733,7 @@
           <div class="cap">286Wh | 600W AC Output</div>
           <div class="price">~$299&ndash;$399</div>
           <p>Incredibly compact at 7.7 lbs. Pairs perfectly with a dedicated rooftop solar array. Ideal for solo van lifers with minimal power needs or as a secondary battery bank.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Friver-3-plus-portable-power-station" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
         </div>
       </div>
     </div>
@@ -1098,6 +1100,8 @@
         <a href="#rooftop-solar">Roof Solar Quotes</a>
         <a href="spec-guide.html">Spec Guide</a>
         <a href="reviews.html">Brand Reviews</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="solar-generator-sizing-guide.html">Sizing Guide</a>
         <a href="about.html">About S.E.T.</a>
         <a href="disclosure.html">Disclosure</a>
         <a href="contact.html">Contact</a>
@@ -1146,10 +1150,6 @@
     }
   }
 
-  // MailerLite email capture — replace these two values with real credentials
-  var ML_API_TOKEN = 'PASTE_MAILERLITE_API_TOKEN_HERE';
-  var ML_GROUP_ID  = 'PASTE_MAILERLITE_GROUP_ID_HERE';
-
   function handleEmailSubmit(e) {
     e.preventDefault();
     var form = e.target;
@@ -1160,21 +1160,20 @@
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    fetch('https://connect.mailerlite.com/api/subscribers', {
+    fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Authorization': 'Bearer ' + ML_API_TOKEN
-      },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         email: email,
-        fields: { name: name },
-        groups: [ML_GROUP_ID]
+        name: name,
+        _subject: 'New S.E.T. Solar Subscriber',
+        _template: 'table',
+        _captcha: 'false'
       })
     })
-    .then(function(res) {
-      if (res.ok || res.status === 409) {
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.success) {
         btn.textContent = 'Guide Sent! Check Your Inbox.';
         btn.style.background = '#00C896';
         btn.style.color = '#fff';

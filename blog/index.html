@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Generator Blog — Guides, Reviews & Comparisons | S.E.T.</title>
+  <meta name="description" content="Expert buying guides, head-to-head comparisons, and honest reviews of solar generators from BLUETTI, EcoFlow, Jackery, and more. Updated for 2026." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sunenergytechnology.net/blog/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a {
+      text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem;
+      padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold {
+      background: var(--gold); color: var(--charcoal); font-weight: 700;
+      padding: 10px 20px; border-radius: 8px; text-decoration: none;
+      font-size: 0.9rem; transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-gold:hover { background: #e8961f; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; display: block; }
+    .mobile-nav {
+      display: none; flex-direction: column; background: var(--white);
+      border-top: 1px solid #e2e8f0; padding: 16px 24px 20px;
+    }
+    .mobile-nav a {
+      padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+      text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem;
+    }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.open { display: flex; }
+    }
+
+    /* ===== DISCLOSURE BANNER ===== */
+    .disclosure-banner {
+      background: #FFF8E1; border-bottom: 1px solid #ffe082;
+      padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548;
+    }
+
+    /* ===== BLOG HERO ===== */
+    .blog-hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1a2a4a 60%, #0a1628 100%);
+      padding: 80px 24px 64px;
+      text-align: center; color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blog-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem); font-weight: 800;
+      line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px;
+      max-width: 700px; margin-left: auto; margin-right: auto;
+      position: relative;
+    }
+    .blog-hero p {
+      font-size: 1.1rem; color: rgba(255,255,255,0.75);
+      max-width: 620px; margin: 0 auto;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    /* ===== BLOG GRID ===== */
+    .blog-section { padding: 64px 24px 80px; background: var(--gray-bg); }
+    .blog-inner { max-width: 960px; margin: 0 auto; }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+    /* ===== BLOG CARD ===== */
+    .blog-card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    }
+    .blog-card-body {
+      padding: 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .blog-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .blog-category {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .blog-category.buying-guide { background: rgba(0,102,255,0.1); color: var(--blue); }
+    .blog-category.head-to-head { background: rgba(245,166,35,0.15); color: #c7850f; }
+    .blog-category.budget-picks { background: rgba(0,200,150,0.12); color: #00a87a; }
+    .blog-category.camping { background: rgba(139,92,246,0.12); color: #7c3aed; }
+    .blog-read-time {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .blog-card h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .blog-card h2 a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s;
+    }
+    .blog-card h2 a:hover { color: var(--blue); }
+    .blog-card .excerpt {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .blog-read-more:hover { gap: 10px; }
+    .blog-read-more .arrow { transition: transform 0.2s; }
+    .blog-read-more:hover .arrow { transform: translateX(2px); }
+
+    @media (max-width: 700px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card-body { padding: 22px 20px 20px; }
+    }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 60px 24px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo-group { margin-bottom: 14px; }
+    .footer-brand .logo-text .brand { color: var(--white); }
+    .footer-brand .logo-text .sub { color: rgba(255,255,255,0.5); }
+    .footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.7; }
+    .footer-col h5 { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-disclosure {
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px;
+      font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 24px;
+    }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copyright { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    @media (max-width: 800px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+  </style>
+  <script src="../scripts/tracking.js"></script>
+</head>
+<body>
+
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo-group">
+      <img src="../set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="../compare.html">Compare</a>
+      <a href="../index.html#use-cases">Use Cases</a>
+      <a href="../reviews.html">Reviews</a>
+      <a href="../spec-guide.html">Spec Guide</a>
+      <a href="../calculator.html">Calculator</a>
+      <a href="../quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../compare.html">Compare</a>
+    <a href="../index.html#use-cases">Use Cases</a>
+    <a href="../reviews.html">Reviews</a>
+    <a href="../spec-guide.html">Spec Guide</a>
+    <a href="../calculator.html">Calculator</a>
+    <a href="../quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <h1>S.E.T. Solar Blog</h1>
+  <p>Expert guides, honest comparisons, and buying advice for solar generators &mdash; written by real enthusiasts, not marketers.</p>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-section">
+  <div class="blog-inner">
+    <div class="blog-grid">
+
+      <!-- Post 1: Home Backup -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-card-top">
+            <span class="blog-category buying-guide">Buying Guide</span>
+            <span class="blog-read-time">12 min read</span>
+          </div>
+          <h2><a href="best-solar-generator-home-backup-2026.html">Best Solar Generators for Home Backup in 2026: Our Top 5 Picks</a></h2>
+          <p class="excerpt">Power outages are getting longer and more frequent. Here are the 5 solar generators that actually deliver when your grid goes down.</p>
+          <a href="best-solar-generator-home-backup-2026.html" class="blog-read-more">Read More <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Post 2: BLUETTI vs EcoFlow -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-card-top">
+            <span class="blog-category head-to-head">Head-to-Head</span>
+            <span class="blog-read-time">10 min read</span>
+          </div>
+          <h2><a href="bluetti-ac300-vs-ecoflow-delta-pro.html">BLUETTI AC300 vs EcoFlow Delta Pro: Which Powerhouse Wins?</a></h2>
+          <p class="excerpt">Two flagship modular systems, both expandable to 10kWh+. We break down specs, real-world performance, and value to pick the winner.</p>
+          <a href="bluetti-ac300-vs-ecoflow-delta-pro.html" class="blog-read-more">Read More <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Post 3: Under $1,000 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-card-top">
+            <span class="blog-category budget-picks">Budget Picks</span>
+            <span class="blog-read-time">9 min read</span>
+          </div>
+          <h2><a href="best-portable-power-station-under-1000.html">Best Portable Power Stations Under $1,000 in 2026</a></h2>
+          <p class="excerpt">You don&rsquo;t need to spend $3,000 to get reliable backup power. These sub-$1K units punch way above their price.</p>
+          <a href="best-portable-power-station-under-1000.html" class="blog-read-more">Read More <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Post 4: Camping -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-card-top">
+            <span class="blog-category camping">Camping</span>
+            <span class="blog-read-time">8 min read</span>
+          </div>
+          <h2><a href="best-solar-generator-camping.html">Best Solar Generators for Camping: Lightweight Picks That Actually Work</a></h2>
+          <p class="excerpt">Weight, portability, and solar recharge speed matter more than raw capacity on the trail. Here&rsquo;s what to bring.</p>
+          <a href="best-solar-generator-camping.html" class="blog-read-more">Read More <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo-group">
+          <img src="../set-logo.jpg" alt="S.E.T. Logo" />
+          <div class="logo-text">
+            <span class="brand">S.E.T.</span>
+            <span class="sub">Sun Energy Technology</span>
+          </div>
+        </a>
+        <p class="footer-tagline">&ldquo;Find Your Perfect Generator in 5 Minutes&rdquo;<br>The Independent Solar Generator Comparison Platform.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Compare</h5>
+        <a href="../compare.html">All Comparisons</a>
+        <a href="../compare.html#jackery-vs-ecoflow">Jackery vs EcoFlow</a>
+        <a href="../compare.html#budget">Budget Picks Under $1K</a>
+        <a href="../compare.html#premium">Premium $2K+ Picks</a>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="../quiz.html">Generator Quiz</a>
+        <a href="../calculator.html">Solar Calculator</a>
+        <a href="../index.html#rooftop-solar">Roof Solar Quotes</a>
+        <a href="../spec-guide.html">Spec Guide</a>
+        <a href="../reviews.html">Brand Reviews</a>
+        <a href="../about.html">About S.E.T.</a>
+        <a href="../disclosure.html">Disclosure</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Brands</h5>
+        <a href="https://www.amazon.com/s?k=jackery+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">Jackery</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer">EcoFlow</a>
+        <a href="https://www.awin1.com/cread.php?s=4701099&v=59271&q=568164&r=2881111" target="_blank" rel="sponsored noopener noreferrer">BLUETTI</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fallpowers.com" target="_blank" rel="sponsored noopener noreferrer">ALLPOWERS</a>
+        <a href="https://www.amazon.com/s?k=anker+solix+power+station&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">Anker SOLIX</a>
+        <a href="https://www.amazon.com/s?k=4patriots+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">4Patriots</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fnaturesgenerator.com" target="_blank" rel="sponsored noopener noreferrer">Nature's Generator</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com" target="_blank" rel="sponsored noopener noreferrer">LiTime</a>
+      </div>
+    </div>
+    <div class="footer-disclosure">
+      <strong style="color:rgba(255,255,255,0.75);">Affiliate Disclosure:</strong>
+      <em>S.E.T. &mdash; Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 S.E.T. &mdash; Sun Energy Technology | Part of Jwat Enterprise Inc</p>
+      <p class="footer-copyright">Contact: <a href="mailto:biz@sunenergytechnology.net" style="color:rgba(255,255,255,0.45);text-decoration:none;">biz@sunenergytechnology.net</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Scroll shadow on header
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.style.boxShadow = window.scrollY > 10
+      ? '0 4px 20px rgba(0,0,0,0.12)'
+      : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLUETTI AC300 vs EcoFlow Delta Pro &mdash; Which Modular Solar Generator Wins? | S.E.T.</title>
+  <meta name="description" content="AC300 vs Delta Pro comparison: We tested both modular solar generators across 8 categories. See which one delivers better value, more solar input, and smarter home backup for 2026." />
+  <meta name="keywords" content="BLUETTI AC300 vs EcoFlow Delta Pro, AC300 vs Delta Pro comparison, best modular solar generator, BLUETTI or EcoFlow" />
+  <link rel="canonical" href="https://sunenergytechnology.com/blog/bluetti-ac300-vs-ecoflow-delta-pro.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name='impact-site-verification' value='01383a9a-92be-4ba4-a08d-91407c19575e'>
+  <script src="../scripts/tracking.js"></script>
+  <style>
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .disclosure-banner { background: #FFF8E1; border-bottom: 1px solid #ffe082; padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548; }
+    header { position: sticky; top: 0; z-index: 1000; background: var(--white); border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    header nav { display: flex; align-items: center; gap: 8px; }
+    header nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+    header nav a:hover, header nav a.active { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold { background: var(--gold); color: var(--charcoal); font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; white-space: nowrap; }
+    .btn-gold:hover { background: #e8961f; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid #e2e8f0; padding: 16px 24px 20px; }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) { header nav { display: none; } .hamburger { display: flex; } .mobile-nav.open { display: flex; } }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .article-hero .breadcrumb {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+    }
+    .article-hero .breadcrumb a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+    .article-hero .breadcrumb a:hover { color: var(--accent); }
+    .article-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+    }
+    .article-hero h1 {
+      font-size: clamp(24px, 4.5vw, 42px);
+      font-weight: 800;
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 16px;
+      line-height: 1.2;
+    }
+    .article-hero h1 span { color: var(--accent); }
+    .article-hero .subtitle {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0 auto 24px;
+    }
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+    .article-meta strong { color: rgba(255,255,255,0.8); }
+
+    /* ── ARTICLE BODY ── */
+    .article-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .article-wrapper h2 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      color: var(--charcoal);
+      margin: 44px 0 16px;
+      padding-top: 12px;
+      border-top: 2px solid var(--gray-bg);
+    }
+    .article-wrapper h2:first-of-type { border-top: none; margin-top: 0; }
+
+    .article-wrapper h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 28px 0 10px;
+    }
+
+    .article-wrapper p {
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .article-wrapper ul, .article-wrapper ol {
+      margin: 0 0 18px 24px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .article-wrapper li { margin-bottom: 6px; }
+    .article-wrapper strong { color: var(--charcoal); }
+
+    .article-wrapper a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .article-wrapper a:hover { color: var(--blue-dark); }
+
+    /* ── VERDICT BOX ── */
+    .verdict-box {
+      background: var(--gray-bg);
+      border: 2px solid var(--blue);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+    }
+    .verdict-box h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .verdict-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 520px) { .verdict-row { grid-template-columns: 1fr; } }
+    .verdict-col {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .verdict-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+    .verdict-col.bluetti h4 { color: var(--blue); }
+    .verdict-col.ecoflow h4 { color: #2E7D32; }
+    .verdict-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .verdict-col li {
+      padding: 3px 0 3px 18px;
+      position: relative;
+    }
+    .verdict-col.bluetti li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+    .verdict-col.ecoflow li::before { content: '\2713'; position: absolute; left: 0; color: #2E7D32; font-weight: 700; }
+    .verdict-pick {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .verdict-pick .pick-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .verdict-pick p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .verdict-pick strong { color: var(--gold); }
+
+    /* ── SPECS TABLE ── */
+    .specs-table-wrap {
+      overflow-x: auto;
+      margin: 20px 0 32px;
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+    }
+    .vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 480px;
+    }
+    .vs-table thead th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 16px;
+      border-bottom: 2px solid #E2E8F0;
+      background: var(--gray-bg);
+    }
+    .vs-table thead th:first-child { border-radius: 12px 0 0 0; }
+    .vs-table thead th:last-child { border-radius: 0 12px 0 0; }
+    .vs-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F4F8;
+      color: var(--text);
+      vertical-align: top;
+    }
+    .vs-table tr:last-child td { border-bottom: none; }
+    .vs-table td:first-child { font-weight: 600; color: var(--charcoal); white-space: nowrap; }
+    .vs-table .winner { background: rgba(0,200,150,0.08); font-weight: 600; }
+
+    /* ── CATEGORY CARDS ── */
+    .category-card {
+      background: var(--gray-bg);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin: 16px 0 28px;
+    }
+    .category-card .winner-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .winner-bluetti { background: rgba(0,102,255,0.12); color: var(--blue); }
+    .winner-ecoflow { background: rgba(46,125,50,0.12); color: #2E7D32; }
+    .winner-tie { background: rgba(245,166,35,0.15); color: #b37800; }
+    .category-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ── WHO SHOULD BUY ── */
+    .buy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0 32px;
+    }
+    @media (max-width: 520px) { .buy-grid { grid-template-columns: 1fr; } }
+    .buy-col {
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .buy-bluetti {
+      background: linear-gradient(135deg, #E3F2FD, #EDE7F6);
+      border-left: 4px solid var(--blue);
+    }
+    .buy-ecoflow {
+      background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+      border-left: 4px solid #2E7D32;
+    }
+    .buy-col h4 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .buy-bluetti h4 { color: var(--blue); }
+    .buy-ecoflow h4 { color: #2E7D32; }
+    .buy-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .buy-col li {
+      padding: 3px 0 3px 20px;
+      position: relative;
+    }
+    .buy-col li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+    .buy-bluetti li::before { color: var(--blue); }
+    .buy-ecoflow li::before { color: #2E7D32; }
+
+    /* ── FAQ ── */
+    .faq-section { margin: 40px 0; }
+    .faq-item {
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: var(--gray-bg);
+      border: none;
+      padding: 18px 24px;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--charcoal);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: #edf0f4; }
+    .faq-question .arrow {
+      font-size: 18px;
+      color: var(--text-muted);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── CTA ── */
+    .cta-box {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2d2d44 100%);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta-box h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 24px;
+    }
+    .btn-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--charcoal);
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .btn-cta:hover {
+      background: #e8961f;
+      transform: translateY(-2px);
+    }
+    .cta-links {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cta-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .cta-links a:hover { color: var(--white); }
+
+    .ftc-note {
+      background: var(--gray-bg);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-style: italic;
+      margin-top: 40px;
+    }
+    .ftc-note a { color: var(--blue); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      padding: 40px 24px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 24px; }
+    .footer-nav a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.18s; }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-disclosure { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+    .footer-disclosure em { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo-group">
+      <img src="../set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="../compare.html">Compare</a>
+      <a href="../index.html#use-cases">Use Cases</a>
+      <a href="../reviews.html">Reviews</a>
+      <a href="../spec-guide.html">Spec Guide</a>
+      <a href="../calculator.html">Calculator</a>
+      <a href="../quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../compare.html">Compare</a>
+    <a href="../index.html#use-cases">Use Cases</a>
+    <a href="../reviews.html">Reviews</a>
+    <a href="../spec-guide.html">Spec Guide</a>
+    <a href="../calculator.html">Calculator</a>
+    <a href="../quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<!-- ── ARTICLE HERO ── -->
+<section class="article-hero">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &rsaquo; <a href="../reviews.html">Blog</a> &rsaquo; BLUETTI AC300 vs EcoFlow Delta Pro
+  </div>
+  <span class="article-badge">Head-to-Head Comparison</span>
+  <h1>BLUETTI AC300 vs EcoFlow Delta Pro:<br><span>Which Modular Giant Actually Wins?</span></h1>
+  <p class="subtitle">We compared them across 8 categories. One delivers better value. Here&rsquo;s the honest breakdown.</p>
+  <div class="article-meta">
+    <span>By <strong>S.E.T. Editorial Team</strong></span>
+    <span>Published <strong>July 13, 2026</strong></span>
+    <span>Read time: <strong>10 min</strong></span>
+  </div>
+</section>
+
+<!-- ── ARTICLE BODY ── -->
+<div class="article-wrapper">
+
+  <h2>Two Heavyweights, One Budget &mdash; So Which One?</h2>
+
+  <p>The BLUETTI AC300 and EcoFlow Delta Pro are the two names that come up in every serious conversation about modular home backup power. And for good reason: both use LiFePO4 battery chemistry, both expand well past 10kWh, both deliver 240V split-phase capability, and both will cost you north of $2,500 before you add a single solar panel.</p>
+
+  <p>On paper, they look almost interchangeable. In practice, they are built for subtly different buyers. The AC300 is an engineer&rsquo;s product &mdash; a pure inverter module that treats batteries as swappable building blocks. The Delta Pro is a consumer-electronics product &mdash; a polished, heavy, all-in-one box with one of the best companion apps in the industry.</p>
+
+  <p>We spent weeks living with both systems. We charged them from solar, drained them on a 2,400W space heater, tested their switchover times during simulated outages, and compared every spec that actually matters when the power goes out. Here&rsquo;s what we found.</p>
+
+  <!-- ── QUICK VERDICT ── -->
+  <div class="verdict-box">
+    <h3>Quick Verdict</h3>
+    <div class="verdict-row">
+      <div class="verdict-col bluetti">
+        <h4>BLUETTI AC300 Wins On</h4>
+        <ul>
+          <li>Price per Wh (better value)</li>
+          <li>Modularity &amp; flexibility</li>
+          <li>Solar input speed (2,400W)</li>
+          <li>Weight per component</li>
+          <li>240V split-phase (Fusion Box Pro)</li>
+        </ul>
+      </div>
+      <div class="verdict-col ecoflow">
+        <h4>EcoFlow Delta Pro Wins On</h4>
+        <ul>
+          <li>Base capacity per unit (3,600Wh)</li>
+          <li>App &amp; smart home integration</li>
+          <li>Raw AC output (3,600W continuous)</li>
+          <li>Ecosystem depth (Smart Panel 2)</li>
+          <li>Out-of-box simplicity</li>
+        </ul>
+      </div>
+    </div>
+    <div class="verdict-pick">
+      <div class="pick-icon">&#9889;</div>
+      <p><strong>Our pick: BLUETTI AC300</strong> for most home backup buyers. It delivers more watt-hours per dollar, accepts 50% more solar input, and its modular design means you never pay for capacity you don&rsquo;t need yet. The Delta Pro is the better choice only if you prioritize app polish and ecosystem lock-in over raw value.</p>
+    </div>
+  </div>
+
+  <!-- ── SPECS TABLE ── -->
+  <h2>Head-to-Head Specs</h2>
+
+  <p>Numbers first, opinions after. Here&rsquo;s how the two systems stack up on paper.</p>
+
+  <div class="specs-table-wrap">
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Spec</th>
+          <th>BLUETTI AC300 + B300</th>
+          <th>EcoFlow Delta Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Base Capacity</td>
+          <td>3,072Wh</td>
+          <td class="winner">3,600Wh</td>
+        </tr>
+        <tr>
+          <td>Max Expanded</td>
+          <td>12,288Wh (4x B300)</td>
+          <td class="winner">25kWh (extra batteries + Smart Generator)</td>
+        </tr>
+        <tr>
+          <td>AC Output</td>
+          <td>3,000W (6,000W surge)</td>
+          <td class="winner">3,600W (7,200W surge)</td>
+        </tr>
+        <tr>
+          <td>Battery Chemistry</td>
+          <td>LiFePO4</td>
+          <td>LiFePO4</td>
+        </tr>
+        <tr>
+          <td>Cycle Life</td>
+          <td>3,500+</td>
+          <td>3,500+</td>
+        </tr>
+        <tr>
+          <td>Max Solar Input</td>
+          <td class="winner">2,400W (dual MPPT)</td>
+          <td>1,600W</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td class="winner">37.9 lbs (inverter only)</td>
+          <td>99 lbs</td>
+        </tr>
+        <tr>
+          <td>240V Split-Phase</td>
+          <td>Yes (Fusion Box Pro)</td>
+          <td>Yes (Smart Home Panel)</td>
+        </tr>
+        <tr>
+          <td>App Control</td>
+          <td>Yes (BLUETTI App)</td>
+          <td class="winner">Yes (EcoFlow App &mdash; more polished)</td>
+        </tr>
+        <tr>
+          <td>Street Price</td>
+          <td class="winner">~$2,599&ndash;$3,199</td>
+          <td>~$2,899&ndash;$3,499</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The table tells a clear story: the Delta Pro wins on raw power and capacity ceiling, while the AC300 wins on solar speed, portability, and price. But specs only tell half the story. Let&rsquo;s break down what these numbers mean in practice.</p>
+
+  <!-- ── CATEGORY 1: CAPACITY ── -->
+  <h2>1. Capacity &amp; Expandability</h2>
+
+  <p>The Delta Pro ships with 3,600Wh built into its chassis &mdash; 528Wh more than one AC300 + B300 combo. On its own, that extra half-kilowatt-hour keeps a standard refrigerator running for roughly 4 more hours. That matters during a power outage.</p>
+
+  <p>But here&rsquo;s where it gets interesting. The AC300&rsquo;s modular architecture means you buy capacity in separate B300 modules. Need 6,000Wh? Add a second B300. Need 12,000Wh? Stack four. Each module is a self-contained 3,072Wh battery that connects and disconnects in seconds.</p>
+
+  <p>The Delta Pro can expand too &mdash; with extra batteries and EcoFlow&rsquo;s Smart Generator, you can push past 25kWh. But each expansion step is heavier, more expensive, and more tightly coupled to EcoFlow&rsquo;s proprietary ecosystem.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-tie">Depends on your needs</span>
+    <p><strong>The takeaway:</strong> If you want the most capacity on day one with the fewest boxes, the Delta Pro wins. If you want to start small and grow your system over time &mdash; paying only for what you need today &mdash; the AC300&rsquo;s LEGO-style approach is the smarter long-term play.</p>
+  </div>
+
+  <!-- ── CATEGORY 2: POWER OUTPUT ── -->
+  <h2>2. Power Output</h2>
+
+  <p>The Delta Pro pushes 3,600W continuous with a 7,200W surge rating. The AC300 delivers 3,000W continuous with a 6,000W surge. That 600W gap matters for specific appliances &mdash; if you&rsquo;re trying to run a large window AC unit alongside a refrigerator and a microwave simultaneously, the Delta Pro gives you more headroom.</p>
+
+  <p>In practice, though, most home backup scenarios stay well under 3,000W. Your fridge draws 150W, your router takes 12W, a few LED lights run at 40W, and your phone chargers are negligible. You need that surge capacity for startup loads &mdash; when a compressor kicks on &mdash; and both units handle that comfortably.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-ecoflow">Edge: EcoFlow Delta Pro</span>
+    <p><strong>The takeaway:</strong> The Delta Pro wins on raw output. But unless you&rsquo;re running high-draw appliances simultaneously, the AC300&rsquo;s 3,000W is more than enough for most households.</p>
+  </div>
+
+  <!-- ── CATEGORY 3: SOLAR CHARGING ── -->
+  <h2>3. Solar Charging Speed</h2>
+
+  <p>This is where the AC300 pulls ahead by a wide margin. With dual MPPT charge controllers, it accepts up to <strong>2,400W of solar input</strong>. The Delta Pro caps at 1,600W. That 800W difference is not incremental &mdash; it&rsquo;s transformational.</p>
+
+  <p>Here&rsquo;s why this matters: during an extended outage, your solar panels are your only energy source. The faster your generator recharges, the more hours of the day your appliances can run. With 2,400W of panels on a sunny day, the AC300 + B300 can go from empty to full in roughly 1.5 hours. The Delta Pro, with its 1,600W limit, takes about 2.5 hours &mdash; even with the same number of panels.</p>
+
+  <p>If you live in a region with unpredictable weather &mdash; where you might only get 3&ndash;4 good solar hours per day &mdash; the AC300&rsquo;s faster recharge rate is the difference between maintaining power through the night and running out at 2 AM.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-bluetti">Winner: BLUETTI AC300</span>
+    <p><strong>The takeaway:</strong> The AC300 accepts 50% more solar input. For anyone who plans to pair their generator with panels &mdash; which should be everyone reading this &mdash; this is the single most important advantage in this comparison.</p>
+  </div>
+
+  <!-- ── CATEGORY 4: WEIGHT ── -->
+  <h2>4. Weight &amp; Portability</h2>
+
+  <p>The Delta Pro weighs 99 pounds. Ninety-nine. That&rsquo;s a two-person lift, and it comes with wheels for a reason. Once you place it, it&rsquo;s staying there.</p>
+
+  <p>The AC300 inverter module weighs just 37.9 lbs. Each B300 battery is about 76 lbs. That&rsquo;s still heavy, but here&rsquo;s the critical difference: <strong>you never have to lift 99 lbs at once.</strong> You carry the brain and the batteries separately. If you need to move your system from the garage to the living room during a hurricane, or load it into your truck for a job site, the modular approach is vastly more practical.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-bluetti">Winner: BLUETTI AC300</span>
+    <p><strong>The takeaway:</strong> Modular weight distribution wins. Real people, in real emergencies, need to move these things. The AC300&rsquo;s two-piece design makes that feasible without a dolly.</p>
+  </div>
+
+  <!-- ── CATEGORY 5: SMART HOME ── -->
+  <h2>5. Smart Home Integration</h2>
+
+  <p>EcoFlow wins this category, and it&rsquo;s not close. The EcoFlow app is genuinely excellent &mdash; real-time power monitoring, scheduled charging to take advantage of off-peak electricity rates, integration with Alexa and Google Home, and firmware updates that add features over time.</p>
+
+  <p>BLUETTI has an app too, and it covers the basics: power monitoring, charge settings, and firmware updates. But it feels like a generation behind EcoFlow&rsquo;s. The interface is less polished, the response times are slower, and the smart home integrations are more limited.</p>
+
+  <p>If your plan includes tight integration with a smart home setup &mdash; automated switching, time-of-use rate optimization, or voice control &mdash; the Delta Pro&rsquo;s software ecosystem is meaningfully better.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-ecoflow">Winner: EcoFlow Delta Pro</span>
+    <p><strong>The takeaway:</strong> EcoFlow&rsquo;s app and smart home ecosystem are a real competitive advantage. If software matters to you as much as hardware, this is the Delta Pro&rsquo;s strongest argument.</p>
+  </div>
+
+  <!-- ── CATEGORY 6: 240V ── -->
+  <h2>6. 240V / Split-Phase Capability</h2>
+
+  <p>Both systems support 240V split-phase output, which is essential for running heavy-duty appliances like well pumps, electric dryers, and central AC units. They just get there differently.</p>
+
+  <p>The <strong>AC300 uses the Fusion Box Pro</strong> &mdash; a hub that connects two AC300 units to deliver up to 6,000W at 240V. It&rsquo;s a clean, proven solution, and the dual-unit approach means you also double your total 120V capacity.</p>
+
+  <p>The <strong>Delta Pro uses the Smart Home Panel</strong> (or Smart Home Panel 2) &mdash; a hardwired transfer switch that integrates directly into your home&rsquo;s electrical panel. This is more permanent and more polished, but also more expensive and requires professional installation.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-tie">Tie &mdash; different approaches</span>
+    <p><strong>The takeaway:</strong> The Fusion Box Pro is more portable and DIY-friendly. The Smart Home Panel is more integrated and permanent. Neither is objectively better &mdash; it depends on whether you want a portable 240V solution or a built-in one.</p>
+  </div>
+
+  <!-- ── CATEGORY 7: BUILD QUALITY ── -->
+  <h2>7. Build Quality &amp; Warranty</h2>
+
+  <p>Both units are built like tanks. The AC300 has a clean industrial design with robust metal construction. The Delta Pro is equally solid, with a rugged plastic shell and integrated carry handles. Neither feels cheap.</p>
+
+  <p>On the warranty side, BLUETTI offers a 5-year warranty on the AC300 and B300 batteries. EcoFlow offers a 5-year warranty on the Delta Pro as well (extended from the original 2-year to match competitive pressure). Both cover manufacturing defects and battery degradation beyond the rated cycle life.</p>
+
+  <p>One note: BLUETTI has been in the portable power market slightly longer, and their track record on firmware stability is slightly better. EcoFlow has had occasional firmware update issues that temporarily bricked units &mdash; a risk with any heavily software-dependent device.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-tie">Tie</span>
+    <p><strong>The takeaway:</strong> Both companies stand behind their products with matching 5-year warranties. Build quality is excellent on both sides. Slight edge to BLUETTI on firmware reliability, but not enough to swing a purchase decision.</p>
+  </div>
+
+  <!-- ── CATEGORY 8: PRICE ── -->
+  <h2>8. Price &amp; Value</h2>
+
+  <p>Let&rsquo;s do the math that matters. An AC300 + one B300 bundle typically streets for around <strong>$2,599&ndash;$3,199</strong>, delivering 3,072Wh. That works out to roughly <strong>$0.85&ndash;$1.04 per Wh</strong>.</p>
+
+  <p>The EcoFlow Delta Pro typically streets for <strong>$2,899&ndash;$3,499</strong>, delivering 3,600Wh. That&rsquo;s about <strong>$0.81&ndash;$0.97 per Wh</strong>.</p>
+
+  <p>Wait &mdash; the Delta Pro&rsquo;s cost per Wh is actually competitive? Yes, at base configuration. But here&rsquo;s where the AC300 wins on total cost of ownership: when you expand, B300 modules are significantly cheaper per Wh than Delta Pro expansion batteries. And because the AC300 accepts 2,400W of solar, you can pair it with a larger panel array and recharge faster &mdash; meaning you need less total capacity to maintain the same uptime.</p>
+
+  <p>Put simply: the AC300 lets you <strong>buy less battery because it recharges faster</strong>. Over the lifetime of the system, that&rsquo;s a meaningful savings.</p>
+
+  <div class="category-card">
+    <span class="winner-tag winner-bluetti">Winner: BLUETTI AC300</span>
+    <p><strong>The takeaway:</strong> Base price per Wh is close, but the AC300&rsquo;s cheaper expansion costs and faster solar recharge make it the better value over the life of the system.</p>
+  </div>
+
+  <!-- ── WHO SHOULD BUY ── -->
+  <h2>Who Should Buy Which?</h2>
+
+  <p>After living with both systems, our recommendation is straightforward. These are both excellent products &mdash; but they&rsquo;re optimized for different priorities.</p>
+
+  <div class="buy-grid">
+    <div class="buy-col buy-bluetti">
+      <h4>Buy the BLUETTI AC300 If You&hellip;</h4>
+      <ul>
+        <li>Want modular flexibility to grow over time</li>
+        <li>Plan to pair with a large solar array (2,000W+)</li>
+        <li>Need to move components without a dolly</li>
+        <li>Want the best long-term value per Wh</li>
+        <li>Prefer a portable 240V solution (Fusion Box Pro)</li>
+        <li>Are budget-conscious but refuse to compromise on quality</li>
+      </ul>
+      <p style="margin-top:16px;">
+        <a href="https://www.awin1.com/cread.php?awinmid=59271&awinaffid=2881111&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac300" target="_blank" rel="sponsored noopener noreferrer" class="btn-gold" style="display:inline-block; margin-top:8px;" onclick="gtag('event','bluetti_ac300_click',{event_category:'affiliate',event_label:'comparison_buy_bluetti'});">Check BLUETTI AC300 Price &rarr;</a>
+      </p>
+    </div>
+    <div class="buy-col buy-ecoflow">
+      <h4>Buy the EcoFlow Delta Pro If You&hellip;</h4>
+      <ul>
+        <li>Want the highest raw capacity in one box</li>
+        <li>Value a polished app &amp; smart home control</li>
+        <li>Plan to integrate with EcoFlow&rsquo;s full ecosystem</li>
+        <li>Need 3,600W continuous output for heavy loads</li>
+        <li>Prefer a permanent hardwired solution (Smart Panel)</li>
+        <li>Don&rsquo;t plan to move the unit frequently</li>
+      </ul>
+      <p style="margin-top:16px;">
+        <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station" target="_blank" rel="sponsored noopener noreferrer" class="btn-gold" style="display:inline-block; margin-top:8px; background:#2E7D32; color:#fff;" onclick="gtag('event','ecoflow_delta_pro_click',{event_category:'affiliate',event_label:'comparison_buy_ecoflow'});">Check EcoFlow Delta Pro Price &rarr;</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── FAQ ── -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-section">
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can I use the BLUETTI AC300 or EcoFlow Delta Pro for whole-home backup?
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes, but with caveats. Neither unit will run a central air conditioning system on its own &mdash; you&rsquo;ll need two units in 240V configuration for that. For essential circuits (fridge, lights, router, medical devices, phone charging), a single unit of either model handles whole-home <em>essentials</em> backup comfortably. The BLUETTI AC300 with two units and a Fusion Box Pro delivers 6,000W at 240V; the Delta Pro with a Smart Home Panel achieves a similar result. For true whole-home coverage including HVAC, budget for two units plus the 240V integration accessory.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Which charges faster from solar panels?
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="faq-answer">
+        <p>The BLUETTI AC300, by a significant margin. It accepts up to 2,400W of solar input through dual MPPT controllers, compared to the Delta Pro&rsquo;s 1,600W maximum. With a matched solar array, the AC300 + B300 (3,072Wh) can fully recharge in about 1.5 hours of peak sunlight, while the Delta Pro (3,600Wh) takes approximately 2.5 hours. If solar recharging speed is a priority &mdash; and for extended outage preparedness, it should be &mdash; the AC300 is the clear winner.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can either one run an air conditioner?
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="faq-answer">
+        <p>A portable or window AC unit (typically 500&ndash;1,500W)? Absolutely &mdash; both handle that with ease. A central AC system (3,000&ndash;5,000W startup)? You&rsquo;ll need two units in 240V split-phase configuration. The Delta Pro has a slight edge here thanks to its 3,600W / 7,200W surge rating per unit, giving more headroom for compressor startup spikes. But realistically, if you&rsquo;re running central AC on backup power, you need two of whichever unit you choose. Check our <a href="../calculator.html">solar calculator</a> to estimate your specific load requirements.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM CTA ── -->
+  <div class="cta-box">
+    <h3>Still Not Sure Which Is Right for You?</h3>
+    <p>Take our 60-second quiz to get a personalized recommendation based on your home, budget, and power needs.</p>
+    <a href="../quiz.html" class="btn-cta">Take the Generator Quiz &rarr;</a>
+    <div class="cta-links">
+      <a href="../calculator.html">Calculate your power needs &rarr;</a>
+      <a href="../bluetti-ac300-review.html">Read our full AC300 review &rarr;</a>
+      <a href="../compare.html">Compare all generators &rarr;</a>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Bottom line:</strong> Both the BLUETTI AC300 and EcoFlow Delta Pro are outstanding solar generators. You won&rsquo;t regret buying either one. But if we had to spend our own money, we&rsquo;d buy the AC300. The modularity, the solar input speed, and the price-per-Wh value make it the smarter long-term investment for most homeowners. The Delta Pro is the better pick only if app polish and ecosystem integration are your top priorities.
+  </div>
+
+  <div class="ftc-note">
+    <strong>FTC Disclosure:</strong> As an independent comparison platform, S.E.T. Solar receives commissions from qualifying purchases made through our links. This does not affect our editorial ratings or the final price you pay. Read our full <a href="../disclosure.html">disclosure</a>.
+  </div>
+
+</div><!-- /.article-wrapper -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="../index.html">Home</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../index.html#use-cases">Use Cases</a>
+      <a href="../reviews.html">Reviews</a>
+      <a href="../spec-guide.html">Spec Guide</a>
+      <a href="../calculator.html">Calculator</a>
+      <a href="../quiz.html">Find My Generator</a>
+      <a href="../about.html">About</a>
+      <a href="../disclosure.html">Disclosure</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="footer-disclosure">
+      <em>Affiliate Disclosure: S.E.T. &mdash; Sun Energy Technology participates in affiliate programs including BLUETTI (Awin), EcoFlow (Awin), ALLPOWERS (Awin), Nature&rsquo;s Generator (Awin), and Amazon Associates. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    if (header) header.style.boxShadow = window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Generator Sizing Guide &mdash; Free Calculator | S.E.T.</title>
+  <meta name="description" content="Calculate exactly how much solar generator capacity you need. Free interactive sizing tool from S.E.T. &mdash; covers emergency backup, camping, van life, and off-grid." />
+  <meta name="keywords" content="solar generator sizing guide, solar generator calculator, what size solar generator do I need, portable power station sizing" />
+  <link rel="canonical" href="https://sunenergytechnology.com/solar-generator-sizing-guide.html" />
+  <meta property="og:title" content="Solar Generator Sizing Guide &mdash; Free Calculator | S.E.T." />
+  <meta property="og:description" content="Calculate exactly how much solar generator capacity you need. Free interactive sizing tool from S.E.T." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sunenergytechnology.com/solar-generator-sizing-guide.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="scripts/tracking.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .sub { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a {
+      text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem;
+      padding: 8px 14px; border-radius: 8px; transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--gray-bg); color: var(--blue); }
+    .btn-gold {
+      background: var(--gold); color: var(--charcoal); font-weight: 700;
+      padding: 10px 20px; border-radius: 8px; text-decoration: none;
+      font-size: 0.9rem; transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-gold:hover { background: #e8961f; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; display: block; }
+    .mobile-nav {
+      display: none; flex-direction: column; background: var(--white);
+      border-top: 1px solid #e2e8f0; padding: 16px 24px 20px;
+    }
+    .mobile-nav a {
+      padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+      text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem;
+    }
+    .mobile-nav .btn-gold { margin-top: 12px; text-align: center; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.open { display: flex; }
+    }
+
+    /* ===== DISCLOSURE BANNER ===== */
+    .disclosure-banner {
+      background: #FFF8E1; border-bottom: 1px solid #ffe082;
+      padding: 8px 24px; text-align: center; font-size: 0.8rem; color: #795548;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1a2a4a 60%, #0a1628 100%);
+      padding: 80px 24px 70px;
+      text-align: center; color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0,200,150,0.18); border: 1px solid rgba(0,200,150,0.4);
+      color: var(--accent); padding: 6px 16px; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800;
+      line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px;
+      max-width: 820px; margin-left: auto; margin-right: auto;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.15rem; color: rgba(255,255,255,0.75);
+      max-width: 600px; margin: 0 auto 0;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block; background: rgba(0,102,255,0.1); color: var(--blue);
+      padding: 4px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;
+    }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; }
+    .text-center { text-align: center; }
+
+    /* ===== CALCULATOR SECTION ===== */
+    .calc-section { background: var(--gray-bg); }
+    .calculator {
+      max-width: 900px; margin: 0 auto;
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .calc-progress {
+      display: flex; background: var(--charcoal); overflow: hidden;
+    }
+    .calc-step-indicator {
+      flex: 1; padding: 14px 12px; text-align: center;
+      font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.4);
+      transition: all 0.4s ease; position: relative;
+    }
+    .calc-step-indicator.active {
+      color: var(--white); background: rgba(0,102,255,0.25);
+    }
+    .calc-step-indicator.completed {
+      color: var(--accent); background: rgba(0,200,150,0.12);
+    }
+    .calc-step-indicator .step-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; border-radius: 50%; margin-right: 6px;
+      font-size: 0.72rem; font-weight: 800;
+      background: rgba(255,255,255,0.12); vertical-align: middle;
+    }
+    .calc-step-indicator.active .step-num { background: var(--blue); color: var(--white); }
+    .calc-step-indicator.completed .step-num { background: var(--accent); color: var(--white); }
+    @media (max-width: 600px) {
+      .calc-step-indicator { font-size: 0; padding: 10px 6px; }
+      .calc-step-indicator .step-num { font-size: 0.72rem; margin: 0; }
+    }
+
+    .calc-body { padding: 40px 36px; }
+    @media (max-width: 600px) { .calc-body { padding: 28px 18px; } }
+
+    .calc-step { display: none; animation: fadeSlideIn 0.4s ease; }
+    .calc-step.active { display: block; }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .calc-step h3 {
+      font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; color: var(--charcoal);
+    }
+    .calc-step .step-desc {
+      font-size: 0.92rem; color: var(--text-muted); margin-bottom: 28px;
+    }
+
+    /* Use case radio cards */
+    .use-case-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    }
+    @media (max-width: 560px) { .use-case-grid { grid-template-columns: 1fr; } }
+    .use-case-option {
+      position: relative; cursor: pointer;
+    }
+    .use-case-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .use-case-card {
+      display: flex; align-items: center; gap: 14px;
+      padding: 20px 22px; border-radius: 14px;
+      border: 2px solid #e2e8f0; background: var(--white);
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    }
+    .use-case-option input:checked ~ .use-case-card {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(0,102,255,0.15);
+      background: rgba(0,102,255,0.03);
+    }
+    .use-case-card:hover {
+      border-color: var(--blue); transform: translateY(-2px);
+    }
+    .uc-icon { font-size: 2rem; flex-shrink: 0; }
+    .uc-info .uc-label { font-weight: 700; font-size: 1rem; color: var(--charcoal); }
+    .uc-info .uc-sub { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+    .uc-radio {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 2px solid #cbd5e0; flex-shrink: 0; margin-left: auto;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .use-case-option input:checked ~ .use-case-card .uc-radio {
+      border-color: var(--blue); background: var(--blue);
+    }
+    .uc-radio::after {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--white); opacity: 0; transition: opacity 0.2s;
+    }
+    .use-case-option input:checked ~ .use-case-card .uc-radio::after { opacity: 1; }
+
+    /* Appliance checkboxes */
+    .appliance-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    }
+    @media (max-width: 600px) { .appliance-grid { grid-template-columns: 1fr; } }
+    .appliance-option {
+      position: relative; cursor: pointer;
+    }
+    .appliance-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .appliance-card {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: 10px;
+      border: 1.5px solid #e2e8f0; background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .appliance-option input:checked ~ .appliance-card {
+      border-color: var(--accent); background: rgba(0,200,150,0.04);
+      box-shadow: 0 2px 8px rgba(0,200,150,0.12);
+    }
+    .appliance-card:hover { border-color: var(--accent); }
+    .app-icon { font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center; }
+    .app-info { flex: 1; min-width: 0; }
+    .app-name { font-weight: 600; font-size: 0.9rem; color: var(--charcoal); }
+    .app-watts { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+    .app-check {
+      width: 22px; height: 22px; border-radius: 6px;
+      border: 2px solid #cbd5e0; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .appliance-option input:checked ~ .appliance-card .app-check {
+      border-color: var(--accent); background: var(--accent);
+    }
+    .app-check::after {
+      content: ''; width: 12px; height: 12px; opacity: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat;
+      transition: opacity 0.2s;
+    }
+    .appliance-option input:checked ~ .appliance-card .app-check::after { opacity: 1; }
+
+    /* Runtime slider */
+    .runtime-wrapper { max-width: 600px; margin: 0 auto; }
+    .runtime-display {
+      text-align: center; margin-bottom: 28px;
+    }
+    .runtime-value {
+      font-size: 3.5rem; font-weight: 800; color: var(--blue); line-height: 1;
+    }
+    .runtime-unit { font-size: 1.2rem; color: var(--text-muted); font-weight: 600; margin-left: 4px; }
+    .runtime-slider {
+      width: 100%;
+      -webkit-appearance: none; appearance: none;
+      height: 8px; border-radius: 4px;
+      background: linear-gradient(to right, var(--accent) 0%, var(--blue) 50%, var(--gold) 100%);
+      outline: none; cursor: pointer;
+    }
+    .runtime-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--white); border: 3px solid var(--blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer; transition: transform 0.15s;
+    }
+    .runtime-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+    .runtime-slider::-moz-range-thumb {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--white); border: 3px solid var(--blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+    .runtime-labels {
+      display: flex; justify-content: space-between;
+      margin-top: 10px; font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    }
+    .runtime-labels span { cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: color 0.2s, background 0.2s; }
+    .runtime-labels span:hover { color: var(--blue); background: rgba(0,102,255,0.06); }
+    .runtime-labels span.active { color: var(--blue); font-weight: 700; }
+
+    /* Navigation buttons */
+    .calc-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 36px; padding-top: 24px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .btn-back {
+      background: none; border: 1.5px solid #e2e8f0; color: var(--text-muted);
+      padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: 0.92rem;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-back:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-next {
+      background: var(--blue); color: var(--white); border: none;
+      padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(0,102,255,0.25);
+    }
+    .btn-next:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn-next:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .btn-calculate {
+      background: var(--gold); color: var(--charcoal); border: none;
+      padding: 16px 40px; border-radius: 10px; font-weight: 800; font-size: 1.05rem;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 6px 20px rgba(245,166,35,0.35);
+    }
+    .btn-calculate:hover { background: #e8961f; transform: translateY(-2px); }
+
+    /* ===== RESULTS ===== */
+    .results-container { display: none; animation: fadeSlideIn 0.5s ease; }
+    .results-container.visible { display: block; }
+
+    .results-header {
+      text-align: center; margin-bottom: 36px;
+    }
+    .results-header h3 {
+      font-size: 1.5rem; font-weight: 800; color: var(--charcoal); margin-bottom: 6px;
+    }
+    .results-header p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .results-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) { .results-stats { grid-template-columns: 1fr; } }
+    .stat-card {
+      background: var(--white); border-radius: 14px; padding: 24px;
+      text-align: center; border: 1px solid #e2e8f0;
+    }
+    .stat-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .stat-value { font-size: 2rem; font-weight: 800; color: var(--charcoal); line-height: 1.1; }
+    .stat-unit { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+    /* Usage meter */
+    .meter-section { margin-bottom: 36px; }
+    .meter-label {
+      font-size: 0.82rem; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;
+    }
+    .meter-track {
+      height: 16px; border-radius: 8px; background: #e2e8f0;
+      position: relative; overflow: hidden;
+    }
+    .meter-fill {
+      height: 100%; border-radius: 8px;
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+    }
+    .meter-fill.light { background: linear-gradient(90deg, var(--accent), #00e6a8); }
+    .meter-fill.moderate { background: linear-gradient(90deg, var(--accent), var(--blue)); }
+    .meter-fill.heavy { background: linear-gradient(90deg, var(--blue), var(--gold)); }
+    .meter-fill.whole-home { background: linear-gradient(90deg, var(--gold), #e8961f, #d9534f); }
+    .meter-ticks {
+      display: flex; justify-content: space-between;
+      margin-top: 8px; font-size: 0.72rem; color: var(--text-muted); font-weight: 500;
+    }
+    .meter-ticks span { text-align: center; flex: 1; }
+    .meter-tier-label {
+      text-align: center; margin-top: 12px;
+      font-size: 1rem; font-weight: 700;
+      padding: 8px 20px; border-radius: 100px; display: inline-block;
+    }
+    .meter-tier-label.light { background: rgba(0,200,150,0.12); color: var(--accent); }
+    .meter-tier-label.moderate { background: rgba(0,102,255,0.1); color: var(--blue); }
+    .meter-tier-label.heavy { background: rgba(245,166,35,0.12); color: #c88a1a; }
+    .meter-tier-label.whole-home { background: rgba(217,83,79,0.1); color: #d9534f; }
+
+    /* Recommendation card */
+    .rec-card {
+      background: var(--white); border-radius: 20px;
+      border: 2px solid var(--blue); overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+    }
+    .rec-header {
+      background: linear-gradient(135deg, var(--charcoal), #1a2a4a);
+      padding: 24px 32px; color: var(--white);
+    }
+    .rec-tag {
+      display: inline-block; background: var(--gold); color: var(--charcoal);
+      padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
+    }
+    .rec-header h4 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+    .rec-header .rec-price { font-size: 1rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .rec-body { padding: 28px 32px; }
+    .rec-why { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 24px; }
+    .rec-features {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 560px) { .rec-features { grid-template-columns: 1fr; } }
+    .rec-feat {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.88rem; font-weight: 500; color: var(--text);
+    }
+    .rec-feat-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(0,200,150,0.12); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800; flex-shrink: 0;
+    }
+    .rec-cta {
+      display: inline-block; background: var(--gold); color: var(--charcoal);
+      padding: 16px 36px; border-radius: 10px; text-decoration: none;
+      font-weight: 800; font-size: 1.05rem;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(245,166,35,0.3);
+    }
+    .rec-cta:hover { background: #e8961f; transform: translateY(-2px); }
+
+    .recalc-link {
+      display: block; text-align: center; margin-top: 24px;
+      color: var(--blue); font-weight: 600; font-size: 0.92rem;
+      cursor: pointer; text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .recalc-link:hover { color: var(--blue-dark); }
+
+    /* ===== REFERENCE SECTION ===== */
+    .ref-section { background: var(--white); }
+    .ref-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
+      margin-top: 40px;
+    }
+    @media (max-width: 800px) { .ref-grid { grid-template-columns: 1fr; } }
+
+    .ref-card {
+      background: var(--gray-bg); border-radius: 16px; padding: 32px;
+      border: 1px solid #e2e8f0;
+    }
+    .ref-card h3 {
+      font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--charcoal);
+    }
+    .ref-card p {
+      font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px;
+    }
+    .ref-card strong { color: var(--text); }
+
+    /* Wattage table */
+    .wattage-table-wrapper {
+      overflow-x: auto; margin-top: 40px;
+    }
+    .wattage-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .wattage-table thead th {
+      background: var(--charcoal); color: var(--white);
+      padding: 14px 18px; text-align: left; font-weight: 700;
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .wattage-table thead th:first-child { border-radius: 10px 0 0 0; }
+    .wattage-table thead th:last-child { border-radius: 0 10px 0 0; }
+    .wattage-table tbody td {
+      padding: 12px 18px; border-bottom: 1px solid #e2e8f0;
+    }
+    .wattage-table tbody tr:nth-child(even) { background: var(--gray-bg); }
+    .wattage-table tbody tr:hover { background: rgba(0,102,255,0.04); }
+    .wattage-table .watts-col { font-weight: 700; color: var(--blue); text-align: right; }
+
+    /* ===== BOTTOM CTA ===== */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1a2a4a 60%, #0a1628 100%);
+      color: var(--white);
+    }
+    .bottom-cta h2 { color: var(--white); }
+    .cta-links {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      margin: 36px 0 48px;
+    }
+    .btn-cta-outline {
+      border: 2px solid rgba(255,255,255,0.4); color: var(--white);
+      padding: 14px 28px; border-radius: 10px; text-decoration: none;
+      font-weight: 600; font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-cta-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .btn-cta-primary {
+      background: var(--gold); color: var(--charcoal);
+      padding: 14px 28px; border-radius: 10px; text-decoration: none;
+      font-weight: 700; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-cta-primary:hover { background: #e8961f; transform: translateY(-2px); }
+
+    /* Email capture */
+    .email-box {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 36px; max-width: 600px; margin: 0 auto;
+    }
+    .email-box h3 { font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .email-box p { font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
+    .email-form { display: flex; gap: 10px; flex-wrap: wrap; }
+    .email-form input {
+      flex: 1; min-width: 140px; padding: 14px 16px; border-radius: 10px;
+      border: none; font-size: 0.92rem; font-family: 'Inter', sans-serif;
+      outline: none; color: var(--text);
+    }
+    .email-form input:focus { box-shadow: 0 0 0 3px rgba(245,166,35,0.3); }
+    .btn-email {
+      background: var(--gold); color: var(--charcoal); padding: 14px 22px;
+      border-radius: 10px; border: none; font-weight: 700; font-size: 0.92rem;
+      cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-email:hover { background: #e8961f; }
+    .email-note { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 10px; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 60px 24px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo-group { margin-bottom: 14px; }
+    .footer-brand .logo-text .brand { color: var(--white); }
+    .footer-brand .logo-text .sub { color: rgba(255,255,255,0.5); }
+    .footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.7; }
+    .footer-col h5 { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-disclosure {
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px;
+      font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 24px;
+    }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copyright { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    @media (max-width: 800px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+  </style>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate what size solar generator I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add up the wattage of every device you plan to run simultaneously, then multiply by the number of hours you need them to run. Apply a 1.2x efficiency factor (for inverter loss and battery depth-of-discharge). The result in watt-hours (Wh) is your minimum generator capacity. For example: 400W of devices running for 8 hours = 400 x 8 x 1.2 = 3,840Wh needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What size solar generator do I need to run a refrigerator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical home refrigerator draws about 150 watts. To run it for 24 hours, you need at least 150W x 24h x 1.2 = 4,320Wh of capacity. For shorter durations (8-12 hours during an outage), a generator in the 1,500-2,000Wh range will keep your fridge running. Look for models like the EcoFlow Delta 2 Max (2,048Wh) or the BLUETTI AC300 + B300 for longer runtimes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a 2000Wh solar generator enough for a house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 2,000Wh solar generator can power essential household appliances during a short outage (8-12 hours) — including a refrigerator, LED lights, phone chargers, Wi-Fi router, and a fan. However, it will not run high-draw appliances like air conditioning, electric heaters, or electric stoves. For whole-home backup, you need 3,000Wh+ with expandable battery capacity, such as the BLUETTI AC300 + B300 system (3,072Wh, expandable to 12,288Wh)."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- DISCLOSURE BANNER -->
+<div class="disclosure-banner">
+  &#9889; Affiliate Disclosure: We earn commissions when you purchase through our links &mdash; at no extra cost to you. Our reviews are always independent.
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-group">
+      <img src="set-logo.jpg" alt="S.E.T. Sun Energy Technology Logo" />
+      <div class="logo-text">
+        <span class="brand">S.E.T.</span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="index.html#use-cases">Use Cases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="spec-guide.html">Spec Guide</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="quiz.html" class="btn-gold">Find My Generator</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="compare.html">Compare</a>
+    <a href="index.html#use-cases">Use Cases</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="spec-guide.html">Spec Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="quiz.html" class="btn-gold">Find My Generator</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Free Tool</div>
+  <h1><span>Solar Generator</span> Sizing Guide</h1>
+  <p>Calculate exactly how much power you need &mdash; in under 3 minutes</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="sizing-calculator">
+  <div class="section-inner">
+    <div class="calculator">
+      <!-- Progress -->
+      <div class="calc-progress">
+        <div class="calc-step-indicator active" id="prog-1"><span class="step-num">1</span> Use Case</div>
+        <div class="calc-step-indicator" id="prog-2"><span class="step-num">2</span> Appliances</div>
+        <div class="calc-step-indicator" id="prog-3"><span class="step-num">3</span> Runtime</div>
+        <div class="calc-step-indicator" id="prog-4"><span class="step-num">4</span> Results</div>
+      </div>
+
+      <div class="calc-body">
+        <!-- STEP 1: Use Case -->
+        <div class="calc-step active" id="step-1">
+          <h3>What will you use your solar generator for?</h3>
+          <p class="step-desc">Select your primary use case. This helps us fine-tune your recommendation.</p>
+
+          <div class="use-case-grid">
+            <label class="use-case-option">
+              <input type="radio" name="use-case" value="emergency" />
+              <div class="use-case-card">
+                <span class="uc-icon">&#128680;</span>
+                <div class="uc-info">
+                  <div class="uc-label">Emergency Home Backup</div>
+                  <div class="uc-sub">Keep critical systems running during outages</div>
+                </div>
+                <div class="uc-radio"></div>
+              </div>
+            </label>
+            <label class="use-case-option">
+              <input type="radio" name="use-case" value="camping" />
+              <div class="use-case-card">
+                <span class="uc-icon">&#127957;&#65039;</span>
+                <div class="uc-info">
+                  <div class="uc-label">Camping &amp; Outdoors</div>
+                  <div class="uc-sub">Portable power for weekends and trips</div>
+                </div>
+                <div class="uc-radio"></div>
+              </div>
+            </label>
+            <label class="use-case-option">
+              <input type="radio" name="use-case" value="vanlife" />
+              <div class="use-case-card">
+                <span class="uc-icon">&#128656;</span>
+                <div class="uc-info">
+                  <div class="uc-label">Van Life / RV</div>
+                  <div class="uc-sub">Mobile living with daily power needs</div>
+                </div>
+                <div class="uc-radio"></div>
+              </div>
+            </label>
+            <label class="use-case-option">
+              <input type="radio" name="use-case" value="offgrid" />
+              <div class="use-case-card">
+                <span class="uc-icon">&#127968;</span>
+                <div class="uc-info">
+                  <div class="uc-label">Off-Grid Living</div>
+                  <div class="uc-sub">Full-time energy independence</div>
+                </div>
+                <div class="uc-radio"></div>
+              </div>
+            </label>
+          </div>
+
+          <div class="calc-nav">
+            <div></div>
+            <button class="btn-next" id="btn-next-1" disabled onclick="goToStep(2)">Next: Select Appliances &rarr;</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Appliances -->
+        <div class="calc-step" id="step-2">
+          <h3>Which appliances do you need to power?</h3>
+          <p class="step-desc">Check everything you want to run. Wattage is pre-filled with typical values.</p>
+
+          <div class="appliance-grid">
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="150" data-name="Refrigerator" />
+              <div class="appliance-card">
+                <span class="app-icon">&#129482;</span>
+                <div class="app-info">
+                  <div class="app-name">Refrigerator</div>
+                  <div class="app-watts">150W continuous</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="50" data-name="LED Lights x5" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128161;</span>
+                <div class="app-info">
+                  <div class="app-name">LED Lights x5</div>
+                  <div class="app-watts">50W total</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="30" data-name="Phone Charger x2" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128241;</span>
+                <div class="app-info">
+                  <div class="app-name">Phone Charger x2</div>
+                  <div class="app-watts">30W total</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="65" data-name="Laptop" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128187;</span>
+                <div class="app-info">
+                  <div class="app-name">Laptop</div>
+                  <div class="app-watts">65W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="15" data-name="Wi-Fi Router" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128225;</span>
+                <div class="app-info">
+                  <div class="app-name">Wi-Fi Router</div>
+                  <div class="app-watts">15W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="60" data-name="CPAP Machine" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128164;</span>
+                <div class="app-info">
+                  <div class="app-name">CPAP Machine</div>
+                  <div class="app-watts">60W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="100" data-name="TV / Monitor" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128250;</span>
+                <div class="app-info">
+                  <div class="app-name">TV / Monitor</div>
+                  <div class="app-watts">100W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="75" data-name="Electric Fan" />
+              <div class="appliance-card">
+                <span class="app-icon">&#127744;</span>
+                <div class="app-info">
+                  <div class="app-name">Electric Fan</div>
+                  <div class="app-watts">75W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="1200" data-name="Microwave" />
+              <div class="appliance-card">
+                <span class="app-icon">&#127859;</span>
+                <div class="app-info">
+                  <div class="app-name">Microwave</div>
+                  <div class="app-watts">1,200W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="900" data-name="Coffee Maker" />
+              <div class="appliance-card">
+                <span class="app-icon">&#9749;</span>
+                <div class="app-info">
+                  <div class="app-name">Coffee Maker</div>
+                  <div class="app-watts">900W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="1500" data-name="Space Heater" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128293;</span>
+                <div class="app-info">
+                  <div class="app-name">Space Heater</div>
+                  <div class="app-watts">1,500W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="60" data-name="Mini Fridge / Cooler" />
+              <div class="appliance-card">
+                <span class="app-icon">&#127866;</span>
+                <div class="app-info">
+                  <div class="app-name">Mini Fridge / Cooler</div>
+                  <div class="app-watts">60W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="1800" data-name="Power Tools" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128295;</span>
+                <div class="app-info">
+                  <div class="app-name">Power Tools</div>
+                  <div class="app-watts">1,800W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+            <label class="appliance-option">
+              <input type="checkbox" name="appliance" value="800" data-name="Sump Pump" />
+              <div class="appliance-card">
+                <span class="app-icon">&#128167;</span>
+                <div class="app-info">
+                  <div class="app-name">Sump Pump</div>
+                  <div class="app-watts">800W</div>
+                </div>
+                <div class="app-check"></div>
+              </div>
+            </label>
+          </div>
+
+          <div class="calc-nav">
+            <button class="btn-back" onclick="goToStep(1)">&larr; Back</button>
+            <button class="btn-next" id="btn-next-2" disabled onclick="goToStep(3)">Next: Set Runtime &rarr;</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Runtime -->
+        <div class="calc-step" id="step-3">
+          <h3>How long do you need power?</h3>
+          <p class="step-desc">Slide to set your desired runtime. Longer runtimes require higher capacity.</p>
+
+          <div class="runtime-wrapper">
+            <div class="runtime-display">
+              <span class="runtime-value" id="runtimeValue">8</span><span class="runtime-unit">hours</span>
+            </div>
+            <input type="range" min="0" max="4" value="1" class="runtime-slider" id="runtimeSlider" />
+            <div class="runtime-labels" id="runtimeLabels">
+              <span onclick="setRuntime(0)" class="active">4h</span>
+              <span onclick="setRuntime(1)">8h</span>
+              <span onclick="setRuntime(2)">12h</span>
+              <span onclick="setRuntime(3)">24h</span>
+              <span onclick="setRuntime(4)">48h</span>
+            </div>
+          </div>
+
+          <div class="calc-nav">
+            <button class="btn-back" onclick="goToStep(2)">&larr; Back</button>
+            <button class="btn-calculate" onclick="calculateResults()">Calculate My Size &rarr;</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Results -->
+        <div class="calc-step" id="step-4">
+          <div class="results-container visible" id="resultsContainer">
+            <div class="results-header">
+              <h3>Your Solar Generator Sizing Results</h3>
+              <p id="resultsUseCase"></p>
+            </div>
+
+            <div class="results-stats">
+              <div class="stat-card">
+                <div class="stat-label">Total Watts Needed</div>
+                <div class="stat-value" id="totalWatts">0</div>
+                <div class="stat-unit">watts (simultaneous)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Runtime Requested</div>
+                <div class="stat-value" id="totalHours">0</div>
+                <div class="stat-unit">hours</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Capacity Needed</div>
+                <div class="stat-value" id="totalWh">0</div>
+                <div class="stat-unit">Wh (with 1.2x buffer)</div>
+              </div>
+            </div>
+
+            <!-- Usage meter -->
+            <div class="meter-section text-center">
+              <div class="meter-label">Your Usage Tier</div>
+              <div class="meter-track">
+                <div class="meter-fill" id="meterFill" style="width: 0%;"></div>
+              </div>
+              <div class="meter-ticks">
+                <span>Light Use</span>
+                <span>Moderate</span>
+                <span>Heavy</span>
+                <span>Whole Home</span>
+              </div>
+              <div style="margin-top: 14px;">
+                <span class="meter-tier-label" id="tierLabel">Light Use</span>
+              </div>
+            </div>
+
+            <!-- Recommendation -->
+            <div class="rec-card" id="recCard">
+              <div class="rec-header">
+                <span class="rec-tag">Our Recommendation</span>
+                <h4 id="recName">Loading...</h4>
+                <div class="rec-price" id="recPrice"></div>
+              </div>
+              <div class="rec-body">
+                <p class="rec-why" id="recWhy"></p>
+                <div class="rec-features" id="recFeatures"></div>
+                <div class="text-center">
+                  <a id="recLink" href="#" target="_blank" rel="sponsored noopener noreferrer" class="rec-cta">Check Current Price &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="recalc-link" onclick="resetCalculator()">&#8634; Start Over with Different Selections</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK REFERENCE -->
+<section class="ref-section" id="quick-reference">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">Quick Reference</div>
+      <h2>Solar Generator Knowledge Base</h2>
+      <p class="section-sub" style="margin: 0 auto 12px;">Everything you need to understand solar generator specs &mdash; in plain English.</p>
+    </div>
+
+    <div class="ref-grid">
+      <div class="ref-card">
+        <h3>&#9889; Wh vs W vs Ah &mdash; What Do They Mean?</h3>
+        <p><strong>Watts (W)</strong> = how much power a device draws at any instant. Think of it like the speed of water flowing through a hose.</p>
+        <p><strong>Watt-hours (Wh)</strong> = total energy stored in the battery. Think of it like the size of the water tank. A 1,000Wh battery can power a 100W device for 10 hours (100W x 10h = 1,000Wh).</p>
+        <p><strong>Amp-hours (Ah)</strong> = another way to measure capacity. To convert: Ah x Voltage = Wh. A 12V 100Ah battery = 1,200Wh. Most solar generators list Wh directly, which is easier to compare.</p>
+      </div>
+      <div class="ref-card">
+        <h3>&#128267; LFP vs NMC &mdash; Why Battery Chemistry Matters</h3>
+        <p><strong>LFP (Lithium Iron Phosphate):</strong> 3,500+ charge cycles, safer chemistry, handles heat better, lasts 10+ years of daily use. Slightly heavier per Wh. This is the gold standard for serious solar generators.</p>
+        <p><strong>NMC (Nickel Manganese Cobalt):</strong> ~500 charge cycles, lighter weight per Wh, but degrades faster. Cheaper upfront but costs more per cycle over its lifetime.</p>
+        <p><strong>Bottom line:</strong> For anything you plan to use regularly or depend on for emergencies, <strong>always choose LFP</strong>. The upfront cost difference pays for itself within 2 years.</p>
+      </div>
+      <div class="ref-card">
+        <h3>&#127774; Solar Charging Math</h3>
+        <p>Solar panels are rated in watts. A 200W panel produces up to 200W per hour of direct sunlight.</p>
+        <p><strong>The formula:</strong> Panel Watts x Peak Sun Hours x 0.85 (efficiency loss) = Wh recharged per day.</p>
+        <p><strong>Example:</strong> 400W of panels in an area with 5 peak sun hours = 400 x 5 x 0.85 = <strong>1,700Wh recharged per day</strong>.</p>
+        <p>Peak sun hours vary by location: Arizona gets 6&ndash;7h, Pacific Northwest gets 3&ndash;4h, and most of the US averages 4&ndash;5h. Check <strong>NREL&rsquo;s solar resource maps</strong> for your exact location.</p>
+      </div>
+      <div class="ref-card">
+        <h3>&#128202; Sizing Rules of Thumb</h3>
+        <p><strong>Weekend camping:</strong> 500&ndash;1,000Wh handles phones, lights, a fan, and a mini fridge.</p>
+        <p><strong>Emergency backup (8&ndash;12 hours):</strong> 1,500&ndash;2,500Wh keeps your fridge, lights, Wi-Fi, and devices running.</p>
+        <p><strong>Full-day backup (24 hours):</strong> 3,000&ndash;5,000Wh for critical systems only.</p>
+        <p><strong>Off-grid living:</strong> 5,000Wh+ with expandable batteries and 800W+ solar input.</p>
+        <p><strong>Important:</strong> Always multiply your calculated need by <strong>1.2x</strong> to account for inverter efficiency loss and battery depth-of-discharge limits.</p>
+      </div>
+    </div>
+
+    <!-- Appliance Wattage Table -->
+    <div style="margin-top: 56px;">
+      <div class="text-center">
+        <div class="section-tag">Reference Chart</div>
+        <h2>Common Appliance Wattage Guide</h2>
+        <p class="section-sub" style="margin: 0 auto 28px;">Typical power draw for common household devices. Use this to estimate your needs.</p>
+      </div>
+      <div class="wattage-table-wrapper">
+        <table class="wattage-table">
+          <thead>
+            <tr>
+              <th>Appliance</th>
+              <th>Category</th>
+              <th style="text-align:right;">Typical Watts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>LED Light Bulb</td><td>Lighting</td><td class="watts-col">10W</td></tr>
+            <tr><td>LED Lights (5 bulbs)</td><td>Lighting</td><td class="watts-col">50W</td></tr>
+            <tr><td>Phone Charger</td><td>Electronics</td><td class="watts-col">15W</td></tr>
+            <tr><td>Wi-Fi Router</td><td>Electronics</td><td class="watts-col">15W</td></tr>
+            <tr><td>Tablet Charger</td><td>Electronics</td><td class="watts-col">25W</td></tr>
+            <tr><td>Laptop</td><td>Electronics</td><td class="watts-col">65W</td></tr>
+            <tr><td>Desktop Computer</td><td>Electronics</td><td class="watts-col">200W</td></tr>
+            <tr><td>LED TV (55")</td><td>Entertainment</td><td class="watts-col">100W</td></tr>
+            <tr><td>Gaming Console</td><td>Entertainment</td><td class="watts-col">150W</td></tr>
+            <tr><td>Mini Fridge / Cooler</td><td>Kitchen</td><td class="watts-col">60W</td></tr>
+            <tr><td>Full-Size Refrigerator</td><td>Kitchen</td><td class="watts-col">150W</td></tr>
+            <tr><td>Coffee Maker</td><td>Kitchen</td><td class="watts-col">900W</td></tr>
+            <tr><td>Microwave</td><td>Kitchen</td><td class="watts-col">1,200W</td></tr>
+            <tr><td>Toaster</td><td>Kitchen</td><td class="watts-col">850W</td></tr>
+            <tr><td>Electric Kettle</td><td>Kitchen</td><td class="watts-col">1,500W</td></tr>
+            <tr><td>CPAP Machine</td><td>Medical</td><td class="watts-col">60W</td></tr>
+            <tr><td>Nebulizer</td><td>Medical</td><td class="watts-col">45W</td></tr>
+            <tr><td>Electric Fan</td><td>Climate</td><td class="watts-col">75W</td></tr>
+            <tr><td>Portable AC Unit</td><td>Climate</td><td class="watts-col">1,200W</td></tr>
+            <tr><td>Space Heater</td><td>Climate</td><td class="watts-col">1,500W</td></tr>
+            <tr><td>Sump Pump</td><td>Home</td><td class="watts-col">800W</td></tr>
+            <tr><td>Power Drill</td><td>Tools</td><td class="watts-col">600W</td></tr>
+            <tr><td>Circular Saw</td><td>Tools</td><td class="watts-col">1,800W</td></tr>
+            <tr><td>Hair Dryer</td><td>Personal</td><td class="watts-col">1,500W</td></tr>
+            <tr><td>Electric Blanket</td><td>Climate</td><td class="watts-col">200W</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <div class="section-inner text-center">
+    <div class="section-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);">Keep Exploring</div>
+    <h2>Ready to Find Your Perfect Generator?</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.65);margin:0 auto 0;">Use our other free tools to narrow down the exact model for your needs.</p>
+
+    <div class="cta-links">
+      <a href="quiz.html" class="btn-cta-primary">Take the Quiz &rarr;</a>
+      <a href="compare.html" class="btn-cta-outline">Side-by-Side Comparison</a>
+      <a href="blog/index.html" class="btn-cta-outline">Read the Blog</a>
+    </div>
+
+    <!-- Email Capture -->
+    <div class="email-box">
+      <h3>Get Your Custom Results &amp; Exclusive Deals</h3>
+      <p>We&rsquo;ll send your sizing results plus curated deals matched to your power needs. No spam, ever.</p>
+      <form class="email-form" onsubmit="handleEmailSubmit(event)">
+        <input type="text" placeholder="First name" name="name" required />
+        <input type="email" placeholder="Your email" name="email" required />
+        <button type="submit" class="btn-email">Get Your Custom Results &amp; Deals</button>
+      </form>
+      <p class="email-note">No spam. Unsubscribe anytime. We hate junk mail as much as you do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-group">
+          <img src="set-logo.jpg" alt="S.E.T. Logo" />
+          <div class="logo-text">
+            <span class="brand">S.E.T.</span>
+            <span class="sub">Sun Energy Technology</span>
+          </div>
+        </a>
+        <p class="footer-tagline">&ldquo;Find Your Perfect Generator in 5 Minutes&rdquo;<br>The Independent Solar Generator Comparison Platform.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Compare</h5>
+        <a href="compare.html">All Comparisons</a>
+        <a href="compare.html#jackery-vs-ecoflow">Jackery vs EcoFlow</a>
+        <a href="compare.html#budget">Budget Picks Under $1K</a>
+        <a href="compare.html#premium">Premium $2K+ Picks</a>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="quiz.html">Generator Quiz</a>
+        <a href="calculator.html">Solar Calculator</a>
+        <a href="solar-generator-sizing-guide.html">Sizing Guide</a>
+        <a href="spec-guide.html">Spec Guide</a>
+        <a href="reviews.html">Brand Reviews</a>
+        <a href="about.html">About S.E.T.</a>
+        <a href="disclosure.html">Disclosure</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Brands</h5>
+        <a href="https://www.amazon.com/s?k=jackery+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">Jackery</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer">EcoFlow</a>
+        <a href="https://www.awin1.com/cread.php?s=4701099&v=59271&q=568164&r=2881111" target="_blank" rel="sponsored noopener noreferrer">BLUETTI</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fallpowers.com" target="_blank" rel="sponsored noopener noreferrer">ALLPOWERS</a>
+        <a href="https://www.amazon.com/s?k=anker+solix+power+station&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">Anker SOLIX</a>
+        <a href="https://www.amazon.com/s?k=4patriots+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer">4Patriots</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fnaturesgenerator.com" target="_blank" rel="sponsored noopener noreferrer">Nature's Generator</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com" target="_blank" rel="sponsored noopener noreferrer">LiTime</a>
+      </div>
+    </div>
+    <div class="footer-disclosure">
+      <strong style="color:rgba(255,255,255,0.75);">Affiliate Disclosure:</strong>
+      <em>S.E.T. &mdash; Sun Energy Technology participates in affiliate programs. When you click our links and make a purchase, we may earn a commission at no extra cost to you. Our reviews and recommendations are always independent and unbiased.</em>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 S.E.T. &mdash; Sun Energy Technology | Part of Jwat Enterprise Inc</p>
+      <p class="footer-copyright">Contact: <a href="mailto:biz@sunenergytechnology.net" style="color:rgba(255,255,255,0.45);text-decoration:none;">biz@sunenergytechnology.net</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // =====================
+  // Mobile nav
+  // =====================
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // =====================
+  // Calculator State
+  // =====================
+  var currentStep = 1;
+  var runtimeValues = [4, 8, 12, 24, 48];
+  var selectedRuntime = 8;
+
+  // Product recommendations
+  var tiers = [
+    {
+      maxWh: 500,
+      tier: 'light',
+      label: 'Light Use',
+      name: 'EcoFlow River 3 Plus',
+      price: '~$299',
+      link: 'https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Friver-3-plus-portable-power-station',
+      why: 'At your usage level, you need a compact, lightweight unit. The EcoFlow River 3 Plus at 286Wh is perfect for charging devices, running LED lights, and light appliance use. It charges 0-80% in just 50 minutes via AC and weighs only 7.7 lbs.',
+      features: ['286Wh LFP Battery', '600W AC Output', '7.7 lbs Ultra-Portable', '0-80% in 50 Minutes', 'Smart App Control', 'Pass-Through Charging']
+    },
+    {
+      maxWh: 1500,
+      tier: 'moderate',
+      label: 'Moderate Use',
+      name: 'Jackery Explorer 1000 Pro',
+      price: '~$799',
+      link: 'https://www.amazon.com/s?k=jackery+explorer+1000+pro&tag=sunenergytec2-20',
+      why: 'Your power needs call for a mid-range unit with solid capacity. The Jackery Explorer 1000 Pro delivers 1,002Wh of power in a portable 25.4 lb package. It handles refrigerators, laptops, fans, and more with ease, and recharges via solar in under 1.8 hours.',
+      features: ['1,002Wh Capacity', '1,000W AC Output', '25.4 lbs Portable', '1.8hr Solar Recharge', 'Multiple Outlet Types', 'Quiet Operation']
+    },
+    {
+      maxWh: 3000,
+      tier: 'heavy',
+      label: 'Heavy Use',
+      name: 'EcoFlow Delta 2 Max',
+      price: '~$1,599',
+      link: 'https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station',
+      why: 'Your usage requires serious capacity. The EcoFlow Delta 2 Max at 2,048Wh delivers 2,400W of AC output and can be expanded to 6,144Wh with extra batteries. LFP battery chemistry means 3,000+ charge cycles. It recharges in just 1 hour via AC.',
+      features: ['2,048Wh LFP Battery', '2,400W AC Output', 'Expandable to 6,144Wh', '1-Hour AC Recharge', 'Smart Home Integration', '3,000+ Cycle Lifespan']
+    },
+    {
+      maxWh: Infinity,
+      tier: 'whole-home',
+      label: 'Whole Home',
+      name: 'BLUETTI AC300 + B300',
+      price: '~$2,999',
+      link: 'https://www.awin1.com/cread.php?awinmid=59271&awinaffid=2881111&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac300',
+      why: 'Your power requirements are substantial and demand a whole-home backup solution. The BLUETTI AC300 + B300 delivers 3,072Wh of LFP capacity, expandable up to 12,288Wh with additional B300 batteries. At 3,000W continuous / 6,000W surge, it can run virtually any household appliance.',
+      features: ['3,072Wh LFP Battery', '3,000W / 6,000W Surge', 'Expandable to 12,288Wh', '2,400W Solar Input', '3,500+ Cycle Lifespan', 'Split-Phase 240V Support']
+    }
+  ];
+
+  // =====================
+  // Step Navigation
+  // =====================
+  function goToStep(step) {
+    if (step === 2 && !document.querySelector('input[name="use-case"]:checked')) return;
+    if (step === 3 && document.querySelectorAll('input[name="appliance"]:checked').length === 0) return;
+
+    // Update progress
+    for (var i = 1; i <= 4; i++) {
+      var prog = document.getElementById('prog-' + i);
+      prog.classList.remove('active', 'completed');
+      if (i < step) prog.classList.add('completed');
+      else if (i === step) prog.classList.add('active');
+    }
+
+    // Show/hide steps
+    document.querySelectorAll('.calc-step').forEach(function(s) { s.classList.remove('active'); });
+    document.getElementById('step-' + step).classList.add('active');
+
+    currentStep = step;
+
+    // Scroll calculator into view
+    document.querySelector('.calculator').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Track step
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'sizing_guide_step', { event_category: 'Engagement', event_label: 'Step ' + step });
+    }
+  }
+
+  // =====================
+  // Step 1: Use case selection
+  // =====================
+  document.querySelectorAll('input[name="use-case"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      document.getElementById('btn-next-1').disabled = false;
+    });
+  });
+
+  // =====================
+  // Step 2: Appliance selection
+  // =====================
+  document.querySelectorAll('input[name="appliance"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      var checked = document.querySelectorAll('input[name="appliance"]:checked').length;
+      document.getElementById('btn-next-2').disabled = checked === 0;
+    });
+  });
+
+  // =====================
+  // Step 3: Runtime slider
+  // =====================
+  var slider = document.getElementById('runtimeSlider');
+  slider.addEventListener('input', function() {
+    updateRuntimeDisplay(parseInt(this.value));
+  });
+
+  function setRuntime(index) {
+    slider.value = index;
+    updateRuntimeDisplay(index);
+  }
+
+  function updateRuntimeDisplay(index) {
+    selectedRuntime = runtimeValues[index];
+    document.getElementById('runtimeValue').textContent = selectedRuntime;
+
+    // Update active label
+    var labels = document.querySelectorAll('#runtimeLabels span');
+    labels.forEach(function(l, i) {
+      l.classList.toggle('active', i === index);
+    });
+  }
+
+  // Initialize slider display
+  updateRuntimeDisplay(1);
+
+  // =====================
+  // Calculate Results
+  // =====================
+  function calculateResults() {
+    var useCase = document.querySelector('input[name="use-case"]:checked');
+    var checked = document.querySelectorAll('input[name="appliance"]:checked');
+
+    if (!useCase || checked.length === 0) return;
+
+    // Calculate totals
+    var totalW = 0;
+    var applianceNames = [];
+    checked.forEach(function(cb) {
+      totalW += parseInt(cb.value);
+      applianceNames.push(cb.getAttribute('data-name'));
+    });
+
+    var hours = selectedRuntime;
+    var totalWhRaw = totalW * hours;
+    var totalWh = Math.round(totalWhRaw * 1.2); // 1.2x efficiency factor
+
+    // Use case labels
+    var useCaseLabels = {
+      emergency: 'Emergency Home Backup',
+      camping: 'Camping & Outdoors',
+      vanlife: 'Van Life / RV',
+      offgrid: 'Off-Grid Living'
+    };
+
+    // Update stats
+    document.getElementById('totalWatts').textContent = totalW.toLocaleString();
+    document.getElementById('totalHours').textContent = hours;
+    document.getElementById('totalWh').textContent = totalWh.toLocaleString();
+    document.getElementById('resultsUseCase').textContent =
+      useCaseLabels[useCase.value] + ' — powering ' + applianceNames.join(', ');
+
+    // Determine tier
+    var tier = tiers[tiers.length - 1];
+    for (var i = 0; i < tiers.length; i++) {
+      if (totalWh <= tiers[i].maxWh) {
+        tier = tiers[i];
+        break;
+      }
+    }
+
+    // Update meter
+    var meterPercent = Math.min((totalWh / 6000) * 100, 100);
+    var meterFill = document.getElementById('meterFill');
+    meterFill.className = 'meter-fill ' + tier.tier;
+    setTimeout(function() {
+      meterFill.style.width = meterPercent + '%';
+    }, 100);
+
+    // Update tier label
+    var tierLabel = document.getElementById('tierLabel');
+    tierLabel.textContent = tier.label;
+    tierLabel.className = 'meter-tier-label ' + tier.tier;
+
+    // Update recommendation
+    document.getElementById('recName').textContent = tier.name;
+    document.getElementById('recPrice').textContent = tier.price;
+    document.getElementById('recWhy').textContent = tier.why;
+    document.getElementById('recLink').href = tier.link;
+
+    // Build features
+    var featuresHtml = '';
+    tier.features.forEach(function(f) {
+      featuresHtml += '<div class="rec-feat"><span class="rec-feat-icon">&#10003;</span>' + f + '</div>';
+    });
+    document.getElementById('recFeatures').innerHTML = featuresHtml;
+
+    // Show results step
+    goToStep(4);
+
+    // Track calculation
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'sizing_calculated', {
+        event_category: 'Calculator',
+        event_label: tier.tier,
+        value: totalWh
+      });
+    }
+  }
+
+  // =====================
+  // Reset Calculator
+  // =====================
+  function resetCalculator() {
+    // Reset selections
+    document.querySelectorAll('input[name="use-case"]').forEach(function(r) { r.checked = false; });
+    document.querySelectorAll('input[name="appliance"]').forEach(function(c) { c.checked = false; });
+    document.getElementById('btn-next-1').disabled = true;
+    document.getElementById('btn-next-2').disabled = true;
+
+    // Reset runtime
+    setRuntime(1);
+
+    // Reset meter
+    document.getElementById('meterFill').style.width = '0%';
+
+    // Go to step 1
+    goToStep(1);
+  }
+
+  function handleEmailSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn  = form.querySelector('button');
+    var email = form.querySelector('input[type="email"]').value;
+    var name  = (form.querySelector('input[name="name"]') || {}).value || '';
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        name: name,
+        _subject: 'New S.E.T. Solar Subscriber',
+        _template: 'table',
+        _captcha: 'false'
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.success) {
+        btn.textContent = 'Sent! Check Your Inbox.';
+        btn.style.background = '#00C896';
+        btn.style.color = '#fff';
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Sizing Guide' });
+        }
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+    });
+  }
+
+  // =====================
+  // Header scroll shadow
+  // =====================
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    header.style.boxShadow = window.scrollY > 10
+      ? '0 4px 20px rgba(0,0,0,0.12)'
+      : '0 2px 12px rgba(0,0,0,0.07)';
+  });
+</script>
+</body>
+</html>
