@@ -4,8 +4,8 @@
   <meta name='impact-site-verification' value='01383a9a-92be-4ba4-a08d-91407c19575e'>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S.E.T. — Sun Energy Technology | Find Your Perfect Solar Generator in 5 Minutes</title>
-  <meta name="description" content="The independent solar generator comparison platform. We compare Jackery, EcoFlow, BLUETTI, ALLPOWERS, Anker SOLIX, 4Patriots, and Nature's Generator so you don't have to. Find your perfect generator in 5 minutes." />
+  <title>S.E.T. — Sun Energy Technology | Independent Solar Reviews — Generators, Home Batteries &amp; More</title>
+  <meta name="description" content="The independent solar energy review platform. Portable generators, home batteries, and solar installation — honest reviews, real specs, no fluff. Compare BLUETTI, EcoFlow, Enphase, Tesla Powerwall, Mango Power and more." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Organization Structured Data -->
@@ -15,7 +15,7 @@
     "@type": "Organization",
     "name": "S.E.T. — Sun Energy Technology",
     "url": "https://sunenergytechnology.com",
-    "description": "Independent solar generator comparison platform. We compare Jackery, EcoFlow, BLUETTI, ALLPOWERS, Anker SOLIX, and Nature's Generator so you don't have to.",
+    "description": "Independent solar energy review platform. Portable generators, home batteries, and solar installation — honest reviews, real specs, no fluff.",
     "foundingDate": "2026",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -327,6 +327,61 @@
     @media (max-width: 1000px) { .picks-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 560px) { .picks-grid { grid-template-columns: 1fr; } }
 
+    /* ===== HOME BATTERY CTA ===== */
+    .home-battery-cta {
+      background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0d2137 100%);
+      color: var(--white);
+      padding: 64px 24px;
+    }
+    .hb-content {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center;
+    }
+    .hb-badge {
+      display: inline-block; background: var(--accent); color: var(--charcoal);
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;
+    }
+    .hb-text h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
+    .hb-text h2 span { color: var(--accent); }
+    .hb-text > p { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7; max-width: 600px; margin-bottom: 24px; }
+    .hb-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .hb-brand-tag {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85);
+    }
+    .hb-stats { display: flex; gap: 32px; margin-bottom: 28px; }
+    .hb-stat { text-align: center; }
+    .hb-stat-val { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+    .hb-stat-lbl { display: block; font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .hb-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hb-ctas .btn-primary {
+      background: var(--accent); color: var(--charcoal); font-weight: 700;
+      padding: 14px 28px; border-radius: 10px; text-decoration: none; font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hb-ctas .btn-primary:hover { background: #00e0a8; transform: translateY(-2px); }
+    .hb-ctas .btn-outline {
+      border: 2px solid rgba(255,255,255,0.3); color: var(--white); font-weight: 600;
+      padding: 12px 24px; border-radius: 10px; text-decoration: none; font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .hb-ctas .btn-outline:hover { border-color: var(--accent); background: rgba(0,200,150,0.08); }
+    .hb-visual { display: flex; justify-content: center; }
+    .hb-icon-stack { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .hb-icon-item {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 18px 28px; text-align: center;
+      font-size: 1.1rem; font-weight: 600; min-width: 220px;
+    }
+    .hb-icon-item span { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+    .hb-icon-arrow { font-size: 1.5rem; color: var(--accent); line-height: 1; }
+    @media (max-width: 800px) {
+      .hb-content { grid-template-columns: 1fr; }
+      .hb-visual { display: none; }
+      .hb-stats { gap: 20px; }
+    }
+
     /* ===== ROOFTOP SOLAR BRIDGE ===== */
     .rooftop-section {
       background: #111c24;
@@ -583,6 +638,7 @@
       <a href="blog/index.html">Blog</a>
       <a href="spec-guide.html">Spec Guide</a>
       <a href="calculator.html">Calculator</a>
+      <a href="home-batteries.html">Home Batteries</a>
       <a href="quiz.html" class="btn-gold">Find My Generator</a>
     </nav>
     <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
@@ -596,6 +652,7 @@
     <a href="blog/index.html">Blog</a>
     <a href="spec-guide.html">Spec Guide</a>
     <a href="calculator.html">Calculator</a>
+    <a href="home-batteries.html">Home Batteries</a>
     <a href="quiz.html" class="btn-gold">Find My Generator</a>
   </div>
 </header>
@@ -603,8 +660,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">Independent &bull; Unbiased &bull; Affiliate Disclosed</div>
-  <h1>Find Your Perfect <span>Solar Generator</span><br>in 5 Minutes</h1>
-  <p>Stop guessing. We compare specs, prices, and real-world performance so you don't have to.</p>
+  <h1>Find Your Perfect <span>Solar Power Solution</span></h1>
+  <p>Portable generators, home batteries, and solar installation &mdash; honest reviews, real specs, no fluff.</p>
   <div class="hero-ctas">
     <a href="quiz.html" class="btn-primary">Find My Generator &rarr;</a>
     <a href="compare.html" class="btn-outline">See Comparisons</a>
@@ -986,6 +1043,44 @@
   </div>
 </section>
 
+<!-- HOME BATTERY CTA -->
+<section class="home-battery-cta" id="home-batteries">
+  <div class="section-inner">
+    <div class="hb-content">
+      <div class="hb-text">
+        <span class="hb-badge">NEW</span>
+        <h2>Find Your Perfect <span>Home Hybrid Solar Battery</span></h2>
+        <p>Going beyond portable? Hybrid home batteries store rooftop solar energy, keep your home powered during outages, and cut your electric bill year-round. We review them the same way we review generators &mdash; independent, spec-driven, no installer kickbacks.</p>
+        <div class="hb-brands">
+          <span class="hb-brand-tag">Enphase</span>
+          <span class="hb-brand-tag">Tesla Powerwall</span>
+          <span class="hb-brand-tag">Franklin Home Power</span>
+          <span class="hb-brand-tag">Mango Power</span>
+          <span class="hb-brand-tag">EcoFlow</span>
+        </div>
+        <div class="hb-stats">
+          <div class="hb-stat"><span class="hb-stat-val">5</span><span class="hb-stat-lbl">Batteries Reviewed</span></div>
+          <div class="hb-stat"><span class="hb-stat-val">30%</span><span class="hb-stat-lbl">Federal Tax Credit</span></div>
+          <div class="hb-stat"><span class="hb-stat-val">10-15yr</span><span class="hb-stat-lbl">Warranty Range</span></div>
+        </div>
+        <div class="hb-ctas">
+          <a href="home-batteries.html" class="btn-primary">See Home Battery Reviews &rarr;</a>
+          <a href="home-batteries.html#comparison" class="btn-outline">Compare All Batteries</a>
+        </div>
+      </div>
+      <div class="hb-visual">
+        <div class="hb-icon-stack">
+          <div class="hb-icon-item">&#127968; <span>Rooftop Solar</span></div>
+          <div class="hb-icon-arrow">&darr;</div>
+          <div class="hb-icon-item">&#128267; <span>Home Battery</span></div>
+          <div class="hb-icon-arrow">&darr;</div>
+          <div class="hb-icon-item">&#9889; <span>Your Home, Powered</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ROOFTOP SOLAR BRIDGE -->
 <section class="rooftop-section" id="rooftop-solar">
   <div class="section-inner">
@@ -1148,6 +1243,7 @@
         <h5>Tools</h5>
         <a href="quiz.html">Generator Quiz</a>
         <a href="calculator.html">Solar Calculator</a>
+        <a href="home-batteries.html">Home Batteries</a>
         <a href="#rooftop-solar">Roof Solar Quotes</a>
         <a href="spec-guide.html">Spec Guide</a>
         <a href="reviews.html">Brand Reviews</a>
