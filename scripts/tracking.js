@@ -96,6 +96,7 @@
   var PARTNER_DOMAINS = {
     'awin1.com': 'Awin',
     'amazon.com': 'Amazon Associates',
+    'renogy.com': 'Renogy',
     'energysage.com': 'EnergySage',
     'modernize.com': 'Modernize',
     'sunrun.com': 'Sunrun',
@@ -107,9 +108,17 @@
     ['bluetti', 'BLUETTI'],
     ['ecoflow', 'EcoFlow'],
     ['allpowers', 'ALLPOWERS'],
+    ['jackery', 'Jackery'],
+    ['mangopower', 'Mango Power'],
     ['natures-generator', "Nature's Generator"],
     ['naturesgenerator', "Nature's Generator"],
-    ['litime', 'LiTime']
+    ['litime', 'LiTime'],
+    ['mooncool', 'Mooncool'],
+    ['dabbsson', 'Dabbsson'],
+    ['bougerv', 'BougeRV'],
+    ['dakotalithium', 'Dakota Lithium'],
+    ['gosun', 'GoSun'],
+    ['shopsolarkits', 'Shop Solar']
   ];
 
   function identifyPartner(href) {
