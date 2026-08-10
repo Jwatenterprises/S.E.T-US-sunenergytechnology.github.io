@@ -208,6 +208,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://sunenergytechnology.com/terms-of-service.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://sunenergytechnology.com/blog/mooncool-electric-trike-review-2026.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
