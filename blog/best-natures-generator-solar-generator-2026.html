@@ -135,6 +135,8 @@
     .article-wrapper a:hover { color: var(--blue-dark); }
     .product-card { background: var(--gray-bg); border-radius: 16px; padding: 28px 28px 24px; margin: 24px 0 12px; border-left: 4px solid var(--blue); position: relative; }
     .product-card.top-pick { border-left-color: var(--gold); }
+    .product-img-wrap { text-align: center; margin: 16px 0 20px; }
+    .product-img-wrap img { max-width: 100%; height: auto; max-height: 340px; border-radius: 12px; object-fit: contain; }
     .product-rank { display: inline-block; background: var(--blue); color: var(--white); padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
     .product-rank.gold { background: var(--gold); color: var(--charcoal); }
     .specs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
@@ -272,6 +274,9 @@
 
   <div class="product-card top-pick">
     <span class="product-rank gold">#1 Overall &bull; Best Whole-Home Backup &bull; S.E.T. Rating: 4.5/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/natures-generator-powerhouse.webp" alt="Nature's Generator Powerhouse whole-home backup system — stackable battery towers shown next to a residential house at night" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box"><span class="val">4,800Wh</span><span class="key">Capacity</span></div>
       <div class="spec-box"><span class="val">7,200W</span><span class="key">Output</span></div>

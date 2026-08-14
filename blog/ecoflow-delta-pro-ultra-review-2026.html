@@ -107,7 +107,7 @@
     "itemReviewed": {
       "@type": "Product",
       "name": "EcoFlow DELTA Pro Ultra",
-      "image": "https://sunenergytechnology.com/set-logo-1024x1024.jpg",
+      "image": "https://sunenergytechnology.com/images/ecoflow-delta-pro-ultra.webp",
       "brand": { "@type": "Brand", "name": "EcoFlow" },
       "description": "6,144Wh LiFePO4 whole-home battery backup with 7,200W continuous output, 10,800W surge, expandable to 90kWh. Smart Home Panel 2 integration for automatic switchover.",
       "category": "Home Battery Backup",
@@ -252,6 +252,8 @@
       margin: 24px 0 12px; border-left: 4px solid var(--blue); position: relative;
     }
     .product-card.top-pick { border-left-color: var(--gold); }
+    .product-img-wrap { text-align: center; margin: 16px 0 20px; }
+    .product-img-wrap img { max-width: 100%; height: auto; max-height: 340px; border-radius: 12px; object-fit: contain; }
     .product-rank {
       display: inline-block; background: var(--blue); color: var(--white);
       padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;
@@ -579,6 +581,9 @@
 
   <div class="product-card top-pick">
     <span class="product-rank gold">S.E.T. Rating: 4.8/5 &bull; Top Pick &mdash; Best Home Battery 2026</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-pro-ultra.webp" alt="EcoFlow DELTA Pro Ultra — inverter and battery unit on caster wheels, front view showing display and outlets" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">6,144Wh</span>

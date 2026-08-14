@@ -113,7 +113,7 @@
         "item": {
           "@type": "Product",
           "name": "ALLPOWERS R3500",
-          "image": "https://sunenergytechnology.com/set-logo-1024x1024.jpg",
+          "image": "https://sunenergytechnology.com/images/allpowers-r3500.webp",
           "brand": { "@type": "Brand", "name": "ALLPOWERS" },
           "description": "3,168Wh LiFePO4 portable power station with 3,200W continuous output (6,400W surge), 2,000W solar input, expandable battery packs, UPS with <20ms switchover, and 30A RV outlet. Best overall pick for home backup, off-grid, and RV use.",
           "category": "Portable Power Station",
@@ -289,6 +289,8 @@
       margin: 24px 0 12px; border-left: 4px solid var(--blue); position: relative;
     }
     .product-card.top-pick { border-left-color: var(--gold); }
+    .product-img-wrap { text-align: center; margin: 16px 0 20px; }
+    .product-img-wrap img { max-width: 100%; height: auto; max-height: 340px; border-radius: 12px; object-fit: contain; }
     .product-rank {
       display: inline-block; background: var(--blue); color: var(--white);
       padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;
@@ -690,6 +692,9 @@
 
   <div class="product-card top-pick">
     <span class="product-rank gold">#1 Top Pick &mdash; Best Overall &bull; S.E.T. Rating 4.5/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/allpowers-r3500.webp" alt="ALLPOWERS R3500 portable power station in a camping setting — 3,200W output, 3,168Wh LiFePO4 battery" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">3,168Wh</span>

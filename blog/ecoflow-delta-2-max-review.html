@@ -243,6 +243,8 @@
       margin: 24px 0 12px; border-left: 4px solid var(--blue); position: relative;
     }
     .product-card.top-pick { border-left-color: var(--gold); }
+    .product-img-wrap { text-align: center; margin: 16px 0 20px; }
+    .product-img-wrap img { max-width: 100%; height: auto; max-height: 340px; border-radius: 12px; object-fit: contain; }
     .product-rank {
       display: inline-block; background: var(--blue); color: var(--white);
       padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;
@@ -572,6 +574,9 @@
 
   <div class="product-card top-pick">
     <span class="product-rank gold">S.E.T. Rating: 4.9 / 5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-2-max.webp" alt="EcoFlow DELTA 2 Max portable power station — front view showing display, USB-C, and USB-A ports" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">2,048Wh</span>
