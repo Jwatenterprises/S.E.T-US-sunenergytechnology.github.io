@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <title>S.E.T. Store — Solar Panels, Electric Rides, LiFePO4 Batteries &amp; Gear | Sun Energy Technology</title>
+  <link rel="canonical" href="https://sunenergytechnology.com/store/" />
+  <meta name="description" content="Shop solar panels, electric trikes, LiFePO4 batteries, solar ovens, portable fridges, and DIY solar kits. Every product hand-picked by S.E.T. Solar — trusted brands, real reviews, best prices." />
+  <meta name="keywords" content="solar panels, electric trike, LiFePO4 battery, solar oven, portable solar fridge, DIY solar kit, Mooncool, Renogy, LiTime, Dakota Lithium, BougeRV, GoSun, Shop Solar" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="S.E.T. Store — Solar Products &amp; Devices for Every Lifestyle">
+  <meta property="og:description" content="Electric rides, solar panels, LiFePO4 batteries, and solar outdoor gear from brands you trust. Every product expert-reviewed.">
+  <meta property="og:url" content="https://sunenergytechnology.com/store/">
+  <meta property="og:image" content="https://sunenergytechnology.com/set-logo-1024x1024.jpg">
+  <meta property="og:site_name" content="S.E.T. Store — Sun Energy Technology">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="S.E.T. Store — Solar Products &amp; Devices for Every Lifestyle">
+  <meta name="twitter:description" content="Electric rides, solar panels, LiFePO4 batteries, and solar outdoor gear from brands you trust.">
+  <meta name="twitter:image" content="https://sunenergytechnology.com/set-logo-1024x1024.jpg">
+  <link href="/fonts/inter.css" rel="stylesheet" />
+
+  <!-- Store + ItemList Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "S.E.T. Store — Sun Energy Technology",
+    "description": "Solar panels, electric transportation, LiFePO4 batteries, solar accessories, outdoor gear, and DIY solar kits. Affiliate storefront by S.E.T. Solar.",
+    "url": "https://sunenergytechnology.com/store/",
+    "image": "https://sunenergytechnology.com/set-logo-1024x1024.jpg",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "S.E.T. — Sun Energy Technology",
+      "url": "https://sunenergytechnology.com"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"S.E.T. Solar","item":"https://sunenergytechnology.com/"},
+      {"@type":"ListItem","position":2,"name":"Store","item":"https://sunenergytechnology.com/store/"}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0066FF;
+      --blue-dark: #0052CC;
+      --charcoal: #1E1E2E;
+      --white: #FFFFFF;
+      --gray-bg: #F5F7FA;
+      --accent: #00C896;
+      --accent-dark: #00A87A;
+      --gold: #F5A623;
+      --text: #2D3748;
+      --text-muted: #718096;
+      --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --card-hover: 0 8px 30px rgba(0,0,0,0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-group img { height: 52px; width: 52px; border-radius: 50%; object-fit: cover; }
+    .logo-text .brand { font-size: 1.25rem; font-weight: 800; color: var(--blue); letter-spacing: -0.5px; }
+    .logo-text .brand .store-tag { color: var(--accent); }
+    .logo-text .sub { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; display: block; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a {
+      text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.88rem;
+      padding: 8px 12px; border-radius: 8px; transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--gray-bg); color: var(--blue); }
+    .btn-cta {
+      background: var(--accent); color: var(--white); font-weight: 700;
+      padding: 10px 20px; border-radius: 8px; text-decoration: none;
+      font-size: 0.88rem; transition: background 0.2s, transform 0.15s;
+      white-space: nowrap; border: none; cursor: pointer;
+    }
+    .btn-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .mobile-nav {
+      display: none; flex-direction: column; background: var(--white);
+      border-top: 1px solid #e2e8f0; padding: 16px 24px 20px;
+    }
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; display: block; }
+    .mobile-nav .btn-cta { margin-top: 12px; text-align: center; display: block; }
+
+    /* ===== DISCLOSURE ===== */
+    .disclosure-banner {
+      background: #FFF8E1; border-bottom: 1px solid #ffe082;
+      padding: 8px 24px; text-align: center; font-size: 0.78rem; color: #795548; line-height: 1.5;
+    }
+    .disclosure-banner a { color: #5d4037; font-weight: 600; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #0a1628 100%);
+      padding: 80px 24px 70px; text-align: center; color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block; background: rgba(0,200,150,0.15); color: var(--accent);
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+      padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+      border: 1px solid rgba(0,200,150,0.3);
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; max-width: 700px; margin: 0 auto 16px; letter-spacing: -1px; }
+    .hero h1 .accent { color: var(--accent); }
+    .hero p { font-size: 1.12rem; color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto 32px; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-ctas .btn-cta { padding: 14px 28px; font-size: 1rem; }
+    .hero-ctas .btn-outline {
+      background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white);
+      padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 1rem;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .hero-ctas .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+    /* ===== CATEGORY NAV ===== */
+    .cat-nav {
+      background: var(--white); border-bottom: 1px solid #e2e8f0;
+      padding: 0 24px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    }
+    .cat-nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; gap: 0; white-space: nowrap;
+    }
+    .cat-nav a {
+      padding: 16px 20px; text-decoration: none; color: var(--text-muted);
+      font-weight: 600; font-size: 0.85rem; border-bottom: 3px solid transparent;
+      transition: all 0.2s; flex-shrink: 0;
+    }
+    .cat-nav a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+
+    /* ===== SECTIONS ===== */
+    .section { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
+    .section-alt { background: var(--gray-bg); }
+    .section-header { text-align: center; margin-bottom: 40px; }
+    .section-header h2 { font-size: 1.8rem; font-weight: 800; color: var(--charcoal); margin-bottom: 8px; letter-spacing: -0.5px; }
+    .section-header p { font-size: 1rem; color: var(--text-muted); max-width: 560px; margin: 0 auto; }
+    .section-header .section-tag {
+      display: inline-block; background: rgba(0,102,255,0.08); color: var(--blue);
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+      padding: 4px 12px; border-radius: 12px; margin-bottom: 12px;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .product-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white); border-radius: 12px;
+      box-shadow: var(--card-shadow); overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--card-hover); }
+    .product-image {
+      position: relative; height: 220px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--gray-bg);
+    }
+    .product-image img {
+      max-width: 85%; max-height: 85%; object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .product-card:hover .product-image img { transform: scale(1.05); }
+    .brand-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(0,0,0,0.75); color: var(--white);
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; padding: 4px 10px; border-radius: 4px;
+    }
+    .rating-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: var(--gold); color: var(--charcoal);
+      font-size: 0.75rem; font-weight: 700;
+      padding: 4px 8px; border-radius: 4px;
+    }
+    .featured-badge {
+      position: absolute; bottom: 12px; left: 12px;
+      background: var(--accent); color: var(--white);
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; padding: 4px 10px; border-radius: 4px;
+    }
+    .product-info { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .product-info h3 { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin-bottom: 6px; line-height: 1.3; }
+    .product-spec { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; gap: 12px; }
+    .price { font-size: 1.25rem; font-weight: 800; color: var(--charcoal); }
+    .price .from { font-size: 0.75rem; font-weight: 500; color: var(--text-muted); }
+    .btn-shop {
+      display: inline-block; background: var(--accent); color: var(--white);
+      font-weight: 700; font-size: 0.82rem; padding: 10px 18px; border-radius: 8px;
+      text-decoration: none; transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-shop:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .review-link {
+      display: block; text-align: center; margin-top: 12px; padding-top: 12px;
+      border-top: 1px solid #edf2f7; font-size: 0.8rem; color: var(--blue);
+      text-decoration: none; font-weight: 600; transition: color 0.2s;
+    }
+    .review-link:hover { color: var(--blue-dark); }
+
+    /* ===== FEATURED GRID ===== */
+    .featured-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .featured-grid .product-card { border: 2px solid rgba(0,200,150,0.2); }
+    .featured-grid .product-card:hover { border-color: var(--accent); }
+
+    /* ===== BRAND BAR ===== */
+    .brands-section { background: var(--charcoal); padding: 48px 24px; text-align: center; }
+    .brands-section h3 { color: rgba(255,255,255,0.5); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 28px; font-weight: 600; }
+    .brand-logos {
+      max-width: 900px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px;
+    }
+    .brand-pill {
+      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+      padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 0.88rem;
+      letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.06);
+      transition: all 0.2s;
+    }
+    .brand-pill:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+
+    /* ===== TRUST SIGNALS ===== */
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px; text-align: center;
+    }
+    .trust-item { padding: 24px; }
+    .trust-icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .trust-item h4 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 6px; }
+    .trust-item p { font-size: 0.88rem; color: var(--text-muted); }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      padding: 60px 24px; text-align: center; color: var(--white);
+    }
+    .newsletter h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 8px; }
+    .newsletter p { color: rgba(255,255,255,0.8); font-size: 1rem; max-width: 480px; margin: 0 auto 24px; }
+    .newsletter-embed {
+      max-width: 480px; margin: 0 auto; border-radius: 8px; overflow: hidden;
+      background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .newsletter small { display: block; margin-top: 12px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+      background: var(--gray-bg); padding: 48px 24px; text-align: center;
+      border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;
+    }
+    .cta-banner h3 { font-size: 1.4rem; font-weight: 800; color: var(--charcoal); margin-bottom: 8px; }
+    .cta-banner p { color: var(--text-muted); max-width: 500px; margin: 0 auto 20px; }
+    .cta-banner .btn-cta { padding: 14px 28px; font-size: 1rem; display: inline-block; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--charcoal); color: rgba(255,255,255,0.6);
+      padding: 48px 24px 32px; font-size: 0.85rem;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+    .footer-brand .brand-name { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .footer-brand .brand-name .accent { color: var(--accent); }
+    .footer-brand p { line-height: 1.6; }
+    .footer-col h4 { color: var(--white); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; padding: 4px 0; transition: color 0.2s; font-size: 0.85rem; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 0.78rem; }
+    .footer-bottom a { color: var(--accent); text-decoration: none; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.open { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 50px; }
+      .hero h1 { font-size: 1.8rem; }
+      .section { padding: 40px 16px; }
+      .product-grid, .featured-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .product-footer { flex-direction: column; align-items: flex-start; }
+      .btn-shop { width: 100%; text-align: center; }
+    }
+  </style>
+
+  <!-- TikTok Pixel -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","trackPull","install","instance"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var o="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=o,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=d.createElement("script");a.type="text/javascript",a.async=!0,a.src=o+"?sdkid="+e+"&lib="+t;var r=d.getElementsByTagName("script")[0];r.parentNode.insertBefore(a,r)};
+    ttq.load('7650989745631281169');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <script src="../scripts/tracking.js"></script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <a href="/store/" class="logo-group">
+      <img src="/set-logo-1024x1024.jpg" alt="S.E.T. Store logo" width="52" height="52" />
+      <div class="logo-text">
+        <span class="brand">S.E.T. <span class="store-tag">Store</span></span>
+        <span class="sub">Sun Energy Technology</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#rides">Electric Rides</a>
+      <a href="#panels">Solar Panels</a>
+      <a href="#batteries">LiFePO4 Batteries</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#outdoor">Outdoor</a>
+      <a href="/" title="Back to S.E.T. Solar">S.E.T. Solar</a>
+      <a href="#rides" class="btn-cta">Shop Now</a>
+    </nav>
+    <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#rides">🛵 Electric Rides</a>
+    <a href="#panels">☀️ Solar Panels</a>
+    <a href="#batteries">🔋 LiFePO4 Batteries</a>
+    <a href="#accessories">🧊 Accessories</a>
+    <a href="#outdoor">🍳 Outdoor Gear</a>
+    <a href="#kits">🔧 DIY Solar Kits</a>
+    <a href="/">← S.E.T. Solar</a>
+    <a href="#rides" class="btn-cta">Shop Now</a>
+  </div>
+</header>
+
+<!-- ===== DISCLOSURE ===== -->
+<div class="disclosure-banner">
+  <strong>Affiliate Disclosure:</strong> S.E.T. Store earns commissions from qualifying purchases through our partner links. This supports independent solar reviews at no extra cost to you. <a href="/disclosure.html">Learn more</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-badge">☀️ S.E.T. Store — Now Open</div>
+  <h1>Solar Products for<br>Every <span class="accent">Lifestyle</span></h1>
+  <p>Electric rides, solar panels, LiFePO4 batteries, solar outdoor gear, and DIY kits — every product hand-picked and expert-reviewed by our team.</p>
+  <div class="hero-ctas">
+    <a href="#rides" class="btn-cta">Shop Electric Rides</a>
+    <a href="/blog/" class="btn-outline">Read Our Reviews →</a>
+  </div>
+</section>
+
+<!-- ===== CATEGORY NAV ===== -->
+<div class="cat-nav">
+  <div class="cat-nav-inner">
+    <a href="#rides">🛵 Electric Rides</a>
+    <a href="#panels">☀️ Solar Panels</a>
+    <a href="#batteries">🔋 LiFePO4 Batteries</a>
+    <a href="#accessories">🧊 Accessories</a>
+    <a href="#outdoor">🍳 Outdoor Gear</a>
+    <a href="#kits">🔧 DIY Kits</a>
+  </div>
+</div>
+
+<!-- ===== FEATURED PICKS ===== -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-tag">Editor's Picks</span>
+    <h2>Top Picks This Month</h2>
+    <p>Hand-selected by our review team. The best solar products and devices right now.</p>
+  </div>
+  <div class="featured-grid">
+
+    <!-- Featured 1: Mooncool TK Pro -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0c3a2d">
+        <img src="../images/mooncool-tk-pro.png" alt="Mooncool TK Pro electric trike" loading="lazy" />
+        <span class="brand-badge">Mooncool</span>
+        <span class="rating-badge">★ 4.5</span>
+        <span class="featured-badge">Best Electric Ride</span>
+      </div>
+      <div class="product-info">
+        <h3>Mooncool TK Pro Electric Trike</h3>
+        <p class="product-spec">750W Motor · 55+ Mile Range · Rear Cargo · 3-Wheel Stability</p>
+        <div class="product-footer">
+          <span class="price">$1,700</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=66494&awinaffid=2881111&ued=https%3A%2F%2Fmooncool.com%2Fproducts%2Fmooncool-tk-pro" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+        <a href="../blog/mooncool-electric-trike-review-2026.html" class="review-link">Read Full Review →</a>
+      </div>
+    </div>
+
+    <!-- Featured 2: LiTime 12V 100Ah -->
+    <div class="product-card">
+      <div class="product-image" style="background:#1a2744">
+        <img src="../set-logo-1024x1024.jpg" alt="LiTime 12V 100Ah LiFePO4 Battery" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">LiTime</span>
+        <span class="rating-badge">★ 4.6</span>
+        <span class="featured-badge">Best Value Battery</span>
+      </div>
+      <div class="product-info">
+        <h3>LiTime 12V 100Ah LiFePO4</h3>
+        <p class="product-spec">100Ah · 1,280Wh · 4,000+ Cycles · BMS Built-In</p>
+        <div class="product-footer">
+          <span class="price">$190</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com%2Fproducts%2Flitime-12v-100ah-lifepo4-lithium-battery" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured 3: Renogy 200W Portable -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0a2240">
+        <img src="../set-logo-1024x1024.jpg" alt="Renogy 200W Portable Solar Panel" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Renogy</span>
+        <span class="rating-badge">★ 4.5</span>
+        <span class="featured-badge">Top Solar Panel</span>
+      </div>
+      <div class="product-info">
+        <h3>Renogy 200W Portable Solar Panel</h3>
+        <p class="product-spec">200W · Foldable Suitcase · ETFE Coating · Kickstand</p>
+        <div class="product-footer">
+          <span class="price">$299</span>
+          <a href="https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2F200-watt-portable-solar-panel%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured 4: GoSun Sport -->
+    <div class="product-card">
+      <div class="product-image" style="background:#2a1f0a">
+        <img src="../set-logo-1024x1024.jpg" alt="GoSun Sport Solar Oven" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">GoSun</span>
+        <span class="rating-badge">★ 4.4</span>
+        <span class="featured-badge">Solar Cooking</span>
+      </div>
+      <div class="product-info">
+        <h3>GoSun Sport Solar Oven</h3>
+        <p class="product-spec">Cooks in 20 Min · No Fuel · 550°F Max · Portable</p>
+        <div class="product-footer">
+          <span class="price">$300</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=88749&awinaffid=2881111&ued=https%3A%2F%2Fgosun.co%2Fproducts%2Fsport" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== ELECTRIC RIDES ===== -->
+<div class="section-alt">
+  <div class="section" id="rides">
+    <div class="section-header">
+      <span class="section-tag">🛵 Electric Transportation</span>
+      <h2>Electric Trikes by Mooncool</h2>
+      <p>Solar-chargeable electric trikes for commuting, errands, and recreation. Charge from any solar panel or power station.</p>
+    </div>
+    <div class="product-grid">
+
+      <!-- Mooncool TK Pro -->
+      <div class="product-card">
+        <div class="product-image" style="background:#0c3a2d">
+          <img src="../images/mooncool-tk-pro.png" alt="Mooncool TK Pro electric trike" loading="lazy" />
+          <span class="brand-badge">Mooncool</span>
+          <span class="rating-badge">★ 4.5</span>
+        </div>
+        <div class="product-info">
+          <h3>Mooncool TK Pro</h3>
+          <p class="product-spec">750W Motor · 55+ Miles · Rear Cargo Basket · 3-Wheel</p>
+          <div class="product-footer">
+            <span class="price">$1,700</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=66494&awinaffid=2881111&ued=https%3A%2F%2Fmooncool.com%2Fproducts%2Fmooncool-tk-pro" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+          <a href="../blog/mooncool-electric-trike-review-2026.html" class="review-link">Read Full Review →</a>
+        </div>
+      </div>
+
+      <!-- Mooncool TK2 -->
+      <div class="product-card">
+        <div class="product-image" style="background:#0c3a2d">
+          <img src="../images/mooncool-tk2.png" alt="Mooncool TK2 folding electric trike" loading="lazy" />
+          <span class="brand-badge">Mooncool</span>
+          <span class="rating-badge">★ 4.4</span>
+        </div>
+        <div class="product-info">
+          <h3>Mooncool TK2 Folding</h3>
+          <p class="product-spec">750W Motor · 45+ Miles · Foldable Frame · Compact Storage</p>
+          <div class="product-footer">
+            <span class="price">$1,500</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=66494&awinaffid=2881111&ued=https%3A%2F%2Fmooncool.com%2Fproducts%2Fmooncool-tk2" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+          <a href="../blog/mooncool-electric-trike-review-2026.html" class="review-link">Read Full Review →</a>
+        </div>
+      </div>
+
+      <!-- Mooncool FT1 -->
+      <div class="product-card">
+        <div class="product-image" style="background:#0c3a2d">
+          <img src="../images/mooncool-ft1.png" alt="Mooncool FT1 fat tire electric trike" loading="lazy" />
+          <span class="brand-badge">Mooncool</span>
+          <span class="rating-badge">★ 4.3</span>
+        </div>
+        <div class="product-info">
+          <h3>Mooncool FT1 Fat Tire</h3>
+          <p class="product-spec">750W Motor · Fat Tires · All-Terrain · Heavy Duty Frame</p>
+          <div class="product-footer">
+            <span class="price">$1,350</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=66494&awinaffid=2881111&ued=https%3A%2F%2Fmooncool.com%2Fproducts%2Fmooncool-ft1-fat-tire-electric-trike" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+          <a href="../blog/mooncool-electric-trike-review-2026.html" class="review-link">Read Full Review →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== SOLAR PANELS ===== -->
+<div class="section" id="panels">
+  <div class="section-header">
+    <span class="section-tag">☀️ Solar Panels</span>
+    <h2>Solar Panels &amp; Charging</h2>
+    <p>Portable and rigid solar panels for RVs, camping, off-grid, and home solar projects.</p>
+  </div>
+  <div class="product-grid">
+
+    <!-- Renogy 200W Portable -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0a2240">
+        <img src="../set-logo-1024x1024.jpg" alt="Renogy 200W portable solar panel" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Renogy</span>
+        <span class="rating-badge">★ 4.5</span>
+      </div>
+      <div class="product-info">
+        <h3>Renogy 200W Portable Solar Panel</h3>
+        <p class="product-spec">200W · Foldable Suitcase · ETFE · Adjustable Kickstand</p>
+        <div class="product-footer">
+          <span class="price">$299</span>
+          <a href="https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2F200-watt-portable-solar-panel%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Renogy 100W Rigid -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0a2240">
+        <img src="../set-logo-1024x1024.jpg" alt="Renogy 100W rigid solar panel" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Renogy</span>
+        <span class="rating-badge">★ 4.6</span>
+      </div>
+      <div class="product-info">
+        <h3>Renogy 100W Monocrystalline Panel</h3>
+        <p class="product-spec">100W · Rigid Mount · 25-Year Warranty · 12V System</p>
+        <div class="product-footer">
+          <span class="price">$119</span>
+          <a href="https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2F100-watt-12-volt-monocrystalline-solar-panel%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BougeRV 200W Panel -->
+    <div class="product-card">
+      <div class="product-image" style="background:#1a2636">
+        <img src="../set-logo-1024x1024.jpg" alt="BougeRV 200W portable solar panel" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">BougeRV</span>
+        <span class="rating-badge">★ 4.3</span>
+      </div>
+      <div class="product-info">
+        <h3>BougeRV 200W Portable Solar Panel</h3>
+        <p class="product-spec">200W · Foldable · ETFE · Compatible with Most Stations</p>
+        <div class="product-footer">
+          <span class="price">$200</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=52765&awinaffid=2881111&ued=https%3A%2F%2Fwww.bougerv.com%2Fcollections%2Fsolar-panels" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Renogy All Panels -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0a2240">
+        <img src="../set-logo-1024x1024.jpg" alt="Browse all Renogy solar panels" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Renogy</span>
+      </div>
+      <div class="product-info">
+        <h3>Browse All Renogy Solar Panels</h3>
+        <p class="product-spec">Rigid, Flexible, Portable · 50W to 550W · RV, Marine, Off-Grid</p>
+        <div class="product-footer">
+          <span class="price"><span class="from">From</span> $55</span>
+          <a href="https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2Fsolar-panels%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Browse All →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== LiFePO4 BATTERIES ===== -->
+<div class="section-alt">
+  <div class="section" id="batteries">
+    <div class="section-header">
+      <span class="section-tag">🔋 LiFePO4 Batteries</span>
+      <h2>LiFePO4 Battery Cells &amp; Packs</h2>
+      <p>Deep-cycle lithium iron phosphate batteries for RV, marine, solar, and off-grid builds. 4,000+ cycle life.</p>
+    </div>
+    <div class="product-grid">
+
+      <!-- LiTime 12V 100Ah -->
+      <div class="product-card">
+        <div class="product-image" style="background:#1a2744">
+          <img src="../set-logo-1024x1024.jpg" alt="LiTime 12V 100Ah LiFePO4 battery" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">LiTime</span>
+          <span class="rating-badge">★ 4.6</span>
+        </div>
+        <div class="product-info">
+          <h3>LiTime 12V 100Ah LiFePO4</h3>
+          <p class="product-spec">100Ah · 1,280Wh · 100A BMS · 4,000+ Cycles · 11 lbs Lighter Than Lead</p>
+          <div class="product-footer">
+            <span class="price">$190</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com%2Fproducts%2Flitime-12v-100ah-lifepo4-lithium-battery" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LiTime 12V 200Ah Plus -->
+      <div class="product-card">
+        <div class="product-image" style="background:#1a2744">
+          <img src="../set-logo-1024x1024.jpg" alt="LiTime 12V 200Ah Plus LiFePO4 battery" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">LiTime</span>
+          <span class="rating-badge">★ 4.5</span>
+        </div>
+        <div class="product-info">
+          <h3>LiTime 12V 200Ah Plus LiFePO4</h3>
+          <p class="product-spec">200Ah · 2,560Wh · 200A BMS · Bluetooth Monitoring</p>
+          <div class="product-footer">
+            <span class="price">$400</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com%2Fproducts%2Flitime-12v-200ah-plus-lifepo4-lithium-battery" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dakota Lithium 12V 100Ah -->
+      <div class="product-card">
+        <div class="product-image" style="background:#2a1a0a">
+          <img src="../set-logo-1024x1024.jpg" alt="Dakota Lithium 12V 100Ah battery" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">Dakota Lithium</span>
+          <span class="rating-badge">★ 4.7</span>
+        </div>
+        <div class="product-info">
+          <h3>Dakota Lithium 12V 100Ah</h3>
+          <p class="product-spec">100Ah · 1,280Wh · 11-Year Warranty · Made in USA · Marine Grade</p>
+          <div class="product-footer">
+            <span class="price">$850</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=79634&awinaffid=2881111&ued=https%3A%2F%2Fdakotalithium.com%2Fproduct%2Fdakota-lithium-12v-100ah-deep-cycle-lifepo4-battery%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dakota Lithium 12V 54Ah -->
+      <div class="product-card">
+        <div class="product-image" style="background:#2a1a0a">
+          <img src="../set-logo-1024x1024.jpg" alt="Dakota Lithium 12V 54Ah battery" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">Dakota Lithium</span>
+          <span class="rating-badge">★ 4.5</span>
+        </div>
+        <div class="product-info">
+          <h3>Dakota Lithium 12V 54Ah</h3>
+          <p class="product-spec">54Ah · 691Wh · 11-Year Warranty · Trolling Motor Ready</p>
+          <div class="product-footer">
+            <span class="price">$500</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=79634&awinaffid=2881111&ued=https%3A%2F%2Fdakotalithium.com%2Fproduct%2Fdakota-lithium-12v-54ah-deep-cycle-lifepo4-battery%2F" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LiTime Browse All -->
+      <div class="product-card">
+        <div class="product-image" style="background:#1a2744">
+          <img src="../set-logo-1024x1024.jpg" alt="Browse all LiTime batteries" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">LiTime</span>
+        </div>
+        <div class="product-info">
+          <h3>Browse All LiTime LiFePO4 Batteries</h3>
+          <p class="product-spec">12V, 24V, 48V · 50Ah to 460Ah · RV, Marine, Solar, Golf Cart</p>
+          <div class="product-footer">
+            <span class="price"><span class="from">From</span> $110</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=82429&awinaffid=2881111&ued=https%3A%2F%2Flitime.com%2Fcollections%2Fall" class="btn-shop" target="_blank" rel="sponsored noopener">Browse All →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== SOLAR ACCESSORIES ===== -->
+<div class="section" id="accessories">
+  <div class="section-header">
+    <span class="section-tag">🧊 Solar Accessories</span>
+    <h2>Solar-Powered Accessories</h2>
+    <p>Portable fridges, coolers, and gear that run on solar power — perfect for camping, RVs, and off-grid living.</p>
+  </div>
+  <div class="product-grid">
+
+    <!-- BougeRV 53Qt Fridge -->
+    <div class="product-card">
+      <div class="product-image" style="background:#1a2636">
+        <img src="../set-logo-1024x1024.jpg" alt="BougeRV 53Qt portable refrigerator" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">BougeRV</span>
+        <span class="rating-badge">★ 4.4</span>
+      </div>
+      <div class="product-info">
+        <h3>BougeRV 53Qt Portable Fridge</h3>
+        <p class="product-spec">53 Quart · 12V/24V DC · -4°F to 50°F · Dual Zone</p>
+        <div class="product-footer">
+          <span class="price">$230</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=52765&awinaffid=2881111&ued=https%3A%2F%2Fwww.bougerv.com%2Fcollections%2Fportable-refrigerators" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BougeRV 30Qt Fridge -->
+    <div class="product-card">
+      <div class="product-image" style="background:#1a2636">
+        <img src="../set-logo-1024x1024.jpg" alt="BougeRV 30Qt portable fridge" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">BougeRV</span>
+        <span class="rating-badge">★ 4.3</span>
+      </div>
+      <div class="product-info">
+        <h3>BougeRV 30Qt Compact Fridge</h3>
+        <p class="product-spec">30 Quart · Ultra-Compact · 12V DC · Perfect for Cars &amp; Trucks</p>
+        <div class="product-footer">
+          <span class="price">$170</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=52765&awinaffid=2881111&ued=https%3A%2F%2Fwww.bougerv.com%2Fcollections%2Fportable-refrigerators" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BougeRV Browse All -->
+    <div class="product-card">
+      <div class="product-image" style="background:#1a2636">
+        <img src="../set-logo-1024x1024.jpg" alt="Browse all BougeRV products" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">BougeRV</span>
+      </div>
+      <div class="product-info">
+        <h3>Browse All BougeRV Products</h3>
+        <p class="product-spec">Portable Fridges · Solar Panels · RV Accessories · Coolers</p>
+        <div class="product-footer">
+          <span class="price"><span class="from">From</span> $60</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=52765&awinaffid=2881111&ued=https%3A%2F%2Fwww.bougerv.com" class="btn-shop" target="_blank" rel="sponsored noopener">Browse All →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== SOLAR OUTDOOR GEAR ===== -->
+<div class="section-alt">
+  <div class="section" id="outdoor">
+    <div class="section-header">
+      <span class="section-tag">🍳 Solar Outdoor Gear</span>
+      <h2>Solar Cooking &amp; Outdoor</h2>
+      <p>Cook, brew, and chill using nothing but the sun. Zero fuel, zero emissions, full flavor.</p>
+    </div>
+    <div class="product-grid">
+
+      <!-- GoSun Sport -->
+      <div class="product-card">
+        <div class="product-image" style="background:#2a1f0a">
+          <img src="../set-logo-1024x1024.jpg" alt="GoSun Sport solar oven" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">GoSun</span>
+          <span class="rating-badge">★ 4.4</span>
+        </div>
+        <div class="product-info">
+          <h3>GoSun Sport Solar Oven</h3>
+          <p class="product-spec">Cooks in 20 Min · No Fuel · 550°F Max · Ultra-Portable</p>
+          <div class="product-footer">
+            <span class="price">$300</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=88749&awinaffid=2881111&ued=https%3A%2F%2Fgosun.co%2Fproducts%2Fsport" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GoSun Fusion -->
+      <div class="product-card">
+        <div class="product-image" style="background:#2a1f0a">
+          <img src="../set-logo-1024x1024.jpg" alt="GoSun Fusion hybrid solar oven" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">GoSun</span>
+          <span class="rating-badge">★ 4.3</span>
+        </div>
+        <div class="product-info">
+          <h3>GoSun Fusion Hybrid Solar Oven</h3>
+          <p class="product-spec">Solar + Electric · Bake, Roast, Steam · Family Size · Off-Grid</p>
+          <div class="product-footer">
+            <span class="price">$350</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=88749&awinaffid=2881111&ued=https%3A%2F%2Fgosun.co%2Fproducts%2Ffusion" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GoSun Brew -->
+      <div class="product-card">
+        <div class="product-image" style="background:#2a1f0a">
+          <img src="../set-logo-1024x1024.jpg" alt="GoSun Brew solar coffee maker" loading="lazy" style="max-width:55%;opacity:0.85" />
+          <span class="brand-badge">GoSun</span>
+          <span class="rating-badge">★ 4.2</span>
+        </div>
+        <div class="product-info">
+          <h3>GoSun Brew Solar Coffee Maker</h3>
+          <p class="product-spec">Solar + USB-C · French Press Style · 16oz · Camp-Ready</p>
+          <div class="product-footer">
+            <span class="price">$150</span>
+            <a href="https://www.awin1.com/cread.php?awinmid=88749&awinaffid=2881111&ued=https%3A%2F%2Fgosun.co%2Fproducts%2Fbrew" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== DIY SOLAR KITS ===== -->
+<div class="section" id="kits">
+  <div class="section-header">
+    <span class="section-tag">🔧 DIY Solar Kits</span>
+    <h2>Complete Solar Kits</h2>
+    <p>Everything you need in one box — panels, controllers, wiring, and mounting hardware for RV, cabin, and off-grid installs.</p>
+  </div>
+  <div class="product-grid">
+
+    <!-- Shop Solar RV Kit -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0d2818">
+        <img src="../set-logo-1024x1024.jpg" alt="Shop Solar 200W RV solar kit" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Shop Solar</span>
+        <span class="rating-badge">★ 4.4</span>
+      </div>
+      <div class="product-info">
+        <h3>200W RV Solar Kit</h3>
+        <p class="product-spec">200W Panel + Controller + Wiring · Plug &amp; Play · RV Ready</p>
+        <div class="product-footer">
+          <span class="price"><span class="from">From</span> $300</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=111790&awinaffid=2881111&ued=https%3A%2F%2Fshopsolarkits.com%2Fcollections%2Frv-solar-kits" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shop Solar Off-Grid Kit -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0d2818">
+        <img src="../set-logo-1024x1024.jpg" alt="Shop Solar off-grid solar kit" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Shop Solar</span>
+        <span class="rating-badge">★ 4.3</span>
+      </div>
+      <div class="product-info">
+        <h3>400W Off-Grid Solar Kit</h3>
+        <p class="product-spec">400W Panels + MPPT Controller + Mounting · Cabin &amp; Shed Ready</p>
+        <div class="product-footer">
+          <span class="price"><span class="from">From</span> $600</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=111790&awinaffid=2881111&ued=https%3A%2F%2Fshopsolarkits.com%2Fcollections%2Foff-grid-solar-kits" class="btn-shop" target="_blank" rel="sponsored noopener">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shop Solar Browse All -->
+    <div class="product-card">
+      <div class="product-image" style="background:#0d2818">
+        <img src="../set-logo-1024x1024.jpg" alt="Browse all Shop Solar kits" loading="lazy" style="max-width:55%;opacity:0.85" />
+        <span class="brand-badge">Shop Solar</span>
+      </div>
+      <div class="product-info">
+        <h3>Browse All Solar Kits</h3>
+        <p class="product-spec">RV Kits · Off-Grid Kits · Cabin Kits · Van Life · Boat Solar</p>
+        <div class="product-footer">
+          <span class="price"><span class="from">From</span> $200</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=111790&awinaffid=2881111&ued=https%3A%2F%2Fshopsolarkits.com" class="btn-shop" target="_blank" rel="sponsored noopener">Browse All →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== GENERATORS CTA BANNER ===== -->
+<div class="cta-banner">
+  <h3>Looking for Solar Generators &amp; Home Batteries?</h3>
+  <p>We review BLUETTI, EcoFlow, ALLPOWERS, Jackery, and more on our main site — 30+ in-depth reviews with honest specs and real comparisons.</p>
+  <a href="/" class="btn-cta">Visit S.E.T. Solar Reviews →</a>
+</div>
+
+<!-- ===== BRAND PARTNERS ===== -->
+<section class="brands-section">
+  <h3>Trusted Brand Partners</h3>
+  <div class="brand-logos">
+    <span class="brand-pill">Mooncool</span>
+    <span class="brand-pill">Renogy</span>
+    <span class="brand-pill">LiTime</span>
+    <span class="brand-pill">Dakota Lithium</span>
+    <span class="brand-pill">BougeRV</span>
+    <span class="brand-pill">GoSun</span>
+    <span class="brand-pill">Shop Solar</span>
+  </div>
+</section>
+
+<!-- ===== TRUST SIGNALS ===== -->
+<div class="section">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">🔬</div>
+      <h4>Expert Reviewed</h4>
+      <p>Every product is independently evaluated by our solar energy team. We only list products we'd use ourselves.</p>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💰</div>
+      <h4>Best Partner Prices</h4>
+      <p>Shop directly from manufacturer stores. Same prices, same warranties, same return policies — no markup.</p>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <h4>Free Shipping</h4>
+      <p>Most products ship free directly from the brand. No middleman, no surprises.</p>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📧</div>
+      <h4>Real Support</h4>
+      <p>Questions before you buy? Email us at <strong>biz@sunenergytechnology.net</strong> and we'll help you choose.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <h2>Get Solar Deals &amp; Reviews</h2>
+  <p>Weekly deals, new product drops, and honest reviews — straight to your inbox.</p>
+  <div class="newsletter-embed">
+    <iframe src="https://55c343d5.sibforms.com/serve/MUIFAOrZ7IJa_Mxs8IeboYQku7SfliQFLMfZB91ZPZ3omUA1s58PfcsVTRJaxgMs_FrDhUmyktHkI7zeOYQsbSo6VMPoD6k20OohMT7g8F8ErZUbzMXoX-bGb_NKY2PYThFYOSUqoOj4PFYu-VbXhG1VKvDY5XjNbWaVFMN78ajnQlwaR_B1Akdgw3aNVLXJCAL-1qgf6CviNs5EmA==" width="100%" height="300" frameborder="0" scrolling="auto" allowfullscreen style="display:block;"></iframe>
+  </div>
+  <small>No spam. Unsubscribe anytime. We never share your email.</small>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">S.E.T. <span class="accent">Store</span></div>
+        <p>The affiliate storefront of Sun Energy Technology. Every product is independently reviewed and hand-picked by our team. We earn a commission when you purchase through our links — at no extra cost to you.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#rides">Electric Rides</a>
+        <a href="#panels">Solar Panels</a>
+        <a href="#batteries">LiFePO4 Batteries</a>
+        <a href="#accessories">Accessories</a>
+        <a href="#outdoor">Outdoor Gear</a>
+        <a href="#kits">DIY Solar Kits</a>
+      </div>
+      <div class="footer-col">
+        <h4>S.E.T. Solar</h4>
+        <a href="/">Homepage</a>
+        <a href="/blog/">Blog &amp; Reviews</a>
+        <a href="/home-batteries.html">Home Battery Guide</a>
+        <a href="/solar-calculator.html">Solar Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="mailto:biz@sunenergytechnology.net">Contact Us</a>
+        <a href="/disclosure.html">Affiliate Disclosure</a>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="https://jwatenterprisesinc.com" target="_blank" rel="noopener">JWAT Enterprise Inc</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 S.E.T. Store — Sun Energy Technology · A division of <a href="https://jwatenterprisesinc.com" target="_blank" rel="noopener">JWAT Enterprise Inc</a> · <a href="mailto:biz@sunenergytechnology.net">biz@sunenergytechnology.net</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
