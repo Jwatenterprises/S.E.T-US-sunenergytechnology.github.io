@@ -221,7 +221,14 @@
       transition: transform 0.25s, box-shadow 0.25s;
       display: flex; flex-direction: column;
     }
+    .product-card { position: relative; cursor: pointer; }
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--card-hover); }
+    /* Stretched link — makes entire card clickable via the primary Shop/Browse button */
+    .btn-shop::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+    .review-link { position: relative; z-index: 2; }
     .product-image {
       position: relative; height: 220px; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
@@ -359,14 +366,7 @@
     }
   </style>
 
-  <!-- TikTok Pixel -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","trackPull","install","instance"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var o="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=o,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=d.createElement("script");a.type="text/javascript",a.async=!0,a.src=o+"?sdkid="+e+"&lib="+t;var r=d.getElementsByTagName("script")[0];r.parentNode.insertBefore(a,r)};
-    ttq.load('7650989745631281169');
-    ttq.page();
-  }(window, document, 'ttq');
-  </script>
+  <!-- All tracking (GA4 + TikTok + Meta + Impact.com) via centralized script -->
   <script src="../scripts/tracking.js"></script>
 </head>
 <body>

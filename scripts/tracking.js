@@ -118,7 +118,8 @@
     ['bougerv', 'BougeRV'],
     ['dakotalithium', 'Dakota Lithium'],
     ['gosun', 'GoSun'],
-    ['shopsolarkits', 'Shop Solar']
+    ['shopsolarkits', 'Shop Solar'],
+    ['oscal', 'Oscal']
   ];
 
   function identifyPartner(href) {
