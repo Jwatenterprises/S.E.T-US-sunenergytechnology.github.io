@@ -623,6 +623,19 @@
     @media (max-width: 800px) { .footer-top { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
 
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--accent); color: var(--white);
+      border: none; cursor: pointer; font-size: 1.3rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--accent-dark); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.22); }
+
     /* ===== UTILITY ===== */
     .text-center { text-align: center; }
   </style>
@@ -890,7 +903,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fpages%2Fsolar-generators" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fpages%2Fsolar-generators" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -913,7 +926,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -936,7 +949,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.amazon.com/s?k=4patriots+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.amazon.com/s?k=4patriots+solar+generator&tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -959,7 +972,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -982,7 +995,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.amazon.com/Mango-Power-Portable-Ultra-durable-Emergency/dp/B0C7GYQW6K?tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.amazon.com/Mango-Power-Portable-Ultra-durable-Emergency/dp/B0C7GYQW6K?tag=sunenergytec2-20" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -1005,7 +1018,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?s=4701099&v=59271&q=568164&r=2881111" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.awin1.com/cread.php?s=4701099&v=59271&q=568164&r=2881111" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -1028,7 +1041,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fallpowers.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fallpowers.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -1051,7 +1064,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fnaturesgenerator.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price &rarr;</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fnaturesgenerator.com" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
           </div>
         </div>
       </div>
@@ -1387,5 +1400,20 @@
   });
 </script>
 <script src="https://www.anrdoezrs.net/am/101837824/include/joined/am.js"></script>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<script>
+(function(){
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 500);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
 </body>
 </html>
