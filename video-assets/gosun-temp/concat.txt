@@ -1,0 +1,4 @@
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gosun-temp\shot00.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gosun-temp\shot01.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gosun-temp\shot02.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gosun-temp\shot03.mp4'

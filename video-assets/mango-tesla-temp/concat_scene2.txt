@@ -1,0 +1,2 @@
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot01a.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot01b.mp4'

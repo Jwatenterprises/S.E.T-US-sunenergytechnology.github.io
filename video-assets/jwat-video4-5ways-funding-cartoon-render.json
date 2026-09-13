@@ -1,0 +1,119 @@
+{
+  "timeline": {
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0f2744 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}\n@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}\n</style>\n<div style=\"position:absolute;top:60px;right:80px;font-size:70px;animation:float 2s ease-in-out infinite;\">&#x1F4B0;</div>\n<div style=\"position:absolute;top:180px;left:60px;font-size:55px;animation:float 2.5s ease-in-out infinite 0.5s;\">&#x1F4B8;</div>\n<div style=\"font-size:60px;margin-bottom:16px;\">&#x1F3AF;</div>\n<p style=\"font-size:80px;font-weight:900;color:#ffd700;margin:0;\">5 Ways</p>\n<p style=\"font-size:44px;font-weight:700;color:#ffffff;margin:12px 40px 0;text-align:center;line-height:1.2;\">to fund your business<br/>in 2026</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.6);margin:16px 0 0 0;animation:pulse 1.5s ease-in-out infinite;\">Save this &#x1F4CC;</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 0.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes slideIn{0%{transform:translateX(-60px);opacity:0}100%{transform:translateX(0);opacity:1}}\n</style>\n<div style=\"background:rgba(255,215,0,0.15);border-radius:50%;width:120px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;\">\n<p style=\"font-size:60px;font-weight:900;color:#ffd700;margin:0;\">1</p>\n</div>\n<div style=\"font-size:80px;margin-bottom:12px;\">&#x1F3E6;</div>\n<p style=\"font-size:42px;font-weight:800;color:#ffffff;margin:0 40px;text-align:center;animation:slideIn 0.5s ease-out 0.2s both;\">SBA Loans</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin:16px 40px 0;text-align:center;animation:slideIn 0.5s ease-out 0.5s both;\">Low rates. But 60-90 days to close.<br/>Need 680+ credit score.</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 4.5,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#16213e 0%,#1a1a2e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes slideIn{0%{transform:translateX(-60px);opacity:0}100%{transform:translateX(0);opacity:1}}\n</style>\n<div style=\"background:rgba(255,215,0,0.15);border-radius:50%;width:120px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;\">\n<p style=\"font-size:60px;font-weight:900;color:#ffd700;margin:0;\">2</p>\n</div>\n<div style=\"font-size:80px;margin-bottom:12px;\">&#x1F4B3;</div>\n<p style=\"font-size:42px;font-weight:800;color:#ffffff;margin:0 40px;text-align:center;animation:slideIn 0.5s ease-out 0.2s both;\">Business Credit Cards</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin:16px 40px 0;text-align:center;animation:slideIn 0.5s ease-out 0.5s both;\">Fast access. But 18-28% APR.<br/>Easy to overspend.</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 9.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes slideIn{0%{transform:translateX(-60px);opacity:0}100%{transform:translateX(0);opacity:1}}\n</style>\n<div style=\"background:rgba(255,215,0,0.15);border-radius:50%;width:120px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;\">\n<p style=\"font-size:60px;font-weight:900;color:#ffd700;margin:0;\">3</p>\n</div>\n<div style=\"font-size:80px;margin-bottom:12px;\">&#x1F91D;</div>\n<p style=\"font-size:42px;font-weight:800;color:#ffffff;margin:0 40px;text-align:center;animation:slideIn 0.5s ease-out 0.2s both;\">Investors / Angels</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin:16px 40px 0;text-align:center;animation:slideIn 0.5s ease-out 0.5s both;\">Big money. But you give up equity.<br/>Hard to find. Takes months.</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 13.5,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#16213e 0%,#1a1a2e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes slideIn{0%{transform:translateX(-60px);opacity:0}100%{transform:translateX(0);opacity:1}}\n</style>\n<div style=\"background:rgba(255,215,0,0.15);border-radius:50%;width:120px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;\">\n<p style=\"font-size:60px;font-weight:900;color:#ffd700;margin:0;\">4</p>\n</div>\n<div style=\"font-size:80px;margin-bottom:12px;\">&#x1F3E0;</div>\n<p style=\"font-size:42px;font-weight:800;color:#ffffff;margin:0 40px;text-align:center;animation:slideIn 0.5s ease-out 0.2s both;\">Home Equity / HELOC</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin:16px 40px 0;text-align:center;animation:slideIn 0.5s ease-out 0.5s both;\">Lower rates. But your house<br/>is on the line. &#x1F6A8;</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 18.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0a1628 0%,#1a365d 60%,#2d5a8c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes rocketIn{0%{transform:translateY(200px) scale(0.3);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}\n@keyframes glow{0%,100%{text-shadow:0 0 20px rgba(74,222,128,0.5)}50%{text-shadow:0 0 40px rgba(74,222,128,0.9)}}\n@keyframes sparkle{0%,100%{opacity:0.3}50%{opacity:1}}\n</style>\n<div style=\"position:absolute;top:80px;left:60px;font-size:28px;animation:sparkle 1s infinite;\">&#x2B50;</div>\n<div style=\"position:absolute;top:150px;right:80px;font-size:24px;animation:sparkle 1s infinite 0.3s;\">&#x2B50;</div>\n<div style=\"background:rgba(74,222,128,0.15);border-radius:50%;width:120px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;\">\n<p style=\"font-size:60px;font-weight:900;color:#4ade80;margin:0;\">5</p>\n</div>\n<div style=\"font-size:80px;animation:rocketIn 0.8s ease-out forwards;margin-bottom:12px;\">&#x1F680;</div>\n<p style=\"font-size:42px;font-weight:800;color:#4ade80;margin:0 40px;text-align:center;animation:glow 2s ease-in-out infinite;\">Revenue-Based Funding</p>\n<p style=\"font-size:28px;font-weight:400;color:#ffffff;margin:16px 40px 0;text-align:center;\">24-48hr approvals. No collateral.<br/>No perfect credit. <span style=\"color:#ffd700;font-weight:700;\">$5K&#x2013;$5M.</span></p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 22.5,
+            "length": 5.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1b2a 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}\n@keyframes fadeSlide{0%{transform:translateY(30px);opacity:0}100%{transform:translateY(0);opacity:1}}\n</style>\n<div style=\"background:#ffd700;border-radius:20px;padding:16px 40px;margin-bottom:28px;animation:fadeSlide 0.5s ease-out forwards;\">\n<p style=\"font-size:32px;font-weight:900;color:#1a365d;margin:0;letter-spacing:2px;\">JWAT</p>\n</div>\n<p style=\"font-size:36px;font-weight:700;color:#ffffff;margin:0 40px;text-align:center;animation:fadeSlide 0.5s ease-out 0.3s both;\">Option 5 is what<br/>we recommend.</p>\n<p style=\"font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin:12px 40px 0;text-align:center;animation:fadeSlide 0.5s ease-out 0.5s both;\">Check your rate. Free. 2 minutes.</p>\n<p style=\"font-size:32px;font-weight:700;color:#ffd700;margin:32px 0 0 0;animation:bounce 1s ease-in-out infinite;\">Link in bio &#x2B07;&#xFE0F;</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 28.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "hd",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "quality": "high"
+  }
+}

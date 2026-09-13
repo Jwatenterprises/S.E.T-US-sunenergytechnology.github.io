@@ -1,0 +1,351 @@
+{
+  "timeline": {
+    "background": "#0a0f1a",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">Electric Go-Karts Are Here \u26a1\ud83c\udfce\ufe0f</p>\n        </div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 0.0,
+            "length": 4.75,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">Segway GoKart Pro 2</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:28px;font-weight:500;color:#00d4aa;text-shadow:1px 1px 6px rgba(0,0,0,0.9);margin:8px 0 0 0;line-height:1.3;letter-spacing:0.5px;\">$1,499 \u00b7 26.7 MPH \u00b7 4,800W Dual Motors</p></div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 4.75,
+            "length": 13.99,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:40px;\"><img src=\"https://images.techeblog.com/wp-content/uploads/2025/07/23133944/segway-gokart-pro-2.jpg\" style=\"max-width:90%;max-height:85%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.6));\"/></div>",
+              "width": 1080,
+              "height": 1100
+            },
+            "start": 4.75,
+            "length": 13.99,
+            "position": "top",
+            "offset": {
+              "y": 0.04
+            },
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">Razor Crazy Cart XL</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:28px;font-weight:500;color:#00d4aa;text-shadow:1px 1px 6px rgba(0,0,0,0.9);margin:8px 0 0 0;line-height:1.3;letter-spacing:0.5px;\">$1,259 \u00b7 14 MPH \u00b7 Drift System \u00b7 Adults</p></div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 18.740000000000002,
+            "length": 14.92,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:40px;\"><img src=\"https://razor.com/wp-content/uploads/2025/04/Crazy_Cart_XL_Product_photo_001.jpg\" style=\"max-width:90%;max-height:85%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.6));\"/></div>",
+              "width": 1080,
+              "height": 1100
+            },
+            "start": 18.740000000000002,
+            "length": 14.92,
+            "position": "top",
+            "offset": {
+              "y": 0.04
+            },
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">Razor Ground Force Elite</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:28px;font-weight:500;color:#00d4aa;text-shadow:1px 1px 6px rgba(0,0,0,0.9);margin:8px 0 0 0;line-height:1.3;letter-spacing:0.5px;\">$549 \u00b7 14 MPH \u00b7 36V \u00b7 Ages 13+</p></div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 33.660000000000004,
+            "length": 13.44,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:40px;\"><img src=\"https://razor.com/wp-content/uploads/2025/04/GroundForceElite_Product_001.png\" style=\"max-width:90%;max-height:85%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.6));\"/></div>",
+              "width": 1080,
+              "height": 1100
+            },
+            "start": 33.660000000000004,
+            "length": 13.44,
+            "position": "top",
+            "offset": {
+              "y": 0.04
+            },
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">Razor Ground Force One</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:28px;font-weight:500;color:#00d4aa;text-shadow:1px 1px 6px rgba(0,0,0,0.9);margin:8px 0 0 0;line-height:1.3;letter-spacing:0.5px;\">$299 \u00b7 12 MPH \u00b7 40 Min \u00b7 Ages 8+</p></div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 47.1,
+            "length": 11.9,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:40px;\"><img src=\"https://razor.com/wp-content/uploads/2025/04/GroundForce_SL_Product.png\" style=\"max-width:90%;max-height:85%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.6));\"/></div>",
+              "width": 1080,
+              "height": 1100
+            },
+            "start": 47.1,
+            "length": 11.9,
+            "position": "top",
+            "offset": {
+              "y": 0.04
+            },
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:flex-end;\n        width:100%;height:100%;text-align:center;padding:0 40px 80px 40px;\">\n        <p style=\"font-family:Arial,sans-serif;font-size:52px;\n        font-weight:900;color:#ffffff;text-shadow:2px 2px 10px rgba(0,0,0,0.95);\n        margin:0;line-height:1.15;letter-spacing:-0.5px;\">S.E.T. Solar</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:28px;font-weight:500;color:#00d4aa;text-shadow:1px 1px 6px rgba(0,0,0,0.9);margin:8px 0 0 0;line-height:1.3;letter-spacing:0.5px;\">Link in bio \u2193</p></div>",
+              "width": 1080,
+              "height": 500
+            },
+            "start": 59.0,
+            "length": 5.3,
+            "position": "bottom",
+            "offset": {
+              "y": 0.02
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;\n        background:linear-gradient(180deg,#0d1826 0%,#0a1628 100%);\">\n        <p style=\"font-family:Arial,sans-serif;font-size:64px;\n        font-weight:900;color:#ffffff;margin:0;line-height:1.15;\n        text-shadow:2px 3px 12px rgba(0,0,0,0.8);\">Electric Go-Karts Are Here \u26a1\ud83c\udfce\ufe0f</p>\n        <div style=\"width:80px;height:4px;background:#ff6b35;margin:20px auto 0;border-radius:2px;\"></div>\n        </div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 0.0,
+            "length": 4.75,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1826,#111828);\"></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 4.75,
+            "length": 13.99,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1826,#111828);\"></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 18.740000000000002,
+            "length": 14.92,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1826,#111828);\"></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 33.660000000000004,
+            "length": 13.44,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1826,#111828);\"></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 47.1,
+            "length": 11.9,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;background:linear-gradient(180deg,#0d1826 0%,#1a3a5c 100%);\">\n        <img src=\"https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/set-logo.jpg\" style=\"width:300px;height:auto;margin-bottom:24px;border-radius:16px;\" />\n        <p style=\"font-family:Arial,sans-serif;font-size:42px;\n        font-weight:700;color:#ffffff;margin:0;\">S.E.T. Solar</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:26px;\n        font-weight:400;color:#00d4aa;margin:14px 0 0 0;\">Full guide + buying links \u2193</p>\n        <p style=\"font-family:Arial,sans-serif;font-size:20px;\n        font-weight:400;color:#e0e0e0;margin:10px 0 0 0;\">sunenergytechnology.com</p>\n        </div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 59.0,
+            "length": 5.3,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line1.mp3",
+              "volume": 1
+            },
+            "start": 0.0,
+            "length": 4.25
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line2.mp3",
+              "volume": 1
+            },
+            "start": 4.75,
+            "length": 13.49
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line3.mp3",
+              "volume": 1
+            },
+            "start": 18.740000000000002,
+            "length": 14.42
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line4.mp3",
+              "volume": 1
+            },
+            "start": 33.660000000000004,
+            "length": 12.94
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line5.mp3",
+              "volume": 1
+            },
+            "start": 47.1,
+            "length": 11.4
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/gokart-voiceover/line6.mp3",
+              "volume": 1
+            },
+            "start": 59.0,
+            "length": 4.8
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "hd",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "quality": "high"
+  }
+}

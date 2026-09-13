@@ -1,0 +1,7 @@
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot00.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot01.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot02.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot03.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot04.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot05.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\mango-tesla-temp\shot06.mp4'

@@ -1,0 +1,133 @@
+{
+  "timeline": {
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0f2744 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}\n@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}\n@keyframes blink{0%,90%,100%{opacity:1}95%{opacity:0}}\n</style>\n<div style=\"position:absolute;top:60px;right:80px;font-size:80px;animation:float 2s ease-in-out infinite;\">&#x1F4B0;</div>\n<div style=\"position:absolute;top:180px;left:60px;font-size:60px;animation:float 2.5s ease-in-out infinite 0.5s;\">&#x1F4B8;</div>\n<div style=\"font-size:160px;margin-bottom:20px;animation:blink 3s infinite;\">&#x1F468;&#x200D;&#x1F4BC;</div>\n<p style=\"font-size:52px;font-weight:800;color:#ffffff;margin:0 40px;text-align:center;line-height:1.2;\">Your business<br/>needs capital.</p>\n<p style=\"font-size:36px;font-weight:400;color:#ffd700;margin:16px 0 0 0;animation:pulse 1.5s ease-in-out infinite;\">But where do you go?</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 0.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}\n@keyframes stampIn{0%{transform:scale(3) rotate(-20deg);opacity:0}60%{transform:scale(1) rotate(-12deg);opacity:1}100%{transform:scale(1) rotate(-12deg);opacity:1}}\n</style>\n<div style=\"font-size:140px;animation:shake 0.5s ease-in-out infinite;\">&#x1F3E6;</div>\n<div style=\"position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-12deg);animation:stampIn 0.8s ease-out forwards;\">\n<div style=\"border:8px solid #ff4444;border-radius:12px;padding:12px 40px;background:rgba(255,68,68,0.15);\">\n<p style=\"font-size:64px;font-weight:900;color:#ff4444;margin:0;letter-spacing:8px;\">DENIED</p>\n</div>\n</div>\n<p style=\"font-size:40px;font-weight:700;color:#ffffff;margin:40px 40px 0;text-align:center;line-height:1.2;\">The bank said <span style=\"color:#ff4444;\">NO.</span></p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 4.5,
+            "length": 4.0,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#1a1a2e 0%,#0d1b2a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}\n@keyframes flyUp{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(-400px) rotate(45deg);opacity:0}}\n</style>\n<div style=\"position:absolute;top:100px;left:80px;font-size:50px;animation:flyUp 2s linear infinite;\">&#x1F4C4;</div>\n<div style=\"position:absolute;top:200px;right:60px;font-size:45px;animation:flyUp 2s linear infinite 0.7s;\">&#x1F4C3;</div>\n<div style=\"position:absolute;top:300px;left:160px;font-size:40px;animation:flyUp 2s linear infinite 1.3s;\">&#x1F4DD;</div>\n<div style=\"font-size:120px;animation:spin 3s linear infinite;\">&#x23F3;</div>\n<p style=\"font-size:48px;font-weight:800;color:#ffffff;margin:24px 40px 0;text-align:center;line-height:1.2;\">Weeks of paperwork.</p>\n<p style=\"font-size:40px;font-weight:400;color:#ff6b6b;margin:12px 0 0 0;\">Still waiting...</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 8.5,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(135deg,#0d1b2a 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes countUp{0%{opacity:0;transform:scale(0.5)}100%{opacity:1;transform:scale(1)}}\n@keyframes slideUp{0%{transform:translateY(40px);opacity:0}100%{transform:translateY(0);opacity:1}}\n</style>\n<div style=\"font-size:80px;margin-bottom:16px;\">&#x1F4C9;</div>\n<p style=\"font-size:120px;font-weight:900;color:#ffd700;margin:0;animation:countUp 0.8s ease-out forwards;\">82%</p>\n<p style=\"font-size:32px;font-weight:400;color:#ffffff;margin:16px 40px 0;text-align:center;animation:slideUp 0.6s ease-out 0.4s both;\">of small businesses</p>\n<p style=\"font-size:38px;font-weight:700;color:#ff6b6b;margin:8px 0 0 0;animation:slideUp 0.6s ease-out 0.7s both;\">fail from cash flow problems</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 13.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0a1628 0%,#1a365d 60%,#2d5a8c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes rocketIn{0%{transform:translateY(200px) scale(0.3);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}\n@keyframes glow{0%,100%{text-shadow:0 0 20px rgba(255,215,0,0.5)}50%{text-shadow:0 0 40px rgba(255,215,0,0.9)}}\n@keyframes sparkle{0%,100%{opacity:0.3}50%{opacity:1}}\n</style>\n<div style=\"position:absolute;top:80px;left:60px;font-size:30px;animation:sparkle 1s infinite;\">&#x2B50;</div>\n<div style=\"position:absolute;top:150px;right:80px;font-size:25px;animation:sparkle 1s infinite 0.3s;\">&#x2B50;</div>\n<div style=\"position:absolute;top:120px;left:200px;font-size:20px;animation:sparkle 1s infinite 0.6s;\">&#x2B50;</div>\n<div style=\"font-size:100px;animation:rocketIn 0.8s ease-out forwards;margin-bottom:24px;\">&#x1F680;</div>\n<p style=\"font-size:52px;font-weight:900;color:#ffd700;margin:0;animation:glow 2s ease-in-out infinite;\">ROK Financial</p>\n<p style=\"font-size:36px;font-weight:600;color:#ffffff;margin:20px 40px 0;text-align:center;\">gets businesses funded<br/><span style=\"color:#4ade80;font-size:44px;font-weight:900;\">FAST.</span></p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 17.5,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1b2a 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes checkIn1{0%{transform:translateX(-100px);opacity:0}100%{transform:translateX(0);opacity:1}}\n@keyframes checkIn2{0%{transform:translateX(-100px);opacity:0}100%{transform:translateX(0);opacity:1}}\n@keyframes checkIn3{0%{transform:translateX(-100px);opacity:0}100%{transform:translateX(0);opacity:1}}\n</style>\n<p style=\"font-size:42px;font-weight:800;color:#ffffff;margin:0 0 40px 0;\">Why ROK?</p>\n<div style=\"display:flex;align-items:center;gap:16px;margin:0 40px 20px;animation:checkIn1 0.5s ease-out 0.2s both;\">\n<span style=\"font-size:44px;\">&#x1F4B5;</span>\n<p style=\"font-size:32px;color:#ffd700;margin:0;font-weight:600;\">$5K &#x2013; $5M funding</p>\n</div>\n<div style=\"display:flex;align-items:center;gap:16px;margin:0 40px 20px;animation:checkIn2 0.5s ease-out 0.6s both;\">\n<span style=\"font-size:44px;\">&#x26A1;</span>\n<p style=\"font-size:32px;color:#ffd700;margin:0;font-weight:600;\">Approved in 24&#x2013;48 hrs</p>\n</div>\n<div style=\"display:flex;align-items:center;gap:16px;margin:0 40px 20px;animation:checkIn3 0.5s ease-out 1.0s both;\">\n<span style=\"font-size:44px;\">&#x1F513;</span>\n<p style=\"font-size:32px;color:#ffd700;margin:0;font-weight:600;\">No collateral required</p>\n</div>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 22.0,
+            "length": 5.0,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(135deg,#1a365d 0%,#2d5a8c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;position:relative;\">\n<style>\n@keyframes popIn{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}\n@keyframes confetti1{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(300px) rotate(360deg);opacity:0}}\n@keyframes confetti2{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(250px) rotate(-270deg);opacity:0}}\n</style>\n<div style=\"position:absolute;top:80px;left:100px;font-size:30px;animation:confetti1 2s linear infinite;\">&#x1F389;</div>\n<div style=\"position:absolute;top:60px;right:120px;font-size:28px;animation:confetti2 2s linear infinite 0.5s;\">&#x1F38A;</div>\n<div style=\"position:absolute;top:150px;left:200px;font-size:24px;animation:confetti1 2s linear infinite 1s;\">&#x2728;</div>\n<p style=\"font-size:30px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 8px 0;\">Real result:</p>\n<p style=\"font-size:100px;font-weight:900;color:#4ade80;margin:0;animation:popIn 0.6s ease-out forwards;\">$1M</p>\n<p style=\"font-size:38px;font-weight:600;color:#ffffff;margin:16px 0 0 0;\">funded in 48 hours</p>\n<p style=\"font-size:26px;font-weight:300;color:rgba(255,255,255,0.7);margin:20px 40px 0;text-align:center;\">No bank. No waiting. No BS.</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 27.0,
+            "length": 4.5,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"width:100%;height:100%;background:linear-gradient(180deg,#0d1b2a 0%,#1a365d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;overflow:hidden;\">\n<style>\n@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}\n@keyframes fadeSlide{0%{transform:translateY(30px);opacity:0}100%{transform:translateY(0);opacity:1}}\n</style>\n<div style=\"background:#ffd700;border-radius:20px;padding:16px 40px;margin-bottom:28px;animation:fadeSlide 0.5s ease-out forwards;\">\n<p style=\"font-size:32px;font-weight:900;color:#1a365d;margin:0;letter-spacing:2px;\">JWAT</p>\n</div>\n<p style=\"font-size:42px;font-weight:700;color:#ffffff;margin:0 40px;text-align:center;animation:fadeSlide 0.5s ease-out 0.3s both;\">Stop waiting on banks.</p>\n<p style=\"font-size:32px;font-weight:400;color:rgba(255,255,255,0.7);margin:12px 40px 0;text-align:center;animation:fadeSlide 0.5s ease-out 0.5s both;\">Get funded in 48 hours.</p>\n<p style=\"font-size:32px;font-weight:700;color:#ffd700;margin:32px 0 0 0;animation:bounce 1s ease-in-out infinite;\">Link in bio &#x2B07;&#xFE0F;</p>\n</div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 31.5,
+            "length": 4.0,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "hd",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "quality": "high"
+  }
+}

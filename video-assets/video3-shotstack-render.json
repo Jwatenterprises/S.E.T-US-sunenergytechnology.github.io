@@ -1,0 +1,347 @@
+{
+  "timeline": {
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Living in an apartment?</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">You can't install rooftop solar.</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 0.0,
+            "length": 5.5,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">But you CAN own</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">a solar generator.</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 5.5,
+            "length": 3.1999999999999997,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">BLUETTI AC200L</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">2,048Wh \u2014 fits under your desk</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 8.7,
+            "length": 6.7,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Charge from a balcony</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">or plug into the wall overnight</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 15.399999999999999,
+            "length": 5.1000000000000005,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Fridge \u00b7 Laptop \u00b7 Phone \u00b7 Fan</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">All running during a blackout</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 20.5,
+            "length": 5.0,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">No gas. No fumes.</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">No landlord permission needed.</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 25.5,
+            "length": 6.3,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Under $2,000</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">Apartment-proof backup power</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 31.8,
+            "length": 5.3,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">S.E.T. Solar</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">Find your perfect generator in 5 minutes</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 37.1,
+            "length": 5.4,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/13761469/13761469-uhd_2560_1440_30fps.mp4",
+              "trim": 2,
+              "volume": 0
+            },
+            "start": 0.0,
+            "length": 5.5,
+            "fit": "crop",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/855262/855262-hd_1920_1080_25fps.mp4",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 5.5,
+            "length": 3.1999999999999997,
+            "fit": "crop",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "image",
+              "src": "https://cdn.shopify.com/s/files/1/0536/3390/8911/files/AC200L_9783dcdd-db2a-4939-8ce5-7134f35d43a4.png?v=1758766225"
+            },
+            "start": 8.7,
+            "length": 6.7,
+            "fit": "contain",
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/5233552/5233552-uhd_2560_1440_30fps.mp4",
+              "trim": 3,
+              "volume": 0
+            },
+            "start": 15.399999999999999,
+            "length": 5.1000000000000005,
+            "fit": "crop",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/5725445/5725445-uhd_2560_1440_25fps.mp4",
+              "trim": 1,
+              "volume": 0
+            },
+            "start": 20.5,
+            "length": 5.0,
+            "fit": "crop",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/6266251/6266251-uhd_1440_2560_25fps.mp4",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 25.5,
+            "length": 6.3,
+            "fit": "crop",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;\n                    width:100%;height:100%;background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 50%,#0d1f3c 100%);\">\n                    <div style=\"text-align:center;\">\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:90px;\n                    font-weight:900;color:#00d4aa;margin:0;\">UNDER $2,000</p>\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:36px;\n                    font-weight:400;color:#ffffff;margin:20px 0 0 0;\">Apartment-proof backup power</p>\n                    </div></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 31.8,
+            "length": 5.3
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n                    width:100%;height:100%;background:linear-gradient(180deg,#0d1f3c 0%,#1a3a5c 100%);\">\n                    <img src=\"https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/set-logo.jpg\" style=\"width:320px;height:auto;margin-bottom:30px;border-radius:16px;\" />\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:44px;\n                    font-weight:700;color:#ffffff;margin:0;\">S.E.T. Solar</p>\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;\n                    font-weight:400;color:#00d4aa;margin:16px 0 0 0;\">Link in bio \u2193</p>\n                    </div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 37.1,
+            "length": 5.4
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line1.mp3",
+              "volume": 1
+            },
+            "start": 0.0,
+            "length": 5.21
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line2.mp3",
+              "volume": 1
+            },
+            "start": 5.5,
+            "length": 2.86
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line3.mp3",
+              "volume": 1
+            },
+            "start": 8.7,
+            "length": 6.41
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line4.mp3",
+              "volume": 1
+            },
+            "start": 15.399999999999999,
+            "length": 4.82
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line5.mp3",
+              "volume": 1
+            },
+            "start": 20.5,
+            "length": 4.66
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line6.mp3",
+              "volume": 1
+            },
+            "start": 25.5,
+            "length": 6.05
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line7.mp3",
+              "volume": 1
+            },
+            "start": 31.8,
+            "length": 5.06
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/video-assets/video3-voiceover/line8.mp3",
+              "volume": 1
+            },
+            "start": 37.1,
+            "length": 5.04
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "hd",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30
+  }
+}

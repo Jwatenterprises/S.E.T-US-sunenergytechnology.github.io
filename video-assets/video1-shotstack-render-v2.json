@@ -1,0 +1,362 @@
+{
+  "timeline": {
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Can a solar generator</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">power your WHOLE house?</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 0.0,
+            "length": 3.07,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">When the grid goes down</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">your family is in the dark.</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 3.07,
+            "length": 8.370000000000001,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">BLUETTI AC300 + B300</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">3,072Wh of LiFePO4 power</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 11.440000000000001,
+            "length": 7.1,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">3,000W Pure Sine Wave</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">6,000W surge capacity</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 18.54,
+            "length": 2.66,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Fridge \u00b7 Lights \u00b7 Router</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">Medical devices \u2014 24+ hours</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 21.2,
+            "length": 8.61,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">Modular & expandable</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">Up to 12,288Wh \u00b7 UPS mode</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 29.81,
+            "length": 9.33,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">The honest answer</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">What it can \u2014 and can't \u2014 do</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 39.14,
+            "length": 5.16,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n        width:100%;height:100%;text-align:center;padding:40px;\">\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:54px;\n        font-weight:800;color:#ffffff;text-shadow:2px 2px 8px rgba(0,0,0,0.9);\n        margin:0 0 12px 0;line-height:1.2;\">S.E.T. Solar</p>\n        <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;\n        font-weight:400;color:#f0f0f0;text-shadow:1px 1px 6px rgba(0,0,0,0.8);\n        margin:0;line-height:1.3;\">Find your perfect generator</p></div>",
+              "width": 1080,
+              "height": 400
+            },
+            "start": 44.3,
+            "length": 3.31,
+            "position": "bottom",
+            "offset": {
+              "y": -0.08
+            },
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/3773486/3773486-hd_1920_1080_30fps.mp4",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 0.0,
+            "length": 3.07,
+            "fit": "crop",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/3163534/3163534-hd_1920_1080_30fps.mp4",
+              "trim": 2,
+              "volume": 0
+            },
+            "start": 3.07,
+            "length": 8.370000000000001,
+            "fit": "crop",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "image",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/images/bluetti-ac300.png"
+            },
+            "start": 11.440000000000001,
+            "length": 7.1,
+            "fit": "contain",
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;align-items:center;justify-content:center;\n                    width:100%;height:100%;background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 50%,#0d1f3c 100%);\">\n                    <div style=\"text-align:center;\">\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:80px;\n                    font-weight:900;color:#00d4aa;margin:0;\">3,000W</p>\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:36px;\n                    font-weight:400;color:#ffffff;margin:16px 0 0 0;\">Pure Sine Wave Inverter</p>\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;\n                    font-weight:300;color:#88bbff;margin:12px 0 0 0;\">6,000W Surge Capacity</p>\n                    </div></div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 18.54,
+            "length": 2.66,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/4065388/4065388-hd_1920_1080_30fps.mp4",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 21.2,
+            "length": 8.61,
+            "fit": "crop",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/5233552/5233552-uhd_2560_1440_30fps.mp4",
+              "trim": 3,
+              "volume": 0
+            },
+            "start": 29.81,
+            "length": 9.33,
+            "fit": "crop",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 39.14,
+            "length": 5.16,
+            "fit": "crop",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "html",
+              "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;\n                    width:100%;height:100%;background:linear-gradient(180deg,#0d1f3c 0%,#1a3a5c 100%);\">\n                    <img src=\"https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/set-logo.jpg\" style=\"width:320px;height:auto;margin-bottom:30px;border-radius:16px;\" />\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:44px;\n                    font-weight:700;color:#ffffff;margin:0;\">S.E.T. Solar</p>\n                    <p style=\"font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;\n                    font-weight:400;color:#00d4aa;margin:16px 0 0 0;\">Link in bio \u2193</p>\n                    </div>",
+              "width": 1080,
+              "height": 1920
+            },
+            "start": 44.3,
+            "length": 3.31,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line1.mp3",
+              "volume": 1
+            },
+            "start": 0.0,
+            "length": 2.57
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line2.mp3",
+              "volume": 1
+            },
+            "start": 3.07,
+            "length": 7.87
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line3.mp3",
+              "volume": 1
+            },
+            "start": 11.440000000000001,
+            "length": 6.6
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line4.mp3",
+              "volume": 1
+            },
+            "start": 18.54,
+            "length": 2.16
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line5.mp3",
+              "volume": 1
+            },
+            "start": 21.2,
+            "length": 8.11
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line6.mp3",
+              "volume": 1
+            },
+            "start": 29.81,
+            "length": 8.83
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line7.mp3",
+              "volume": 1
+            },
+            "start": 39.14,
+            "length": 4.66
+          },
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://raw.githubusercontent.com/Jwatenterprises/S.E.T-US-sunenergytechnology.github.io/main/voiceover/line8.mp3",
+              "volume": 1
+            },
+            "start": 44.3,
+            "length": 2.81
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "hd",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "quality": "high"
+  }
+}

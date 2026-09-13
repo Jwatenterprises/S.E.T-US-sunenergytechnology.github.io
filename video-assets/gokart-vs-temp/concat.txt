@@ -1,0 +1,6 @@
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot00.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot01.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot02.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot03.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot04.mp4'
+file 'C:\Users\Milli\Documents\SunEnergyTechnology\video-assets\gokart-vs-temp\shot05.mp4'
