@@ -302,6 +302,8 @@
     .article-wrapper a:hover { color: var(--blue-dark); }
 
     /* ── PRODUCT CARD ── */
+    .product-img-wrap { text-align: center; margin: 16px 0 20px; }
+    .product-img-wrap img { max-width: 100%; height: auto; max-height: 340px; border-radius: 12px; object-fit: contain; }
     .product-card {
       background: var(--gray-bg); border-radius: 16px; padding: 28px 28px 24px;
       margin: 24px 0 12px; border-left: 4px solid var(--blue); position: relative;
@@ -710,6 +712,9 @@
 
   <div class="product-card top-pick">
     <span class="product-rank gold">#1 Top Pick &mdash; Best Overall &bull; S.E.T. Rating 4.9/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-2-max.webp" alt="EcoFlow DELTA 2 Max portable power station — 2,048Wh LiFePO4 solar generator" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">2,048Wh</span>
@@ -773,6 +778,9 @@
 
   <div class="product-card">
     <span class="product-rank">#2 Pick &mdash; Whole-Home Backup &bull; S.E.T. Rating 4.8/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-pro.webp" alt="EcoFlow DELTA Pro portable power station — 3,600Wh LiFePO4 whole-home backup" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">3,600Wh</span>
@@ -835,6 +843,9 @@
 
   <div class="product-card">
     <span class="product-rank">#3 Pick &mdash; Best Budget &bull; S.E.T. Rating 4.5/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-river-3-plus.webp" alt="EcoFlow RIVER 3 Plus portable power station — 286Wh budget camping solar generator" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">286Wh</span>
@@ -895,6 +906,9 @@
 
   <div class="product-card">
     <span class="product-rank">#4 Pick &mdash; Mid-Range Value &bull; S.E.T. Rating 4.6/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-2.webp" alt="EcoFlow DELTA 2 portable power station — 1,024Wh mid-range solar generator" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">1,024Wh</span>
@@ -955,6 +969,9 @@
 
   <div class="product-card">
     <span class="product-rank">#5 Pick &mdash; Premium &bull; S.E.T. Rating 4.7/5</span>
+    <div class="product-img-wrap">
+      <img src="../images/ecoflow-delta-pro-ultra.webp" alt="EcoFlow DELTA Pro Ultra — 6,144Wh premium whole-home battery replacement" loading="lazy" />
+    </div>
     <div class="specs-grid">
       <div class="spec-box">
         <span class="val">6,144Wh</span>
@@ -1112,6 +1129,21 @@
   <p>The <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fproducts%2Fexplorer-2000-plus-portable-power-station" target="_blank" rel="sponsored noopener noreferrer">Jackery Explorer 2000 Plus</a> is EcoFlow's closest direct competitor at a nearly identical capacity, and it wins on output and solar input. The DELTA 2 Max wins on price, weight, and by far the fastest AC recharge. For most buyers, the price and charging speed advantage tips the scale toward EcoFlow.</p>
 
   <p>The <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-r3500-portable-power-station-3200w-3168wh" target="_blank" rel="sponsored noopener noreferrer">ALLPOWERS R3500</a> offers more raw capacity and solar input for similar money, and it's worth a look if solar recharge speed matters more to you than EcoFlow's ecosystem and app polish. Where EcoFlow tends to win is fit and finish, app experience, and resale/support ecosystem &mdash; ALLPOWERS wins on pure spec-per-dollar in this comparison.</p>
+
+  <!-- ============================================ -->
+  <!-- MID-ARTICLE EMAIL CAPTURE -->
+  <!-- ============================================ -->
+
+  <div style="background:linear-gradient(135deg,#0E2A47,#1B4D7A);border-radius:16px;padding:36px 32px;margin:40px 0;text-align:center;color:#fff;">
+    <p style="font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#00C896;font-weight:700;margin-bottom:8px;">Free Download</p>
+    <h3 style="font-size:clamp(20px,3.5vw,26px);font-weight:800;margin-bottom:10px;color:#fff;">Not ready to buy yet?</h3>
+    <p style="font-size:15px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto 20px;">Get our free <strong>Solar Generator Buyer's Guide</strong> &mdash; 47 pages, real specs, no fluff. We'll send it straight to your inbox.</p>
+    <form onsubmit="event.preventDefault();var f=this,b=f.querySelector('button'),e=f.querySelector('input[type=email]').value;b.textContent='Sending...';b.disabled=true;fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:e,_subject:'S.E.T. Solar Buyer Guide Request (mid-article)',_template:'table',_captcha:'false'})}).then(function(r){return r.json()}).then(function(d){if(d.success){b.textContent='Guide Sent! Check Your Inbox.';b.style.background='#00C896'}else{b.textContent='Try Again';b.disabled=false}}).catch(function(){b.textContent='Try Again';b.disabled=false});" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+      <input type="email" placeholder="Your email address" required style="flex:1;min-width:200px;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;font-size:15px;" />
+      <button type="submit" style="background:#F5A623;color:#1E1E2E;border:none;padding:12px 24px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap;">Send Me the Guide</button>
+    </form>
+    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:12px;">No spam. Unsubscribe anytime.</p>
+  </div>
 
   <!-- ============================================ -->
   <!-- FAQ -->

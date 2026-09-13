@@ -175,8 +175,24 @@
     }
   }
 
+  // ── Auto-inject Awin clickref for per-page tracking ──
+  function injectAwinClickref() {
+    var pageName = getPageName();
+    var links = document.querySelectorAll('a[href*="awin1.com"]');
+    links.forEach(function(link) {
+      try {
+        var url = new URL(link.href);
+        if (!url.searchParams.has('clickref')) {
+          url.searchParams.set('clickref', pageName);
+          link.href = url.toString();
+        }
+      } catch (e) {}
+    });
+  }
+
   // ── Auto-attach Affiliate Click Tracking ──
   function attachAffiliateTracking() {
+    injectAwinClickref();
     var links = document.querySelectorAll('a[href]');
     links.forEach(function(link) {
       var partner = identifyPartner(link.href);

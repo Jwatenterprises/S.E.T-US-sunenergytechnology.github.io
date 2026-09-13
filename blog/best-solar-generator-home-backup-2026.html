@@ -1082,6 +1082,21 @@
   <p>Not sure what size is right for you? Our <a href="../spec-guide.html">spec guide</a> breaks down capacity tiers by household size, or take the <a href="../quiz.html">2-minute generator quiz</a> for a personalized recommendation.</p>
 
   <!-- ============================================ -->
+  <!-- MID-ARTICLE EMAIL CAPTURE -->
+  <!-- ============================================ -->
+
+  <div style="background:linear-gradient(135deg,#0E2A47,#1B4D7A);border-radius:16px;padding:36px 32px;margin:40px 0;text-align:center;color:#fff;">
+    <p style="font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#00C896;font-weight:700;margin-bottom:8px;">Free Download</p>
+    <h3 style="font-size:clamp(20px,3.5vw,26px);font-weight:800;margin-bottom:10px;color:#fff;">Not ready to buy yet?</h3>
+    <p style="font-size:15px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto 20px;">Get our free <strong>Solar Generator Buyer's Guide</strong> &mdash; 47 pages, real specs, no fluff. We'll send it straight to your inbox.</p>
+    <form onsubmit="event.preventDefault();var f=this,b=f.querySelector('button'),e=f.querySelector('input[type=email]').value;b.textContent='Sending...';b.disabled=true;fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:e,_subject:'S.E.T. Solar Buyer Guide Request (mid-article)',_template:'table',_captcha:'false'})}).then(function(r){return r.json()}).then(function(d){if(d.success){b.textContent='Guide Sent! Check Your Inbox.';b.style.background='#00C896'}else{b.textContent='Try Again';b.disabled=false}}).catch(function(){b.textContent='Try Again';b.disabled=false});" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+      <input type="email" placeholder="Your email address" required style="flex:1;min-width:200px;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;font-size:15px;" />
+      <button type="submit" style="background:#F5A623;color:#1E1E2E;border:none;padding:12px 24px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap;">Send Me the Guide</button>
+    </form>
+    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:12px;">No spam. Unsubscribe anytime.</p>
+  </div>
+
+  <!-- ============================================ -->
   <!-- FAQ -->
   <!-- ============================================ -->
 
