@@ -1,0 +1,4 @@
+# ads.txt for sunenergytechnology.com
+# Add your Google AdSense publisher ID after approval
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Replace pub-XXXXXXXXXXXXXXXX with your actual publisher ID from AdSense dashboard
