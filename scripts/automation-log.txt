@@ -349,3 +349,29 @@ Contacts checked: 0
 Sent: 0
 Skipped/waiting: 0
 --- Run complete: Sun 09/13/2026  9:20:13.76 --- 
+=== S.E.T. Solar Welcome Automation (LIVE SEND) ===
+Date: 2026-09-15 09:53
+
+
+=== Summary ===
+Contacts checked: 0
+Sent: 0
+Skipped/waiting: 0
+--- Run complete: Tue 09/15/2026  9:53:17.70 --- 
+^C=== S.E.T. Solar Welcome Automation (LIVE SEND) ===
+Date: 2026-09-18 09:10
+
+
+=== Summary ===
+Contacts checked: 0
+Sent: 0
+Skipped/waiting: 0
+--- Run complete: Fri 09/18/2026  9:10:06.45 --- 
+Traceback (most recent call last):
+  File "C:\Users\Milli\Documents\SunEnergyTechnology\scripts\solar-welcome-automation.py", line 457, in <module>
+    load_api_key()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Milli\Documents\SunEnergyTechnology\scripts\solar-welcome-automation.py", line 291, in load_api_key
+    raise RuntimeError("BREVO_API_KEY not found")
+RuntimeError: BREVO_API_KEY not found
+--- Run complete: Sat 09/19/2026  9:19:30.35 --- 

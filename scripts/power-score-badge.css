@@ -1,0 +1,232 @@
+/* ═══════════════════════════════════════════════
+   S.E.T. POWER SCORE™ — Badge Component
+   Version 1.0 | September 2026
+   ═══════════════════════════════════════════════ */
+
+/* --- Tier Colors --- */
+:root {
+  --ps-elite: #D4A017;
+  --ps-elite-bg: linear-gradient(135deg, #FFF8E1, #FFF3CD);
+  --ps-elite-border: #D4A017;
+  --ps-recommended: #6B7B8D;
+  --ps-recommended-bg: linear-gradient(135deg, #F8F9FA, #EDF2F7);
+  --ps-recommended-border: #A0AEC0;
+  --ps-solid: #B87333;
+  --ps-solid-bg: linear-gradient(135deg, #FFF8F0, #FEEBC8);
+  --ps-solid-border: #C68642;
+  --ps-basic: #A0AEC0;
+  --ps-basic-bg: linear-gradient(135deg, #F7FAFC, #EDF2F7);
+  --ps-basic-border: #CBD5E0;
+  --ps-bar-track: #E2E8F0;
+}
+
+/* --- Badge Container --- */
+.ps-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 2px solid var(--ps-recommended-border);
+  background: var(--ps-recommended-bg);
+  font-family: 'Inter', sans-serif;
+  max-width: 280px;
+  width: 100%;
+}
+
+.ps-badge.elite {
+  border-color: var(--ps-elite-border);
+  background: var(--ps-elite-bg);
+}
+.ps-badge.recommended {
+  border-color: var(--ps-recommended-border);
+  background: var(--ps-recommended-bg);
+}
+.ps-badge.solid {
+  border-color: var(--ps-solid-border);
+  background: var(--ps-solid-bg);
+}
+.ps-badge.basic {
+  border-color: var(--ps-basic-border);
+  background: var(--ps-basic-bg);
+}
+
+/* --- Score Circle --- */
+.ps-circle {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.ps-circle::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 4px solid var(--ps-recommended);
+}
+
+.elite .ps-circle::before { border-color: var(--ps-elite); }
+.recommended .ps-circle::before { border-color: var(--ps-recommended); }
+.solid .ps-circle::before { border-color: var(--ps-solid); }
+.basic .ps-circle::before { border-color: var(--ps-basic); }
+
+.ps-score-number {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ps-recommended);
+}
+
+.elite .ps-score-number { color: var(--ps-elite); }
+.recommended .ps-score-number { color: var(--ps-recommended); }
+.solid .ps-score-number { color: var(--ps-solid); }
+.basic .ps-score-number { color: var(--ps-basic); }
+
+.ps-score-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #718096;
+  margin-top: 2px;
+}
+
+/* --- Tier Label --- */
+.ps-tier {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  color: #fff;
+  background: var(--ps-recommended);
+}
+
+.elite .ps-tier { background: var(--ps-elite); }
+.recommended .ps-tier { background: var(--ps-recommended); }
+.solid .ps-tier { background: var(--ps-solid); }
+.basic .ps-tier { background: var(--ps-basic); }
+
+/* --- Brand Mark --- */
+.ps-brand {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #A0AEC0;
+}
+
+/* --- Dimension Bars --- */
+.ps-dimensions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ps-dim-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ps-dim-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #4A5568;
+  width: 80px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ps-dim-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--ps-bar-track);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ps-dim-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease-out;
+}
+
+.ps-dim-fill.capacity { background: #0066FF; }
+.ps-dim-fill.efficiency { background: #00C896; }
+.ps-dim-fill.value { background: #F5A623; }
+.ps-dim-fill.durability { background: #8B5CF6; }
+.ps-dim-fill.versatility { background: #EF4444; }
+
+.ps-dim-score {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4A5568;
+  width: 28px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* --- Inline Compact Badge (for comparison tables) --- */
+.ps-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--ps-recommended-border);
+  background: #fff;
+}
+
+.ps-inline.elite { border-color: var(--ps-elite-border); }
+.ps-inline.recommended { border-color: var(--ps-recommended-border); }
+.ps-inline.solid { border-color: var(--ps-solid-border); }
+
+.ps-inline .ps-inline-score {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.ps-inline.elite .ps-inline-score { color: var(--ps-elite); }
+.ps-inline.recommended .ps-inline-score { color: var(--ps-recommended); }
+.ps-inline.solid .ps-inline-score { color: var(--ps-solid); }
+
+.ps-inline .ps-inline-label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #A0AEC0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .ps-badge {
+    padding: 16px;
+    max-width: 100%;
+  }
+  .ps-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .ps-score-number {
+    font-size: 1.6rem;
+  }
+  .ps-dim-label {
+    width: 64px;
+    font-size: 0.6rem;
+  }
+}

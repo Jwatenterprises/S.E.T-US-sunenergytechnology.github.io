@@ -1,0 +1,75 @@
+<!--
+  S.E.T. SOLAR — Reusable Email Capture Snippet
+  Drop this into any blog post before the footer.
+  Requires: The inline JS at the bottom of this file, or include handleEmailSubmit in the page.
+
+  IMPORTANT: Update the event_label for each blog post to track which page drives leads.
+  Example: event_label: 'Buyers Guide - Best Solar Phone Charger 2026'
+-->
+
+<!-- EMAIL CAPTURE SECTION -->
+<section style="background:linear-gradient(135deg, #1E1E2E 0%, #2d2d44 100%); padding:56px 24px; text-align:center; margin-top:48px;">
+  <div style="max-width:640px; margin:0 auto;">
+    <div style="display:inline-block; background:rgba(0,200,150,0.2); color:#00C896; padding:5px 16px; border-radius:16px; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:20px;">Free Resource</div>
+    <h2 style="font-size:clamp(22px,4vw,32px); font-weight:800; color:#fff; margin-bottom:12px; line-height:1.2;">Get the Free S.E.T. Solar Buyer&rsquo;s Guide 2026</h2>
+    <p style="font-size:15px; color:rgba(255,255,255,0.7); margin-bottom:28px; line-height:1.6;">47 pages. Every major brand scored with our S.E.T. Power Score&trade;. Real-world runtime tests. Top picks for every budget. Plain English, no fluff.</p>
+    <form class="email-form" onsubmit="handleEmailSubmit(event)" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; max-width:520px; margin:0 auto;">
+      <input type="text" placeholder="First name" name="name" required style="flex:1; min-width:140px; padding:14px 16px; border:2px solid rgba(255,255,255,0.15); border-radius:10px; background:rgba(255,255,255,0.08); color:#fff; font-size:15px; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='#00C896'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" />
+      <input type="email" placeholder="Email address" name="email" required style="flex:1.5; min-width:200px; padding:14px 16px; border:2px solid rgba(255,255,255,0.15); border-radius:10px; background:rgba(255,255,255,0.08); color:#fff; font-size:15px; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='#00C896'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" />
+      <button type="submit" style="padding:14px 28px; background:#00C896; color:#fff; border:none; border-radius:10px; font-size:15px; font-weight:700; cursor:pointer; font-family:'Inter',sans-serif; white-space:nowrap; transition:background 0.2s;" onmouseover="this.style.background='#00B386'" onmouseout="this.style.background='#00C896'">Send Me the Guide</button>
+    </form>
+    <p style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:12px;">No spam. Unsubscribe anytime. Your email is never shared or sold.</p>
+  </div>
+</section>
+
+<!--
+  JAVASCRIPT — Add to the page's <script> block or keep inline.
+  UPDATE: Change event_label to match this specific blog post.
+-->
+<script>
+function handleEmailSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn  = form.querySelector('button');
+  var email = form.querySelector('input[type="email"]').value;
+  var name  = (form.querySelector('input[name="name"]') || {}).value || '';
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  fetch('https://formsubmit.co/ajax/biz@sunenergytechnology.net', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      email: email,
+      name: name,
+      _subject: 'New S.E.T. Solar Subscriber — Buyers Guide',
+      _template: 'table',
+      _captcha: 'false'
+    })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.success) {
+      btn.textContent = "Guide Sent! Check Your Inbox.";
+      btn.style.background = '#00C896';
+      btn.style.color = '#fff';
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'lead_capture', {
+          event_category: 'Email',
+          event_label: 'Buyers Guide — Blog Post'
+        });
+      }
+    } else {
+      btn.textContent = 'Something went wrong. Try again.';
+      btn.style.background = '#E53E3E';
+      btn.disabled = false;
+    }
+  })
+  .catch(function() {
+    btn.textContent = 'Connection error. Try again.';
+    btn.style.background = '#E53E3E';
+    btn.disabled = false;
+  });
+}
+</script>
