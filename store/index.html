@@ -830,7 +830,7 @@
     <div class="section-header">
       <span class="section-tag" style="background:rgba(245,166,35,0.15);color:#E65100">🔥 Limited Time</span>
       <h2>Fall Prime Encore Deals</h2>
-      <p>Amazon Prime Big Deal Days ended October 7, but several brands extended their sales. EcoFlow runs through <strong>Oct 10</strong>, Anker through <strong>Oct 14</strong>, and BLUETTI through <strong>Oct 19</strong>. Prices were checked October 8 and can change, so confirm the final price at checkout. <a href="/blog/prime-big-deal-days-solar-generator-2026.html" style="color:#E65100;font-weight:600;text-decoration:none;white-space:nowrap">See final Prime Day prices &rarr;</a></p>
+      <p>Amazon Prime Big Deal Days ended October 7, but several brands extended their sales. EcoFlow runs through <strong>Oct 10</strong><span id="ecoflowEndedNote" hidden> (now ended)</span>, Anker through <strong>Oct 14</strong>, and BLUETTI through <strong>Oct 19</strong>. Prices were checked October 8 and can change, so confirm the final price at checkout. <a href="/blog/prime-big-deal-days-solar-generator-2026.html" style="color:#E65100;font-weight:600;text-decoration:none;white-space:nowrap">See final Prime Day prices &rarr;</a></p>
       <p id="cdLabel" style="font-weight:700;margin-top:10px">EcoFlow deals end in:</p>
       <div class="countdown-row" id="dealCountdown">
         <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-lbl">Days</span></div>
@@ -913,8 +913,8 @@
         </div>
       </div>
 
-      <!-- EcoFlow DELTA 3 Max — Prime Day Big Deals -->
-      <div class="product-card">
+      <!-- EcoFlow DELTA 3 Max — Prime Day Big Deals (auto-marks ended after Oct 10 11:59 PM PT) -->
+      <div class="product-card" id="ecoflowD3MaxCard" data-deal-end="2026-10-10T23:59:59-07:00">
         <div class="product-image" style="background:#ffffff">
           <img src="../images/store/ecoflow-delta-3-max.png" alt="EcoFlow DELTA 3 Max portable power station" loading="lazy" />
           <span class="brand-badge">EcoFlow</span>
@@ -2244,6 +2244,18 @@
       noResults.classList.remove('show');
     }
   });
+})();
+
+// === Expired Deal Cards ===
+(function(){
+  var card = document.getElementById('ecoflowD3MaxCard');
+  if (!card || Date.now() < new Date(card.getAttribute('data-deal-end')).getTime()) return;
+  var badge = card.querySelector('.featured-badge');
+  if (badge) badge.remove();
+  card.querySelector('.product-spec').textContent = '2,048Wh LiFePO4 · EcoFlow store sale ($879) ended Oct 10 · Check today’s Amazon price';
+  card.querySelector('.price').textContent = 'Check price';
+  var note = document.getElementById('ecoflowEndedNote');
+  if (note) note.hidden = false;
 })();
 
 // === Deal Countdown Timer ===
