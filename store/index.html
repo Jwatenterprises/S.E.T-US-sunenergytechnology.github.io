@@ -830,7 +830,7 @@
     <div class="section-header">
       <span class="section-tag" style="background:rgba(245,166,35,0.15);color:#E65100">🔥 Limited Time</span>
       <h2>Fall Prime Encore Deals</h2>
-      <p>Amazon Prime Big Deal Days ended October 7, but several brands extended their sales. EcoFlow runs through <strong>Oct 10</strong><span id="ecoflowEndedNote" hidden> (now ended)</span>, Anker through <strong>Oct 14</strong>, and BLUETTI through <strong>Oct 19</strong>. Prices were checked October 8 and can change, so confirm the final price at checkout. <a href="/blog/prime-big-deal-days-solar-generator-2026.html" style="color:#E65100;font-weight:600;text-decoration:none;white-space:nowrap">See final Prime Day prices &rarr;</a></p>
+      <p>Amazon Prime Big Deal Days ended October 7, but several brands extended their sales. EcoFlow runs through <strong>Oct 10</strong><span id="ecoflowEndedNote" hidden> (now ended)</span>, Anker through <strong>Oct 14</strong><span id="ankerEndedNote" hidden> (now ended)</span>, and BLUETTI through <strong>Oct 19</strong>. Prices were checked October 8 and can change, so confirm the final price at checkout. <a href="/blog/prime-big-deal-days-solar-generator-2026.html" style="color:#E65100;font-weight:600;text-decoration:none;white-space:nowrap">See final Prime Day prices &rarr;</a></p>
       <p id="cdLabel" style="font-weight:700;margin-top:10px">EcoFlow deals end in:</p>
       <div class="countdown-row" id="dealCountdown">
         <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-lbl">Days</span></div>
@@ -842,7 +842,7 @@
     <div class="product-grid">
 
       <!-- Anker SOLIX Fall Prime Deals -->
-      <div class="product-card">
+      <div class="product-card" id="ankerEncoreCard" data-deal-end="2026-10-14T23:59:59-07:00">
         <div class="product-image" style="background:#ffffff">
           <img src="../images/store/../anker-solix-f3000.png" alt="Anker SOLIX portable power station" loading="lazy" />
           <span class="brand-badge">Anker SOLIX</span>
@@ -945,7 +945,7 @@
   <div class="featured-grid">
 
     <!-- Anker SOLIX S2000 -->
-    <div class="product-card">
+    <div class="product-card" id="ankerS2000Card" data-deal-end="2026-10-14T23:59:59-07:00">
       <div class="product-image" style="background:#ffffff">
         <img src="../images/store/anker-solix-s2000.webp" alt="Anker SOLIX S2000 portable power station" loading="lazy" />
         <span class="brand-badge">Anker SOLIX</span>
@@ -2255,6 +2255,26 @@
   card.querySelector('.product-spec').textContent = '2,048Wh LiFePO4 · EcoFlow store sale ($879) ended Oct 10 · Check today’s Amazon price';
   card.querySelector('.price').textContent = 'Check price';
   var note = document.getElementById('ecoflowEndedNote');
+  if (note) note.hidden = false;
+})();
+
+// === Expired Anker Encore Cards ===
+(function(){
+  var s2000 = document.getElementById('ankerS2000Card');
+  if (!s2000 || Date.now() < new Date(s2000.getAttribute('data-deal-end')).getTime()) return;
+  var badge = s2000.querySelector('.featured-badge');
+  if (badge) badge.remove();
+  s2000.querySelector('.product-spec').textContent = '2,010Wh LiFePO4 · 1,500W (3,000W surge) · 400W Solar Input · Encore sale ($649.99) ended Oct 14';
+  s2000.querySelector('.price').textContent = 'Check price';
+  var encore = document.getElementById('ankerEncoreCard');
+  if (encore) {
+    var eb = encore.querySelector('.featured-badge');
+    if (eb) eb.remove();
+    encore.querySelector('h3').textContent = 'Anker SOLIX Deals';
+    encore.querySelector('.product-spec').textContent = 'Fall Prime Deals Encore ended Oct 14 · See current Anker SOLIX prices';
+    encore.querySelector('.price').textContent = 'Check price';
+  }
+  var note = document.getElementById('ankerEndedNote');
   if (note) note.hidden = false;
 })();
 
