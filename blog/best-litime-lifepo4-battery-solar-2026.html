@@ -1040,7 +1040,7 @@
     var email = form.querySelector('input[type="email"]').value;
     var name = (form.querySelector('input[name="name"]') || {}).value || '';
     btn.textContent = 'Sending...'; btn.disabled = true;
-    fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com', {
+    fetch('https://formsubmit.co/ajax/biz@sunenergytechnology.net', {
       method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ email: email, name: name, _subject: 'New S.E.T. Solar Subscriber', _template: 'table', _captcha: 'false' })
     })

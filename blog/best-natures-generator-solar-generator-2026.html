@@ -531,7 +531,7 @@
   function handleEmailSubmit(e) {
     e.preventDefault(); var form = e.target; var btn = form.querySelector('button'); var email = form.querySelector('input[type="email"]').value; var name = (form.querySelector('input[name="name"]') || {}).value || '';
     btn.textContent = 'Sending...'; btn.disabled = true;
-    fetch('https://formsubmit.co/ajax/biz@jwatenterprisesinc.com', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email: email, name: name, _subject: 'New S.E.T. Solar Subscriber', _template: 'table', _captcha: 'false' }) })
+    fetch('https://formsubmit.co/ajax/biz@sunenergytechnology.net', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email: email, name: name, _subject: 'New S.E.T. Solar Subscriber', _template: 'table', _captcha: 'false' }) })
     .then(function(res) { return res.json(); })
     .then(function(data) { if (data.success) { btn.textContent = 'Guide Sent! Check Your Inbox.'; btn.style.background = '#00C896'; btn.style.color = '#fff'; if (typeof gtag !== 'undefined') { gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Buyers Guide - Nature Generator Roundup 2026' }); } } else { btn.textContent = 'Try Again'; btn.disabled = false; } })
     .catch(function() { btn.textContent = 'Try Again'; btn.disabled = false; });
