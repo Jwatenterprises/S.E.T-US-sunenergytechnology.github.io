@@ -37,15 +37,7 @@
         "name": "Can a solar generator run a CPAP machine all night?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A CPAP machine without a heated humidifier draws 25-50W, meaning even a small 286Wh unit like the EcoFlow RIVER 3 Plus can power it for 6-8 hours on a single charge. With a heated humidifier and heated tube (80-120W total draw), you need more capacity: a 2,048Wh unit like the EcoFlow DELTA 2 Max or BLUETTI AC200L will run a CPAP with full humidification for 17-25 hours — enough for 2-3 full nights. The key spec to check is pure sine wave output, which all five generators on this list provide. Modified sine wave generators can damage CPAP motors and produce electrical noise that triggers pressure errors."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What size solar generator do I need for medical devices?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on your specific devices and how long you need backup power. For CPAP-only (25-50W), a 300Wh unit covers one night. For CPAP with heated humidifier (80-120W), you need at least 1,000Wh for a full night with margin. For an oxygen concentrator (300-600W for stationary models), you need 2,000Wh minimum for 4-6 hours. For multiple medical devices running simultaneously — CPAP plus oxygen concentrator plus medication refrigerator — look at 3,000Wh or more. Always size 20% above your calculated need so you are not running the battery to zero, which shortens its lifespan."
+          "text": "Yes. A CPAP without heated humidifier draws 25–50W, meaning even a small 286Wh unit (EcoFlow RIVER 3 Plus) covers 6–8 hours. With heated humidifier and tube (80–120W total), a 2,048Wh unit like the DELTA 2 Max or AC200L provides 17–25 hours — two to three full nights. The key requirement is pure sine wave output, which all five picks on this list provide."
         }
       },
       {
@@ -53,23 +45,31 @@
         "name": "Is a solar generator safe for medical equipment?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, provided it produces pure sine wave AC output. All five generators on this list use pure sine wave inverters, which deliver the same clean electrical signal as your wall outlet. This matters because CPAP machines, oxygen concentrators, and other precision medical devices contain sensitive motors and electronics that can malfunction or sustain damage from modified sine wave power. Additionally, look for UPS (Uninterruptible Power Supply) mode — this feature keeps the generator plugged into the wall and switches to battery power within 10-30 milliseconds if the grid drops, so your CPAP never skips a breath during a middle-of-the-night outage."
+          "text": "Yes, if it produces pure sine wave AC output. Modified sine wave generators can overheat CPAP motors and trigger alarms on oxygen concentrators. All five generators on this list produce pure sine wave power identical to your wall outlet. Additionally, UPS mode ensures seamless switchover (10–30ms) so devices never lose power during a grid failure."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I take a solar generator on a plane for my CPAP?",
+        "name": "What size generator do I need for a CPAP?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most portable power stations under 100Wh can go in carry-on luggage per FAA and TSA rules. However, most solar generators worth using for a CPAP exceed 100Wh and are restricted by airlines. The EcoFlow RIVER 3 Plus (286Wh) is too large for airline carry-on under standard lithium battery rules. For air travel with a CPAP, dedicated CPAP battery packs (like the Medistrom Pilot-24 Lite) are designed to meet FAA requirements. For road trips, camping, and RV travel, any generator on this list works perfectly — just bring it in the vehicle rather than checking it as luggage."
+          "text": "For CPAP without humidifier (25–50W): 300Wh minimum for one night. For CPAP with heated humidifier (60–100W): 1,000Wh minimum. For CPAP with humidifier and heated tube (80–120W): 1,200Wh minimum. Always add 20% margin and account for inverter efficiency (~85%). A 2,000Wh unit gives you comfortable two-night coverage with full humidification."
         }
       },
       {
         "@type": "Question",
-        "name": "How loud are solar generators when running a CPAP at night?",
+        "name": "Can I use a solar generator with an oxygen concentrator?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Solar generators are functionally silent at CPAP-level loads. Most units produce 25-35 dB at low draw — quieter than a whisper and far quieter than the CPAP machine itself (which typically runs at 26-30 dB). The fan inside the generator only ramps up under heavy loads (1,000W+), which a CPAP at 25-100W will never trigger. You can place the generator on a nightstand or under the bed without any noise disruption. By comparison, a gas generator runs at 55-75 dB — equivalent to a conversation or a vacuum cleaner — and cannot be used indoors due to carbon monoxide."
+          "text": "Portable oxygen concentrators (40–60W) work with any generator on this list. Stationary oxygen concentrators (300–600W) need a larger unit — the ALLPOWERS R3500 (3,168Wh, 3,500W) or Jackery HomePower 2000 Plus v2 (expandable to 12kWh) are your best options. Always check your concentrator's startup surge wattage and confirm the generator's surge rating exceeds it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How loud are solar generators when running a CPAP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Functionally silent. At 50–120W draw, solar generators produce 25–35 dB — quieter than a whisper and quieter than most CPAP machines (26–30 dB). The internal fan doesn't ramp up until loads exceed 500–1,000W. You can place it on a nightstand without any sleep disruption. By comparison, a gas generator runs at 55–75 dB and cannot be used indoors."
         }
       }
     ]
