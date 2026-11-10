@@ -173,6 +173,15 @@
       max-width: 600px; margin: 0 auto 40px;
     }
     .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 52px; }
+    .hero-path-q { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin: 8px 0 16px; }
+    .hero-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 920px; margin: 0 auto 44px; text-align: left; }
+    .hero-path { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; }
+    .hero-path-icon { font-size: 1.8rem; line-height: 1; margin-bottom: 10px; }
+    .hero-path h2 { font-size: 1.35rem; color: #fff; margin: 0 0 6px; }
+    .hero-path p { font-size: 0.95rem; color: rgba(255,255,255,0.78); margin: 0 0 18px; flex: 1; }
+    .hero-path-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .hero-path-links .btn-primary, .hero-path-links .btn-outline { padding: 12px 18px; font-size: 0.95rem; }
+    @media (max-width: 700px) { .hero-paths { grid-template-columns: 1fr; } }
     .btn-primary {
       background: var(--gold); color: var(--charcoal); font-weight: 700;
       padding: 16px 32px; border-radius: 10px; text-decoration: none;
@@ -700,9 +709,26 @@
   <div class="hero-badge">Independent &bull; Unbiased &bull; Affiliate Disclosed</div>
   <h1>Find Your Perfect <span>Solar Power Solution</span></h1>
   <p>Portable generators, home batteries, and solar installation &mdash; honest reviews, real specs, no fluff.</p>
-  <div class="hero-ctas">
-    <a href="quiz.html" class="btn-primary">Find My Generator &rarr;</a>
-    <a href="compare.html" class="btn-outline">See Comparisons</a>
+  <p class="hero-path-q">What are you shopping for?</p>
+  <div class="hero-paths">
+    <div class="hero-path">
+      <div class="hero-path-icon">&#9889;</div>
+      <h2>Portable Power</h2>
+      <p>Power outages, camping, RV &amp; van life. Solar generators from about $200 to $3,000.</p>
+      <div class="hero-path-links">
+        <a href="quiz.html" class="btn-primary">Find My Generator &rarr;</a>
+        <a href="#top-picks" class="btn-outline">See 2026 Rankings</a>
+      </div>
+    </div>
+    <div class="hero-path">
+      <div class="hero-path-icon">&#127968;</div>
+      <h2>Home Solar</h2>
+      <p>Rooftop panels and whole-home batteries for long-term bill savings and backup.</p>
+      <div class="hero-path-links">
+        <a href="home-batteries.html" class="btn-primary">Home Battery Guide &rarr;</a>
+        <a href="#rooftop-solar" class="btn-outline">Roof Solar Savings</a>
+      </div>
+    </div>
   </div>
   <div class="trust-badges">
     <div class="trust-badge">&#10003; Independent Reviews</div>
@@ -731,16 +757,16 @@
       <div class="set-metric-lbl">Brands Compared</div>
     </div>
     <div class="set-metric">
-      <div class="set-metric-num">43+</div>
-      <div class="set-metric-lbl">Solar Subscribers</div>
+      <div class="set-metric-num">&#10003;</div>
+      <div class="set-metric-lbl">Specs Checked Against Third-Party Data</div>
     </div>
     <div class="set-metric">
       <div class="set-metric-num">12+</div>
       <div class="set-metric-lbl">Free Guides & Tools</div>
     </div>
     <div class="set-metric">
-      <div class="set-metric-num">100%</div>
-      <div class="set-metric-lbl">Independent Reviews</div>
+      <div class="set-metric-num">&#10003;</div>
+      <div class="set-metric-lbl">Sponsors &amp; Affiliate Links Labeled</div>
     </div>
   </div>
 </section>
@@ -793,7 +819,7 @@
           <div class="cap">1,002Wh | 1,000W AC Output</div>
           <div class="price">~$699&ndash;$899</div>
           <p>Lightweight at 25.4 lbs, ultra-fast solar recharge in under 1.8 hours with Jackery SolarSaga panels. Perfect for weekend campers who want reliable power without bulk.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on Jackery &#8599;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Runner-Up Camping Pick</span>
@@ -801,7 +827,7 @@
           <div class="cap">286Wh | 600W AC Output</div>
           <div class="price">~$299&ndash;$399</div>
           <p>Ultra-compact and lightweight at just 7.7 lbs. Charges 0&ndash;80% in 50 minutes via AC. Great budget-conscious option for minimalist campers or day hikers.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-river-3-plus-portable-power-station-flash-sale&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-river-3-plus-portable-power-station-flash-sale&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on EcoFlow &#8599;</a>
         </div>
       </div>
     </div>
@@ -819,7 +845,7 @@
           <div class="cap">2,048Wh | 2,400W AC Output</div>
           <div class="price">~$1,499&ndash;$1,799</div>
           <p>Industry-leading 1-hour AC recharge. Expandable to 6kWh with add-on batteries. Smart home integration and remote monitoring via app. Our top emergency prep recommendation.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on EcoFlow &#8599;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Patriot-Grade Emergency Pick</span>
@@ -827,7 +853,7 @@
           <div class="cap">2,000Wh+ | 2,000W AC Output</div>
           <div class="price">~$1,299&ndash;$1,699</div>
           <p>Built specifically for emergency preparedness. Rugged design, LFP battery, and a company focused entirely on self-reliance. Excellent warranty and US-based support.</p>
-          <a href="https://www.ebay.com/sch/i.html?_nkw=4patriots+solar+generator&amp;mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5339209381&amp;customid=site-index&amp;toolid=10001&amp;mkevt=1" target="_blank" rel="noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.ebay.com/sch/i.html?_nkw=4patriots+solar+generator&amp;mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5339209381&amp;customid=site-index&amp;toolid=10001&amp;mkevt=1" target="_blank" rel="noopener noreferrer" class="btn-check">Check Live Price on eBay &#8599;</a>
         </div>
       </div>
     </div>
@@ -845,7 +871,7 @@
           <div class="cap">3,600Wh | 3,600W AC Output</div>
           <div class="price">~$2,899&ndash;$3,499</div>
           <p>Expandable to 25kWh with extra batteries and smart generator. Up to 1,600W solar input. Can power an entire home during outages. The benchmark for serious off-grid setups.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on EcoFlow &#8599;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Off-Grid Power Alternative</span>
@@ -853,7 +879,7 @@
           <div class="cap">3,840Wh | 6,000W AC Output</div>
           <div class="price">~$3,499&ndash;$3,999</div>
           <p>Highest AC output in class at 6,000W &mdash; runs virtually anything. Expandable to 26.9kWh. Whole-home integration with transfer switch. Best-in-class for power-hungry off-grid setups.</p>
-          <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on Anker SOLIX &#8599;</a>
         </div>
       </div>
     </div>
@@ -871,7 +897,7 @@
           <div class="cap">1,002Wh | 1,000W AC Output</div>
           <div class="price">~$699&ndash;$899</div>
           <p>25.4 lbs with a built-in handle. Charges via 12V car outlet, solar, or AC simultaneously. Fast 1.8-hour solar recharge. The go-to choice for van lifers who need a reliable daily driver.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on Jackery &#8599;</a>
         </div>
         <div class="result-card">
           <span class="best-badge">Van Life Compact Pick</span>
@@ -879,7 +905,7 @@
           <div class="cap">286Wh | 600W AC Output</div>
           <div class="price">~$299&ndash;$399</div>
           <p>Incredibly compact at 7.7 lbs. Pairs perfectly with a dedicated rooftop solar array. Ideal for solo van lifers with minimal power needs or as a secondary battery bank.</p>
-          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-river-3-plus-portable-power-station-flash-sale&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Price &rarr;</a>
+          <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-river-3-plus-portable-power-station-flash-sale&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-check">Check Live Price &amp; Stock on EcoFlow &#8599;</a>
         </div>
       </div>
     </div>
@@ -912,7 +938,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=59183&awinaffid=2881111&ued=https%3A%2F%2Fwww.jackery.com%2Fcollections%2Fportable-power-stations&amp;clickref=site-home" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Live Price &amp; Stock on Jackery &#8599;</a>
           </div>
         </div>
       </div>
@@ -935,7 +961,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station&clickref=homepage-ecoflow" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-pro-portable-power-station&clickref=homepage-ecoflow" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Live Price &amp; Stock on EcoFlow &#8599;</a>
           </div>
         </div>
       </div>
@@ -958,7 +984,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.ebay.com/sch/i.html?_nkw=4patriots+solar+generator&amp;mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5339209381&amp;customid=site-index&amp;toolid=10001&amp;mkevt=1" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=4patriots+solar+generator&amp;mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5339209381&amp;customid=site-index&amp;toolid=10001&amp;mkevt=1" target="_blank" rel="noopener noreferrer" class="btn-buy">Check Live Price on eBay &#8599;</a>
           </div>
         </div>
       </div>
@@ -981,7 +1007,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fproducts%2Fc1000" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://ankersolix.pxf.io/c/6782322/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fproducts%2Fc1000" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Live Price &amp; Stock on Anker SOLIX &#8599;</a>
           </div>
         </div>
       </div>
@@ -1004,7 +1030,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=57555&awinaffid=2881111&ued=https%3A%2F%2Fwww.mangopower.com%2Fproducts%2Fmango-power-e-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy" onclick="gtag('event','affiliate_click',{brand:'mango_power',product:'mango_power_e',source:'homepage'});">Check Current Price ↗</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=57555&awinaffid=2881111&ued=https%3A%2F%2Fwww.mangopower.com%2Fproducts%2Fmango-power-e-portable-power-station&amp;clickref=site-home" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy" onclick="gtag('event','affiliate_click',{brand:'mango_power',product:'mango_power_e',source:'homepage'});">Check Live Price &amp; Stock on Mango Power &#8599;</a>
           </div>
         </div>
       </div>
@@ -1050,7 +1076,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-r3500-portable-power-station-3200w-3168wh&clickref=homepage-allpowers" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-r3500-portable-power-station-3200w-3168wh&clickref=homepage-allpowers" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Live Price &amp; Stock on ALLPOWERS &#8599;</a>
           </div>
         </div>
       </div>
@@ -1073,7 +1099,7 @@
           </div>
           <div class="pick-links">
             <a href="reviews.html" class="btn-review">See Full Review &rarr;</a>
-            <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fwww.naturesgenerator.com%2Fproducts%2Flithium-3600-pod&clickref=homepage-natures" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Current Price ↗</a>
+            <a href="https://www.awin1.com/cread.php?awinmid=98409&awinaffid=2881111&ued=https%3A%2F%2Fwww.naturesgenerator.com%2Fproducts%2Flithium-3600-pod&clickref=homepage-natures" target="_blank" rel="sponsored noopener noreferrer" class="btn-buy">Check Live Price &amp; Stock on Nature&rsquo;s Generator &#8599;</a>
           </div>
         </div>
       </div>
