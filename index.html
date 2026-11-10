@@ -182,6 +182,15 @@
     .hero-path-links { display: flex; gap: 10px; flex-wrap: wrap; }
     .hero-path-links .btn-primary, .hero-path-links .btn-outline { padding: 12px 18px; font-size: 0.95rem; }
     @media (max-width: 700px) { .hero-paths { grid-template-columns: 1fr; } }
+    .quick-finder { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; margin: 0 auto 32px; max-width: 900px; box-shadow: 0 4px 18px rgba(15,23,42,0.06); }
+    .qf-title { font-weight: 800; font-size: 1.1rem; margin-bottom: 12px; color: #1e1e2e; }
+    .qf-step { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+    .qf-q { font-weight: 700; font-size: 0.9rem; color: #475569; min-width: 92px; }
+    .qf-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+    .qf-opts button { border: 1.5px solid #cbd5e1; background: #fff; color: #1e1e2e; border-radius: 999px; padding: 8px 14px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+    .qf-opts button:hover { border-color: #0066FF; color: #0066FF; }
+    .qf-opts button.on { background: #0066FF; border-color: #0066FF; color: #fff; }
+    .qf-go { display: inline-block; margin-top: 8px; }
     .btn-primary {
       background: var(--gold); color: var(--charcoal); font-weight: 700;
       padding: 16px 32px; border-radius: 10px; text-decoration: none;
@@ -917,7 +926,35 @@
   <div class="section-inner">
     <div class="section-tag">2026 Rankings</div>
     <h2>2026&rsquo;s Top Solar Generators &mdash; Our Independent Rankings</h2>
-    <p class="section-sub">Tested across real-world scenarios. Ranked on performance, value, and reliability &mdash; not brand deals.</p>
+    <p class="section-sub">Judged on real-world use cases with specs cross-checked against third-party data. Ranked on performance, value, and reliability &mdash; not brand deals.</p>
+
+    <div class="quick-finder" id="quick-finder">
+      <div class="qf-title">Find your match in 3 clicks</div>
+      <div class="qf-step"><span class="qf-q">1. Budget</span>
+        <div class="qf-opts" data-group="budget"><button type="button" data-v="under1k">Under $1K</button><button type="button" data-v="1k-2k">$1K&ndash;$2K</button><button type="button" data-v="2kplus">$2K+</button></div></div>
+      <div class="qf-step"><span class="qf-q">2. Powering</span>
+        <div class="qf-opts" data-group="power"><button type="button" data-v="small">Phones &amp; lights</button><button type="button" data-v="fridge">Fridge or CPAP</button><button type="button" data-v="big">RV or home circuits</button></div></div>
+      <div class="qf-step"><span class="qf-q">3. Mainly for</span>
+        <div class="qf-opts" data-group="use"><button type="button" data-v="camping">Camping &amp; travel</button><button type="button" data-v="emergency">Outages</button></div></div>
+      <a href="compare.html#finder" class="btn-primary qf-go" id="qfGo">Show My Matches &rarr;</a>
+    </div>
+    <script>
+    (function () {
+      var sel = {}, go = document.getElementById('qfGo');
+      document.querySelectorAll('#quick-finder .qf-opts').forEach(function (g) {
+        g.addEventListener('click', function (e) {
+          var b = e.target.closest('button'); if (!b) return;
+          var on = !b.classList.contains('on');
+          g.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
+          if (on) { b.classList.add('on'); sel[g.getAttribute('data-group')] = b.getAttribute('data-v'); }
+          else { delete sel[g.getAttribute('data-group')]; }
+          var q = Object.keys(sel).map(function (k) { return k + '=' + encodeURIComponent(sel[k]); }).join('&');
+          go.href = 'compare.html' + (q ? '?' + q : '') + '#finder';
+        });
+      });
+    })();
+    </script>
+
     <div class="picks-grid">
 
       <!-- Jackery -->
@@ -1108,6 +1145,20 @@
 </section>
 
 <!-- HOME BATTERY CTA -->
+<!-- MID-PAGE SIGNUP (added 2026-11-10: course capture right after the rankings) -->
+<section class="email-section" id="course-signup-mid" style="padding:40px 16px;">
+  <div class="section-inner text-center">
+    <h2 style="margin-bottom:8px;">Not sure which one yet? Get the free Solar Buyer&rsquo;s Course</h2>
+    <p class="email-desc" style="margin-bottom:18px;">12 short, plain-English emails plus our Blackout Cheat Sheet. Sizing, battery life, solar panels, and what to buy.</p>
+    <form class="email-form" onsubmit="handleEmailSubmit(event)">
+      <input type="text" placeholder="Your first name" name="name" required />
+      <input type="email" placeholder="Your email address" name="email" required />
+      <button type="submit" class="btn-email">Send Me the Course</button>
+    </form>
+    <p class="email-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
 <section class="home-battery-cta" id="home-batteries">
   <div class="section-inner">
     <div class="hb-content">
@@ -1235,7 +1286,7 @@
   <div class="section-inner">
     <div class="section-tag">Latest Guides</div>
     <h2>New Reviews &amp; Comparisons</h2>
-    <p class="section-sub">Our newest head-to-head tests and buying guides.</p>
+    <p class="section-sub">Our newest head-to-head comparisons and buying guides.</p>
     <ul style="list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;text-align:left;">
       <li><a href="/blog/ecoflow-titan-launch-2026.html" style="display:block;padding:14px 16px;background:var(--white);border:1px solid #e3e7ee;border-radius:10px;color:var(--text);font-weight:600;text-decoration:none;line-height:1.35;">EcoFlow TITAN Is Here &rarr;</a></li>
       <li><a href="/blog/tesla-powerwall-3-vs-franklinwh-apower-2-2026.html" style="display:block;padding:14px 16px;background:var(--white);border:1px solid #e3e7ee;border-radius:10px;color:var(--text);font-weight:600;text-decoration:none;line-height:1.35;">Tesla Powerwall 3 vs FranklinWH aPower 2 &rarr;</a></li>
@@ -1298,12 +1349,12 @@
 <section class="email-section" id="email-signup">
   <div class="section-inner text-center">
     <div class="section-tag" style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);">Free Resource</div>
-    <h2>Get the Free Solar Generator Buyer&rsquo;s Guide (PDF)</h2>
-    <p class="email-desc">47 pages. Plain English. No fluff. Covers every major brand, real-world runtime tests, and our top picks for every budget.</p>
+    <h2>Get the Free Solar Buyer&rsquo;s Course</h2>
+    <p class="email-desc">12 short emails plus our Blackout Cheat Sheet. Plain English, no fluff: sizing, battery life, solar panels, backup power, and picks for every budget.</p>
     <form class="email-form" onsubmit="handleEmailSubmit(event)">
       <input type="text" placeholder="Your first name" name="name" required />
       <input type="email" placeholder="Your email address" name="email" required />
-      <button type="submit" class="btn-email">Send Me the Guide</button>
+      <button type="submit" class="btn-email">Send Me the Course</button>
     </form>
     <p class="email-note">No spam. Unsubscribe anytime. We hate junk mail as much as you do.</p>
   </div>
@@ -1418,7 +1469,7 @@
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (data.success) {
-        btn.textContent = 'Guide Sent! Check Your Inbox.';
+        btn.textContent = 'You’re In! Check Your Inbox.';
         btn.style.background = '#00C896';
         btn.style.color = '#fff';
         if (typeof gtag !== 'undefined') {

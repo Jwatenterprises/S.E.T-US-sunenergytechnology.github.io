@@ -656,6 +656,17 @@
 
     /* Hidden rows for filtering */
     tr.hidden { display: none; }
+    .rt-btn { display:inline-block; margin-top:6px; font-size:0.78rem; font-weight:700; color:var(--blue); background:none; border:1px solid currentColor; border-radius:999px; padding:2px 10px; cursor:pointer; white-space:nowrap; }
+    tr.rt-row td { background:#f8fafc; font-size:0.88rem; color:#334155; padding:12px 16px; }
+    tr.rt-row .rt-grid { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 6px; }
+    tr.rt-row .rt-grid strong { color:#0e2a47; }
+    tr.rt-row .rt-note { font-size:0.78rem; color:#64748b; }
+    .finder { background: #f5f7fa; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 18px 6px; margin-bottom: 24px; }
+    .finder-step { margin-bottom: 4px; }
+    .finder-q { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px; color: #1e1e2e; }
+    .finder .filter-bar { margin-bottom: 14px; }
+    .finder-count { font-size: 0.92rem; color: #475569; margin: 0 0 12px; }
+    .finder-count a { color: var(--blue); }
   </style>
   <script src="scripts/tracking.js"></script>
   <!-- Google Analytics GA4 -->
@@ -721,7 +732,7 @@
 <section id="table">
   <div class="section-inner">
     <div class="section-tag">Master Comparison Table</div>
-    <h2>9 Top Solar Generators &mdash; Full Spec Breakdown</h2>
+    <h2>18 Solar Generators &mdash; Full Spec Breakdown</h2>
     <p class="section-sub">Every spec that matters, in one place. Updated for 2026 pricing.</p>
 
     <!-- Legend -->
@@ -732,13 +743,34 @@
     </div>
 
     <!-- Filters -->
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterTable('all', this)">All Products</button>
-      <button class="filter-btn" onclick="filterTable('under1k', this)">Under $1,000</button>
-      <button class="filter-btn" onclick="filterTable('1k-2k', this)">$1,000&ndash;$2,000</button>
-      <button class="filter-btn" onclick="filterTable('2kplus', this)">$2,000+</button>
-      <button class="filter-btn" onclick="filterTable('camping', this)">Best for Camping</button>
-      <button class="filter-btn" onclick="filterTable('emergency', this)">Best for Emergency</button>
+    <div class="finder" id="finder">
+      <div class="finder-step">
+        <span class="finder-q">1. What&rsquo;s your budget?</span>
+        <div class="filter-bar" data-group="budget">
+          <button class="filter-btn active" data-v="all">Any budget</button>
+          <button class="filter-btn" data-v="under1k">Under $1,000</button>
+          <button class="filter-btn" data-v="1k-2k">$1,000&ndash;$2,000</button>
+          <button class="filter-btn" data-v="2kplus">$2,000+</button>
+        </div>
+      </div>
+      <div class="finder-step">
+        <span class="finder-q">2. What are you powering?</span>
+        <div class="filter-bar" data-group="power">
+          <button class="filter-btn active" data-v="all">Anything</button>
+          <button class="filter-btn" data-v="small">Phones, laptop &amp; lights</button>
+          <button class="filter-btn" data-v="fridge">Fridge or CPAP (1kWh+)</button>
+          <button class="filter-btn" data-v="big">RV or home circuits (2kWh+)</button>
+        </div>
+      </div>
+      <div class="finder-step">
+        <span class="finder-q">3. Mainly for&hellip;</span>
+        <div class="filter-bar" data-group="use">
+          <button class="filter-btn active" data-v="all">Either</button>
+          <button class="filter-btn" data-v="camping">Camping &amp; travel</button>
+          <button class="filter-btn" data-v="emergency">Outages &amp; emergencies</button>
+        </div>
+      </div>
+      <p class="finder-count" id="finderCount" aria-live="polite"></p>
     </div>
 
     <p class="swipe-hint">&#8592; Swipe to compare &#8594;</p>
@@ -792,11 +824,11 @@
           <tr class="top-pick" data-price="1k-2k" data-use="emergency">
             <td>EcoFlow <span class="row-badge badge-top">Top Pick</span></td>
             <td>Delta 2 Max</td>
-            <td>~$1,499&ndash;$1,799</td>
+            <td>~$1,029&ndash;$1,299</td>
             <td>2,048Wh</td>
-            <td>2,400W (5,000W surge)</td>
+            <td>2,400W (4,800W surge)</td>
             <td>1,000W</td>
-            <td>48.1 lbs</td>
+            <td>50 lbs</td>
             <td class="battery-lfp">LFP</td>
             <td>Emergency, Off-Grid</td>
             <td class="rating-cell">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</td>
@@ -1161,33 +1193,68 @@
     document.getElementById('mobileNav').classList.toggle('open');
   }
 
-  function filterTable(type, btn) {
-    // Update active button
-    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-
+  // Labeled runtime estimates per model (2026-11-10): usable Wh = capacity x 0.85; hours = usable / average load
+  (function () {
+    var LOADS = [['Full-size fridge', 120], ['CPAP (no humidifier)', 40], ['Wi-Fi router + LED lights', 30]];
     var rows = document.querySelectorAll('#compTable tbody tr');
-    rows.forEach(function(row) {
-      if (type === 'all') {
-        row.classList.remove('hidden');
-        return;
-      }
-      var priceAttr = (row.getAttribute('data-price') || '');
-      var useAttr = (row.getAttribute('data-use') || '');
-      var show = false;
-      if (type === 'under1k') { show = priceAttr.indexOf('under1k') > -1; }
-      else if (type === '1k-2k') { show = priceAttr.indexOf('1k-2k') > -1; }
-      else if (type === '2kplus') { show = priceAttr.indexOf('2kplus') > -1; }
-      else if (type === 'camping') { show = useAttr.indexOf('camping') > -1; }
-      else if (type === 'emergency') { show = useAttr.indexOf('emergency') > -1; }
-      if (show) { row.classList.remove('hidden'); }
-      else { row.classList.add('hidden'); }
+    rows.forEach(function (row) {
+      var cap = parseFloat(((row.children[3] || {}).textContent || '').replace(/,/g, ''));
+      var cell = row.children[1]; if (!cap || !cell) return;
+      var usable = Math.round(cap * 0.85);
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'rt-btn'; btn.textContent = 'Est. runtimes';
+      btn.setAttribute('aria-expanded', 'false'); cell.appendChild(document.createElement('br')); cell.appendChild(btn);
+      var det = document.createElement('tr'); det.className = 'rt-row'; det.hidden = true;
+      var td = document.createElement('td'); td.colSpan = row.children.length;
+      td.innerHTML = '<div class="rt-grid">' + LOADS.map(function (l) {
+        return '<span>' + l[0] + ' (~' + l[1] + 'W avg): <strong>~' + Math.round(usable / l[1]) + ' h</strong></span>'; }).join('') +
+        '</div><div class="rt-note">Estimate, not a test result: ' + cap.toLocaleString() + 'Wh &times; 0.85 usable &asymp; ' + usable.toLocaleString() +
+        'Wh, divided by the average load. Real runtime varies with temperature, inverter efficiency and appliance cycling. <a href="/calculator.html">Size your own loads &rarr;</a></div>';
+      det.appendChild(td); row.parentNode.insertBefore(det, row.nextSibling);
+      btn.addEventListener('click', function () { det.hidden = !det.hidden; btn.setAttribute('aria-expanded', String(!det.hidden)); });
     });
-
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'table_filter', { event_category: 'Compare', event_label: type });
+  })();
+  // 3-step finder: budget x what you're powering x use (2026-11-10). URL: ?budget=&power=&use=
+  (function () {
+    var state = { budget: 'all', power: 'all', use: 'all' };
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#compTable tbody tr:not(.rt-row)'));
+    function wh(row) {
+      var c = row.children[3]; if (!c) return 0;
+      var n = parseFloat((c.textContent || '').replace(/,/g, '')); return isNaN(n) ? 0 : n;
     }
-  }
+    function apply() {
+      var shown = 0;
+      rows.forEach(function (row) {
+        var p = row.getAttribute('data-price') || '', u = row.getAttribute('data-use') || '', cap = wh(row);
+        var ok = (state.budget === 'all' || p.indexOf(state.budget) > -1) &&
+                 (state.use === 'all' || u.indexOf(state.use) > -1) &&
+                 (state.power === 'all' || state.power === 'small' ||
+                  (state.power === 'fridge' && cap >= 1000) || (state.power === 'big' && cap >= 2000));
+        row.classList.toggle('hidden', !ok); if (ok) shown++;
+        var d = row.nextElementSibling; if (!ok && d && d.classList.contains('rt-row')) { d.hidden = true; var b = row.querySelector('.rt-btn'); if (b) b.setAttribute('aria-expanded', 'false'); }
+      });
+      var el = document.getElementById('finderCount');
+      if (el) el.innerHTML = shown ? 'Showing <strong>' + shown + '</strong> of ' + rows.length + ' power stations.' :
+        'No exact match &mdash; try a higher budget, or use our <a href="/calculator.html">solar calculator</a> to size your needs.';
+    }
+    document.querySelectorAll('#finder .filter-bar').forEach(function (bar) {
+      var g = bar.getAttribute('data-group');
+      bar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.filter-btn'); if (!btn) return;
+        bar.querySelectorAll('.filter-btn').forEach(function (x) { x.classList.toggle('active', x === btn); });
+        state[g] = btn.getAttribute('data-v'); apply();
+        if (typeof gtag !== 'undefined') gtag('event', 'table_filter', { event_category: 'Compare', event_label: g + ':' + state[g] });
+      });
+    });
+    try {
+      var q = new URLSearchParams(location.search);
+      ['budget', 'power', 'use'].forEach(function (g) {
+        var v = q.get(g); if (!v) return;
+        var btn = document.querySelector('#finder [data-group="' + g + '"] [data-v="' + v + '"]');
+        if (btn) btn.click();
+      });
+    } catch (e) {}
+    apply();
+  })();
 
   window.addEventListener('scroll', function() {
     var header = document.querySelector('header');

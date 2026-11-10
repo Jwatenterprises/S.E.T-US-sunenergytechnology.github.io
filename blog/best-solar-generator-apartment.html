@@ -1332,12 +1332,12 @@
   <!-- ============================================ -->
 
   <div class="email-section">
-    <h3>Get the Free Solar Generator Apartment Guide (PDF)</h3>
+    <h3>Get the Free Solar Buyer&rsquo;s Course</h3>
     <p class="email-desc">Our complete apartment-specific guide covers sizing, balcony solar setups, and runtime calculations for every common apartment appliance.</p>
     <form class="email-form" onsubmit="handleEmailSubmit(event)">
       <input type="text" placeholder="Your first name" name="name" required />
       <input type="email" placeholder="Your email address" name="email" required />
-      <button type="submit" class="btn-email">Send Me the Guide</button>
+      <button type="submit" class="btn-email">Send Me the Course</button>
     </form>
     <p class="email-note">No spam. Unsubscribe anytime. We hate junk mail as much as you do.</p>
   </div>
@@ -1463,7 +1463,7 @@
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (data.success) {
-        btn.textContent = 'Guide Sent! Check Your Inbox.';
+        btn.textContent = 'You’re In! Check Your Inbox.';
         btn.style.background = '#00C896';
         btn.style.color = '#fff';
         if (typeof gtag !== 'undefined') {

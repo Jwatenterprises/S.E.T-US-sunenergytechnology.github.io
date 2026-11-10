@@ -633,7 +633,7 @@
 
   <p>The P300 holds 256Wh of LiFePO4 capacity with 300W of output: enough for phones, laptops, lights, a fan, a CPAP with a DC cable, or a small projector. It recharges from the wall in about an hour, and the included panel lets you top it up anywhere with sun.</p>
 
-  <p>If you need to run a mini-fridge or anything over 300W, step up to the AC180 below. See our <a href="allpowers-volix-p300-review-2026.html">VOLIX P300 review</a> for hands-on details.</p>
+  <p>If you need to run a mini-fridge or anything over 300W, step up to the AC180 below. See our <a href="allpowers-volix-p300-review-2026.html">VOLIX P300 review</a> for the full details.</p>
 
   <div class="pros-cons-grid">
     <div class="pro-col">
@@ -952,12 +952,12 @@
 <section class="email-section">
   <div class="section-inner">
     <span class="section-tag">Free Resource</span>
-    <h2>Get the Free Solar Generator Buyer&rsquo;s Guide (PDF)</h2>
-    <p class="email-desc">47 pages. Plain English. No fluff. Covers every major brand, real-world runtime tests, and our top picks for every budget.</p>
+    <h2>Get the Free Solar Buyer&rsquo;s Course</h2>
+    <p class="email-desc">12 short emails plus our Blackout Cheat Sheet. Plain English, no fluff: sizing, battery life, solar panels, backup power, and picks for every budget.</p>
     <form class="email-form" onsubmit="handleEmailSubmit(event)">
       <input type="text" placeholder="Your first name" name="name" required />
       <input type="email" placeholder="Your email address" name="email" required />
-      <button type="submit" class="btn-email">Send Me the Guide</button>
+      <button type="submit" class="btn-email">Send Me the Course</button>
     </form>
     <p class="email-note">No spam. Unsubscribe anytime. We hate junk mail as much as you do.</p>
   </div>
@@ -1048,7 +1048,7 @@
       method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ email: email, name: name, _subject: 'New S.E.T. Solar Subscriber', _template: 'table', _captcha: 'false' })
     }).then(function(r) { return r.json(); }).then(function(d) {
-      if (d.success) { btn.textContent = 'Guide Sent! Check Your Inbox.'; btn.style.background = '#00C896'; btn.style.color = '#fff';
+      if (d.success) { btn.textContent = 'You’re In! Check Your Inbox.'; btn.style.background = '#00C896'; btn.style.color = '#fff';
         if (typeof gtag !== 'undefined') { gtag('event', 'lead_capture', { event_category: 'Email', event_label: 'Buyers Guide - Beginners 2026' }); }
       } else { btn.textContent = 'Try Again'; btn.disabled = false; }
     }).catch(function() { btn.textContent = 'Try Again'; btn.disabled = false; });

@@ -268,3 +268,11 @@
   window.setTrack = trackEvent;
 
 })();
+
+// Exit-intent signup for the free Solar Buyer's Course (scripts/exit-popup.js, added 2026-11-10)
+(function () {
+  var s = document.createElement('script');
+  s.src = '/scripts/exit-popup.js';
+  s.defer = true;
+  (document.head || document.documentElement).appendChild(s);
+})();

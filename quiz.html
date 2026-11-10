@@ -526,11 +526,11 @@
 
       <!-- Email Capture -->
       <div class="result-email-box">
-        <h3>Save Your Results + Get the Free Buyer&rsquo;s Guide</h3>
-        <p>47-page PDF with full brand reviews, runtime tests, and exclusive discount codes. Free.</p>
+        <h3>Save Your Results + Get the Free Buyer&rsquo;s Course</h3>
+        <p>12 short emails + our Blackout Cheat Sheet. Plain English. Free.</p>
         <form class="result-email-form" onsubmit="handleResultEmail(event)">
           <input type="email" placeholder="Your email address" required />
-          <button type="submit">Send Me the Guide</button>
+          <button type="submit">Send Me the Course</button>
         </form>
       </div>
 
@@ -928,7 +928,7 @@
   function handleResultEmail(e) {
     e.preventDefault();
     var btn = e.target.querySelector('button');
-    btn.textContent = 'Guide Sent!';
+    btn.textContent = 'You’re In!';
     btn.style.background = '#00C896';
     btn.disabled = true;
     if (typeof gtag !== 'undefined') {
