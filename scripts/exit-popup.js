@@ -38,11 +38,11 @@
     ov.innerHTML =
       '<div class="setx-box" role="dialog" aria-modal="true" aria-labelledby="setx-h">' +
       '<button type="button" class="setx-x" aria-label="Close">&times;</button>' +
-      '<h2 id="setx-h">Before you go: get the free Solar Buyer&rsquo;s Course</h2>' +
-      '<p>12 short, plain-English emails plus our Blackout Cheat Sheet. Sizing, battery life, solar panels, and what to buy.</p>' +
+      '<h2 id="setx-h">Before you go: get the free Solar Generator Buyer&rsquo;s Guide</h2>' +
+      '<p>A free 12-page PDF with a sizing worksheet and printable Blackout Cheat Sheet, plus short plain-English follow-up emails.</p>' +
       '<form><input type="text" name="name" placeholder="First name" autocomplete="given-name" required>' +
       '<input type="email" name="email" placeholder="Email address" autocomplete="email" required>' +
-      '<button type="submit">Send Me the Course</button></form>' +
+      '<button type="submit">Send Me the Guide</button></form>' +
       '<p class="setx-note">No spam. Unsubscribe anytime.</p></div>';
     document.body.appendChild(ov);
 
