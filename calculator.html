@@ -548,7 +548,7 @@
         <div class="panel active" id="panel0">
           <div class="info-box">
             Select the appliances you want to power. Click to add, adjust quantity with +/-.
-          </div>
+           <span style="display:block;margin-top:6px;font-size:0.85em;">Window AC: watts are running power. Older (non-inverter) units need 2&ndash;3&times; that for a second at start-up, so pick a power station with enough surge. <a href="/blog/best-solar-generator-window-ac-2026.html">Window AC sizing guide &rarr;</a></span></div>
 
           <div class="appliance-grid" id="appGrid"></div>
 
@@ -722,7 +722,9 @@ const APPLIANCES = [
   { id:'phone',     icon:'📱', name:'Phone Charging',     watts:10,   category:'personal' },
   { id:'light_led', icon:'💡', name:'LED Lights (x4)',    watts:40,   category:'lighting' },
   { id:'fan',       icon:'🌀', name:'Ceiling Fan',        watts:75,   category:'climate'  },
-  { id:'ac_window', icon:'❄️', name:'Window A/C',         watts:1200, category:'climate'  },
+  { id:'ac_window_5k',  icon:'❄️', name:'Window AC 5,000 BTU',  watts:500,  category:'climate'  },
+  { id:'ac_window_8k',  icon:'❄️', name:'Window AC 8,000 BTU',  watts:700,  category:'climate'  },
+  { id:'ac_window',     icon:'❄️', name:'Window AC 12,000 BTU', watts:1100, category:'climate'  },
   { id:'cpap',      icon:'😴', name:'CPAP Machine',       watts:30,   category:'medical'  },
   { id:'freezer',   icon:'🧊', name:'Chest Freezer',      watts:100,  category:'kitchen'  },
   { id:'washer',    icon:'👕', name:'Washing Machine',    watts:500,  category:'laundry'  },
