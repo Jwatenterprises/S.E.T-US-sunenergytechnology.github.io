@@ -509,7 +509,7 @@
 <div class="hero">
   <div class="badge">Free Tool — No Email Required</div>
   <h2>Solar Power Needs Calculator</h2>
-  <p>Find out exactly how much solar power you need — and which S.E.T system fits your life.</p>
+  <p>Find out exactly how much solar power you need — and which power station fits your loads.</p>
 </div>
 
 <!-- MAIN LAYOUT -->
@@ -662,23 +662,23 @@
     <div class="card">
       <div class="card-body" style="display:flex;flex-direction:column;gap:10px;">
         <div style="font-size:0.82rem;font-weight:700;color:var(--navy);margin-bottom:4px;">
-          Why S.E.T?
+          Why use this calculator?
         </div>
         <div style="font-size:0.8rem;color:var(--gray);display:flex;gap:8px;align-items:flex-start;">
           <span style="color:var(--green);font-size:1rem;">✓</span>
-          <span><strong style="color:var(--navy);">30-Day Money Back</strong> — Not happy? Full refund, no questions.</span>
+          <span><strong style="color:var(--navy);">Free, no email</strong> — Your answers stay in your browser.</span>
         </div>
         <div style="font-size:0.8rem;color:var(--gray);display:flex;gap:8px;align-items:flex-start;">
           <span style="color:var(--green);font-size:1rem;">✓</span>
-          <span><strong style="color:var(--navy);">3-Year Warranty</strong> — Every system covered.</span>
+          <span><strong style="color:var(--navy);">Real products</strong> — Specs from each manufacturer&rsquo;s US page, prices dated.</span>
         </div>
         <div style="font-size:0.8rem;color:var(--gray);display:flex;gap:8px;align-items:flex-start;">
           <span style="color:var(--green);font-size:1rem;">✓</span>
-          <span><strong style="color:var(--navy);">0% APR Financing</strong> — As low as $125/month.</span>
+          <span><strong style="color:var(--navy);">You buy direct</strong> — From the brand or retailer; their warranty, returns and financing terms apply.</span>
         </div>
         <div style="font-size:0.8rem;color:var(--gray);display:flex;gap:8px;align-items:flex-start;">
           <span style="color:var(--green);font-size:1rem;">✓</span>
-          <span><strong style="color:var(--navy);">You Own It</strong> — No leases, no liens, no surprises.</span>
+          <span><strong style="color:var(--navy);">Research-based</strong> — We don&rsquo;t sell our own systems. <a href="/how-we-score.html">How we pick</a>.</span>
         </div>
       </div>
     </div>
@@ -740,34 +740,31 @@ const GOALS = [
 
 const PRODUCTS = [
   {
-    name:'S.E.T Starter 1500',
-    capacity:1500,
-    panels:1,
-    price:899,
-    finance:75,
-    specs:['1,500Wh','1,800W AC','USB-A/C','Solar+Wall charge','12.5 kg'],
-    match_max:1200,
+    name:'Anker SOLIX C1000X',
+    capacity:1056, output:1800,
+    price:479.99,
+    img:'/images/store/anker-solix-c1000x.png',
+    link:'https://ankersolix.pxf.io/c/6782322/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fproducts%2Fa1761111',
+    specs:['1,056Wh','1,800W AC (2,400W surge)','600W solar input','LiFePO4'],
   },
   {
-    name:'S.E.T Power 2000',
-    capacity:2000,
-    panels:2,
-    price:1299,
-    finance:108,
-    specs:['2,000Wh','2,200W AC','4×AC outlets','MPPT controller','15 kg'],
-    match_max:1800,
-    recommended:true,
+    name:'EcoFlow DELTA 2 Max',
+    capacity:2048, output:2400,
+    price:1029,
+    img:'/images/ecoflow-delta-2-max.webp',
+    link:'https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2881111&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=site-calculator',
+    specs:['2,048Wh','2,400W AC (4,800W surge)','1,000W solar input','Expands to 6,144Wh'],
   },
   {
-    name:'S.E.T Pro 2500',
-    capacity:2500,
-    panels:2,
-    price:1499,
-    finance:125,
-    specs:['2,500Wh','3,000W AC','LFP battery','5-year cells','Expandable'],
-    match_max:99999,
+    name:'ALLPOWERS R3500',
+    capacity:3168, output:3200,
+    price:1199,
+    img:'/images/allpowers-r3500.webp',
+    link:'https://www.awin1.com/cread.php?awinmid=40342&awinaffid=2881111&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-r3500-portable-power-station-3200w-3168wh&clickref=site-calculator',
+    specs:['3,168Wh','3,200W AC (6,000W peak)','2,000W solar input','93 lbs'],
   },
 ];
+const PRICE_DATE = 'Nov 10, 2026';
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 
@@ -960,7 +957,7 @@ function calculate() {
   const tenYearCost     = annualGridCost * 10;
 
   // Find best product match
-  let recommended = PRODUCTS.find(p => battNeeded <= p.capacity) || PRODUCTS[PRODUCTS.length - 1];
+  let recommended = PRODUCTS.find(p => battNeeded <= p.capacity && watts <= p.output) || PRODUCTS[PRODUCTS.length - 1];
 
   // Render summary
   document.getElementById('resultsSummary').innerHTML = `
@@ -978,37 +975,43 @@ function calculate() {
     </div>
   `;
 
-  // Render recommendations
+  // Render recommendations (real products; specs from manufacturer US pages, prices dated)
   const recArea = document.getElementById('recommendationsArea');
-  recArea.innerHTML = '<h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:12px;">Recommended S.E.T Systems</h3>';
+  const tooBig  = battNeeded > PRODUCTS[PRODUCTS.length - 1].capacity || watts > PRODUCTS[PRODUCTS.length - 1].output;
+  recArea.innerHTML = '<h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:12px;">Power Stations That Fit Your Load</h3>' +
+    (tooBig ? '<p style="font-size:0.85rem;color:var(--gray);margin:0 0 12px;">Your load is larger than any single portable unit. Consider <a href="/home-batteries.html">a home battery system</a>, or split appliances across more than one unit.</p>' : '');
 
   PRODUCTS.forEach((p, i) => {
+    const fitsWh   = p.capacity >= battNeeded;
+    const fitsW    = p.output >= watts;
     const matchPct = Math.min(100, Math.round((p.capacity / Math.max(battNeeded, 500)) * 85));
     const isRec    = (p.name === recommended.name);
     const div      = document.createElement('div');
-    div.className  = 'rec-card' + (isRec ? '' : '');
+    div.className  = 'rec-card';
     div.style.borderColor = isRec ? 'var(--green)' : 'var(--border)';
     div.innerHTML = `
       ${isRec ? '<div class="best-badge">Best Match for You</div>' : ''}
-      <div class="prod-name">${p.name}</div>
-      <div class="prod-cap">${p.capacity.toLocaleString()}Wh Capacity &nbsp;|&nbsp; Includes ${p.panels}× 100W Solar Panel${p.panels>1?'s':''}</div>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" style="width:72px;height:72px;object-fit:contain;flex:none;background:#fff;border-radius:8px;">
+        <div><div class="prod-name">${p.name}</div>
+        <div class="prod-cap">${p.capacity.toLocaleString()}Wh &nbsp;|&nbsp; Pair with about ${panelsNeeded}× 100W panels for your location</div></div>
+      </div>
       <div class="prod-specs">${p.specs.map(s=>`<span class="spec-pill">${s}</span>`).join('')}</div>
       <div class="match-bar-wrap">
-        <label>System match for your load</label>
+        <label>${fitsWh && fitsW ? 'Covers your battery and wattage needs' : (!fitsW ? 'Output below your total load' : 'Battery smaller than your daily need')}</label>
         <div class="match-bar"><div class="match-bar-fill" style="width:${matchPct}%"></div></div>
       </div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;gap:10px;flex-wrap:wrap;">
         <div>
-          <div class="prod-price">$${p.price.toLocaleString()}</div>
-          <div class="prod-finance">or $${p.finance}/mo at 0% APR</div>
+          <div class="prod-price">~$${p.price.toLocaleString()}</div>
+          <div class="prod-finance">Retailer price on ${PRICE_DATE}. Prices change.</div>
         </div>
-        <div style="font-size:0.78rem;color:var(--green);font-weight:700;">
-          ${matchPct}% match
-        </div>
+        <a href="${p.link}" target="_blank" rel="sponsored noopener" style="background:var(--green);color:#fff;font-weight:700;font-size:0.85rem;padding:9px 14px;border-radius:8px;text-decoration:none;">Check today's price &rarr;</a>
       </div>
     `;
     recArea.appendChild(div);
   });
+  recArea.insertAdjacentHTML('beforeend', '<p style="font-size:0.75rem;color:var(--gray);margin-top:8px;">S.E.T. earns a commission on some links, at no extra cost to you. Specs from each manufacturer&rsquo;s US page. <a href="/how-we-score.html">How we pick</a>.</p>');
 
   // Render savings breakdown
   const payback = (recommended.price / monthlyGridCost).toFixed(1);
@@ -1023,11 +1026,11 @@ function calculate() {
       <span class="val">$${annualGridCost.toFixed(0)}/yr</span>
     </div>
     <div class="breakdown-row">
-      <span>Recommended S.E.T system</span>
+      <span>Suggested power station (price ${PRICE_DATE})</span>
       <span class="val">$${recommended.price.toLocaleString()}</span>
     </div>
     <div class="breakdown-row">
-      <span>Est. payback period</span>
+      <span>Est. payback if solar covers these loads (panels extra)</span>
       <span class="val">${payback} months</span>
     </div>
     <div class="breakdown-row">
